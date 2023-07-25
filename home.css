@@ -1,0 +1,36 @@
+
+/* CSS 제일 첫 번째 선언  
+
+아래 *표시는 전체 선택자(모든요소)에 영향
+
+*/
+
+
+* { 
+    box-sizing: border-box; /* content box 보다 border box로 시작*/
+   
+}
+
+
+.wrap {
+    width: 1440px;
+    height: 56px;
+    background-color: #212121;
+}
+
+
+.wrapNav {
+    display: flex;
+    width: 240px;
+    height: 1395px;
+    padding: 0px 16px 42px 0px;
+    flex-direction: column;
+    align-items: flex-start;
+    background-color: #212121;
+}
+
+.searchBox {
+    margin: 8px 553px 8px 525px;
+
+}
+
