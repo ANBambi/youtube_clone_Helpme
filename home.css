@@ -4,10 +4,6 @@
 */
 * {
     box-sizing: border-box; /* content box 보다 border box로 시작*/
-    font-size: 14px;
-    font-style: normal;
-    font-weight: 400;
-    line-height: normal;
     color: white;
 }
 /*  구간 선 border */
@@ -50,4 +46,29 @@
     
 }
 
-/*  list 간격 수정을 할려했는데 못했습니다. */
+/* ----------------------  list 수정 -------------------------- */
+ul {
+    line-height: 2;
+    list-style-type: none;              /* 리스트 점 삭제 */
+}
+
+.material-symbols-outlined,
+.yourVideos {
+  display: inline-block;
+  margin-right: 20px;                   /* 요소 사이의 간격 설정 */
+  
+}
+
+/* ----------------------  todolist ------------------
+
+
+searchbox, mic, 배열 맞추기
+youtube 이미지 추가하기 
+이미지와 channelName 배열 맞추기 
+(사이드바 이미지와 name 위치가 삐뚤..
+
+hamburger와 사이드바 이미지 왼쪽여백 길이 맞추기
+
+
+*/
+
