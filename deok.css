@@ -1,4 +1,137 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;700&display=swap');
 
 
+:root {
+    /* color */
+    --white-color: #fff;
+    --black-color: #140a00;
+    --blue-color: #1359c7;
+    --red-color: #e30504;
+    --grey-dark-color: #616161;
+    --gray-light-color: #8e8e8e;
+  
+    /* size */
+    --padding:12px;
+    --avatar-size: 36px;
+  
+    /* font size */
+    --font-superlarge: 22px;
+    --font-verylarge: 20px;
+    --font-large: 18px;
+    --font-medium: 14px;
+    --font-small: 12px;
+    --font-micro: 10px;
+}
 
-print("git  test  07.25 12:41")
+/* 리셋 */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* 폰트 */
+body {
+    font-family: 'Roboto', sans-serif;
+}
+
+
+.searchBox{
+    display: flex;
+    border: 1px solid #ddd;
+    height: 4px;
+}
+
+.searchInput{
+    width: 400px;
+    padding: 7px;
+    border: 0;
+    height: 100%;
+    border-radius: 2px 0 0 2px;
+}
+
+.searchBtn{
+    height: 100%;
+    width: 60px;
+    border: none;
+}
+
+.mic{
+    margin-top: 10px;
+}
+
+.profile{
+    align-items: center;
+}
+
+/* 헤더 */
+.navigation {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 56px;
+    width: 100%;
+    flex-shrink: 0;
+    padding: 15px;
+}
+
+/* 메인 전체 (사이드바, 컨텐츠 */
+main {
+    height: calc(100vh - 70px);
+    display: flex;
+    background-color: #f9f9f9;
+}
+
+/* Sidebar */ 
+nav {
+    height: 100%;
+    width: 17%;
+    color: var(--white-color);
+    background: #212121;
+    overflow-y: hidden;
+} 
+
+
+/* 반응형 */
+@media (max-width: 900px) {
+    .search input {
+      width: 25rem;
+    }
+}
+
+/* .left {
+    display: flex;
+    align-items: center;
+}
+   
+.left #menu {
+    padding: 0 7px;
+    cursor: pointer;
+} */
+
+/* 햄버거 */
+.topLeft{
+    color: var(--white-color);
+}
+
+
+/* 검색창 오타때문에 아이디로 해놓음
+#searchBox{
+    display: flex;
+    width: 470px;
+    height: 40px;
+    justify-content: center;
+    align-items: flex-start;
+    gap: 4px;
+    flex-shrink: 0;
+}
+
+.profile {
+    display: flex;
+    width: 204px;
+    height: 40px;
+    justify-content: center;
+    align-items: flex-end;
+    gap: 8px;
+}
+ */
