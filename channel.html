@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+   <meta charset="UTF-8">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <title>Channel</title>
+</head>
+<body>
+   <div class="common">
+      <!--Header and Nav part -->
+   </div>
+
+   <!--channel information-->
+   <section class="channel">
+      <header class="channelBasicInfo">
+         <div class="channelCover">
+            <img src="imgChannel/channelCover.svg" alt="">
+         </div>
+         <div class="channelInfo">
+            <div class="channelTitle">
+               <!--channel cover-->
+               <div class="channelimg">
+                  <img src="videoImg/Pic.svg" alt="">
+               </div>
+               <!--channel owner info-->
+               <div class="channelInfo">
+                  <p class="channelName" id="channelName">Marcus Levin</p>
+                  <p class="subscribers" id="subscribers">[subscribers number] subscribers</p>
+               </div>
+               <div class="subscribeBtn">
+                  <button class="subscribe" id="subscribe">
+                     <img src="videoImg/Subscribes-Btn.svg" alt="">
+                  </button>
+               </div>
+            </div>
+      </header>
+   </section>
+   <!--Main-->
+   <section class="channelMain">
+      <!--header Navigation-->
+      <header class="channelNav">
+         <div class="navContainer">
+            <ul>
+               <li class="home" id="home"> HOME</li>
+               <li class="videos" id="videos">VIDEOS</li>
+               <li class="playLists" id="playLists">PLAYLISTS</li>
+               <li class="community" id="community">COMMUNITY</li>
+               <li class="channels" id="channels">CHANNELS</li>
+               <li class="about" id="about">ABOUT</li>
+               <li class="searchInChannel" id="searchInChannel">
+                  <span class="material-symbols-outlined">search</span>
+               </li>
+               <li>
+                  <span class="material-symbols-outlined">arrow_forward_ios</span>
+               </li>
+            </ul>
+         </div>
+         </div>
+      </header>
+      <!-- video part-->
+      <article class="channelVideo">
+
+      </article>
+   </section>
+</body>
+<script src="./getvideo.js"></script>
+<script src="./communication.js"></script>
+<script>
+document.addEventListener('DOMContentLoaded', () => {
+    displayChannel().catch(error => {
+        console.error('error', error);
+    });
+});    
+</script>
+</html>
