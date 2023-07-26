@@ -1,6 +1,5 @@
 @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;700&display=swap');
 
-
 :root {
     /* color */
     --white-color: #fff;
@@ -21,21 +20,26 @@
     --font-medium: 14px;
     --font-small: 12px;
     --font-micro: 10px;
-}
+ }
 
-/* 리셋 */
+/* reset */
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
 }
 
-/* 폰트 */
+/* font */
 body {
     font-family: 'Roboto', sans-serif;
 }
 
+/*header div*/
+.wrap{
+    background-color: #212121;
+}
 
+/*search*/
 .searchBox{
     display: flex;
     border: 1px solid #ddd;
@@ -114,9 +118,7 @@ nav {
     color: var(--white-color);
 }
 
-
-/* 검색창 오타때문에 아이디로 해놓음
-#searchBox{
+.searchBox{
     display: flex;
     width: 470px;
     height: 40px;
@@ -134,4 +136,4 @@ nav {
     align-items: flex-end;
     gap: 8px;
 }
- */
+
