@@ -3,37 +3,36 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!--css import-->
+    <link rel="stylesheet" href="./home.css"/>
     <!-- Google Fonts link-->
     <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined" rel="stylesheet" />
     <title>HOME</title>
-    <link rel="stylesheet" href="deok.css">
-    <script src="dawoon.js" defer></script>
 </head>
 <body>
     <!--header container-->
     <div class="wrap">
         <!--Top Navigation-->
-        <!--버튼 이미지가 하얀색이라서 test용으로 블랙 입힌거니까 css적용할때는 삭제하시면 됩니다-->
-        <header id="navigation" class="navigation" style="background-color: black;">
+        <header id="navigation" class="navigation">
             <!--header(search) left part(menu icon & logo)-->
             <div id="topLeft" class="topLeft">
                 <span class="material-symbols-outlined">menu</span>
-                <img src="imgHtml/Youtube-Logo.svg" alt="">
+                <img src="imgHome/Youtube-Logo.svg" alt="">
             </div>
             <!-- center part(search)-->
-            <div class="serarchBox" id="searchBox">
+            <div class="searchBox" id="searchBox">
                 <input type="text" name="searchInput" id="searchInput" class="searchInput">
                 <button class="searchBtn" id="searchBtn">
                     <span class="material-symbols-outlined">search</span>
                 </button>
-                <img class="mic" id="mic" src="imgHtml/mic.svg" alt="">
+                <img class="mic" id="mic" src="imgHome/mic.svg" alt="">
             </div>
             <!--right part(profile)-->
             <div class="profile" id="profile">
-                <img class="create" id="create" src="imgHtml/create.svg" alt="">
-                <img class="apps" id="apps" src="imgHtml/apps.svg" alt="">
-                <img class="notifications" id="notifications" src="imgHtml/notifications.svg" alt="">
-                <img class="profile" id="profile" src="imgHtml/Profile.svg" alt="">
+                <img class="create" id="create" src="imgHome/create.svg" alt="">
+                <img class="apps" id="apps" src="imgHome/apps.svg" alt="">
+                <img class="notifications" id="notifications" src="imgHome/notifications.svg" alt="">
+                <img class="profile" id="profile" src="imgHome/Profile.svg" alt="">
             </div>
         </header>
     </div>
@@ -41,6 +40,7 @@
     <div class="wrapNav" id="wrapNav">
         <!--sideBar-->
         <nav class="sideBar" id="sideBar">
+            <!--sibebar Top-->
             <div class="sideBarTop" id="sideBarTop">
                 <ul class="sibeBarContent">
                     <li>
@@ -58,6 +58,7 @@
                 </ul>
                 <hr class="border">
             </div>
+            <!--sibebar Top2-->
             <div class="sibeBarTop2" id="sibeBarTop2">
                 <ul class="sibeBarContent">
                     <li>
@@ -87,35 +88,36 @@
                 </ul>
                 <hr class="border">
             </div>
+            <!--sibebar subscriptions-->
             <div class="sideBarSubscriptions" id="sideBarSubscriptions">
                 <p class="sideBarTitle">SUBSCRIPTIONS</p>
                 <ul class="sibeBarContent">
                     <li>
-                        <img src="imgHtml/Profile.svg" alt="">
+                        <img src="imgHome/Profile.svg" alt="">
                         <span class="channelName" id="channelName">James Gouse</span>
                     </li>
                     <li>
-                        <img src="imgHtml/Profile.svg" alt="">
+                        <img src="imgHome/Profile.svg" alt="">
                         <span class="channelName" id="channelName">James Gouse</span>
                     </li>
                     <li>
-                        <img src="imgHtml/Profile.svg" alt="">
+                        <img src="imgHome/Profile.svg" alt="">
                         <span class="channelName" id="channelName">James Gouse</span>
                     </li>
                     <li>
-                        <img src="imgHtml/Profile.svg" alt="">
+                        <img src="imgHome/Profile.svg" alt="">
                         <span class="channelName" id="channelName">James Gouse</span>
                     </li>
                     <li>
-                        <img src="imgHtml/Profile.svg" alt="">
+                        <img src="imgHome/Profile.svg" alt="">
                         <span class="channelName" id="channelName">James Gouse</span>
                     </li>
                     <li>
-                        <img src="imgHtml/Profile.svg" alt="">
+                        <img src="imgHome/Profile.svg" alt="">
                         <span class="channelName" id="channelName">James Gouse</span>
                     </li>
                     <li>
-                        <img src="imgHtml/Profile.svg" alt="">
+                        <img src="imgHome/Profile.svg" alt="">
                         <span class="channelName" id="channelName">James Gouse</span>
                     </li>
                     <li>
@@ -125,26 +127,27 @@
                 </ul>
                 <hr class="border">
             </div>
-        </nav>
-        <nav class="sideBarBottom" id="sideBarBottom">
-            <p class="sideBarTitle">MORE FROM YOUTUBE</p>
-            <ul class="sibeBarContent">
-                <li>
-                    <img src="imgHtml/premium.svg" alt="">
-                    <span class="premium" id="premium">Youtube Premium</span>
-                </li>
-                <li>
-                    <img src="imgHtml/gaming.svg" alt="">
-                    <span class="gaming" id="gaming">Gaming</span>
-                </li>
-                <li>
-                    <img src="imgHtml/live.svg" alt="">
-                    <span class="live" id="live">Live</span>
-                </li>
-            </ul>
+            <!--sidebar bottom-->
+            <div class="sideBarBottom" id="sideBarBottom">
+                <p class="sideBarTitle">MORE FROM YOUTUBE</p>
+                <ul class="sibeBarContent">
+                    <li>
+                        <img src="imgHome/premium.svg" alt="">
+                        <span class="premium" id="premium">Youtube Premium</span>
+                    </li>
+                    <li>
+                        <img src="imgHome/gaming.svg" alt="">
+                        <span class="gaming" id="gaming">Gaming</span>
+                    </li>
+                    <li>
+                        <img src="imgHome/live.svg" alt="">
+                        <span class="live" id="live">Live</span>
+                    </li>
+                </ul>
+            </div>
         </nav>
     </div>
-
+    <!--main(video list part)-->
     <section>
 
     </section>
