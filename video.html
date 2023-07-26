@@ -6,6 +6,10 @@
    <!-- Google Fonts link-->
    <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined" rel="stylesheet" />
    <title>Video</title>
+   <link rel="stylesheet" href="video.css">
+   <script src="video.js" defer></script>
+   <!-- 아이콘 svg 연결-->
+   
 </head>
 <body>
    <!--header(search)-->
@@ -27,13 +31,16 @@
                      <span class="views" id="views"> [views]</span>
                      <span class="uploadDate" id="uploadDate"></span>
                      <ul>
-                        <li>
-                           <span class="material-symbols-outlined">thumb_up</span>
-                           <span class="likesCount" id="likesCount">[좋아요수]</span>
-                        </li>
+                        <li><!-- 35번 라인 부터  38번 까지 수정했습니다. 여기만 건드려 보고 계속 진행하겠습니다. -->
+                           <button class="material-symbols-outlined thumb_up">thumb_up</button>
+                           <span class="likesCount" id="likeCount">0</span>
+                           
+                           <button class="material-symbols-outlined thumb_down">thumb_down</span>
+                           <span class="dislikeCount" id="dislikeCount">0</span>
+                        </li><!--Test 진행 한 부분-->
                         <li>
                            <span class="material-symbols-outlined">thumb_down</span>
-                           <span class="dislikeCount" id="dislikeCount">[싫어요수]</span>
+                           <span class="dislikeCount" id="dislikeCount">[싫어요 수]</span>
                         </li>
                         <li>
                            <img src="videoImg/Group.svg" alt="">
