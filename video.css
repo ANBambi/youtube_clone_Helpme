@@ -93,6 +93,7 @@ body{
 .material-symbols-outlined{
    margin-right: 9px;
 
+
 * {
     list-style-type: none;
 }
@@ -102,6 +103,8 @@ body{
 
     border: none;
     background-color: white
+}
+
 }
 
 
@@ -172,7 +175,6 @@ body{
 
 
 
-
 .material-symbols-outlined.thumb_up {
     /* 여기에 버튼의 기본 스타일을 설정해주세요 */
     color: black; /* 예시로 기본 색상을 검정으로 설정했습니다. */
@@ -194,3 +196,4 @@ body{
 .material-symbols-outlined.thumb_down.active {
         color: gray; /* 버튼이 눌린 상태일 때 색상을 회색으로 변경합니다. */
 }
+
