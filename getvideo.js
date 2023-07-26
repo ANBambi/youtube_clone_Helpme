@@ -33,7 +33,7 @@ async function displayHome() {
 
     for (let i = 0; i < videoList.length; i++) {
         const videoId = videoList[i].video_id;
-        const videoInfo = videoInfoList[i];
+        const videoInfo = videoInfoList[i]; 
 
         // 비디오 정보를 표시할 문자열 생성
         let channelURL = `location.href="./channel.html"`;
