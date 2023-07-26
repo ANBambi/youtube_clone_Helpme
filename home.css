@@ -137,6 +137,8 @@ body {
 
 /* icon gap control  */
 .sideBar li{
+    display: flex;
+    align-items: center;
     width: 224px;
     height: 40px;
     margin: 8px 0px 8px 24px;
