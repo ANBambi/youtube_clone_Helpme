@@ -6,7 +6,7 @@
     <!--css import-->
     <link rel="stylesheet" href="./home.css"/>
     <!-- Google Fonts link-->
-    <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined" rel="stylesheet" />
+    <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined" rel="stylesheet">
     <title>HOME</title>
 </head>
 <body>
@@ -15,27 +15,104 @@
         <!--Top Navigation-->
         <header id="navigation" class="navigation">
             <!--header(search) left part(menu icon & logo)-->
+            <!--header(search) left part(menu icon & logo)-->
             <div id="topLeft" class="topLeft">
-                <span class="material-symbols-outlined">menu</span>
-                <img src="imgHome/Youtube-Logo.svg" alt="">
+                <div class="leftContent">
+                    <span class="material-symbols-outlined">menu</span>
+                    <img src="imgHome/Youtube-Logo.svg" alt="">
+                </div>
             </div>
             <!-- center part(search)-->
             <div class="searchBox" id="searchBox">
-                <input type="text" name="searchInput" id="searchInput" class="searchInput">
+                <input type="text" name="searchInput" id="searchInput" class="searchInput" placeholder="search">
                 <button class="searchBtn" id="searchBtn">
                     <span class="material-symbols-outlined">search</span>
                 </button>
-                <img class="mic" id="mic" src="imgHome/mic.svg" alt="">
+                <button class="micButton" id="micButton">
+                    <img class="mic" id="mic" src="imgHome/mic.svg" alt="">
+                </button>
+
             </div>
             <!--right part(profile)-->
             <div class="profile" id="profile">
-                <img class="create" id="create" src="imgHome/create.svg" alt="">
-                <img class="apps" id="apps" src="imgHome/apps.svg" alt="">
-                <img class="notifications" id="notifications" src="imgHome/notifications.svg" alt="">
-                <img class="profile" id="profile" src="imgHome/Profile.svg" alt="">
+                <div class="rightContent" id="rightContent">
+                    <img class="create" id="create" src="imgHome/create.svg" alt="">
+                    <img class="apps" id="apps" src="imgHome/apps.svg" alt="">
+                    <img class="notifications" id="notifications" src="imgHome/notifications.svg" alt="">
+                    <img class="profile" id="profile" src="imgHome/Profile.svg" alt="">
+                </div>
             </div>
         </header>
     </div>
+    <!-- 7월 26일 추가된 코드 -->
+    <!-- top menu -->
+    <div class="topMenu" id = "topMenu">
+        <!-- <div class="Border"></div> -->
+        <div class="frame10">
+          <div class="topMenuItem" id = "topMenuItem">
+            <div class="topMenuButton">
+              <div class="item" id = "item">Item</div>
+            </div>
+          </div>
+          <div class="topMenuItem" id = "topMenuItem">
+            <div class="topMenuButton">
+              <div class="item" id = "item">음악</div>
+            </div>
+          </div>
+          <div class="topMenuItem" id = "topMenuItem">
+            <div class="topMenuButton">
+              <div class="item" id = "item">실시간</div>
+            </div>
+          </div>
+          <div class="topMenuItem" id = "topMenuItem">
+            <div class="topMenuButton">
+              <div class="item" id = "item">뉴스</div>
+            </div>
+          </div>
+          <div class="topMenuItem" id = "topMenuItem">
+            <div class="topMenuButton">
+              <div class="item" id = "item">게임</div>
+            </div>
+          </div>
+          <div class="topMenuItem" id = "topMenuItem">
+            <div class="topMenuButton">
+              <div class="item" id = "item">야구</div>
+            </div>
+          </div>
+          <div class="topMenuItem" id = "topMenuItem">
+            <div class="topMenuButton">
+              <div class="item" id = "item">요리</div>
+            </div>
+          </div>
+          <div class="topMenuItem" id = "topMenuItem">
+            <div class="topMenuButton">
+              <div class="item" id = "item">만화 영화</div>
+            </div>
+          </div>
+          <div class="topMenuItem" id = "topMenuItem">
+            <div class="topMenuButton">
+              <div class="item" id = "item">축구</div>
+            </div>
+          </div>
+          <div class="topMenuItem" id = "topMenuItem">
+            <div class="topMenuButton">
+              <div class="item" id = "item">최근에 업로드된 동영상</div>
+            </div>
+          </div>
+          <div class="TopMenuItem">
+            <div class="TopMenuButton">
+              <div class="All">All</div>
+            </div>
+          </div>
+          <div class="TopMenuIcon">
+            <!-- <div class="NavigationsIconsLeftbottom">
+              <div class="Vector"></div>
+            </div> -->
+          </div>
+        </div>
+        <div class="Border"></div>
+      </div>
+    <!-- 밑에가 서현님 -->
     <!--nav container-->
     <div class="wrapNav" id="wrapNav">
         <!--sideBar-->
@@ -45,15 +122,15 @@
                 <ul class="sibeBarContent">
                     <li>
                         <span class="material-symbols-outlined">home</span>
-                        <span class="home" id="home">Home</span>
+                        <span class="subtitle home" id="home">Home</span>
                     </li>
                     <li>
                         <span class="material-symbols-outlined">explore</span>
-                        <span class="explore" id="explore">Explore</span>
+                        <span class="subtitle explore" id="explore">Explore</span>
                     </li>
                     <li>
                         <span class="material-symbols-outlined">subscriptions</span>
-                        <span class="subscriptions" id="subscription">subscriptions</span>
+                        <span class=" subtitle subscriptions" id="subscription">subscriptions</span>
                     </li>
                 </ul>
                 <hr class="border">
@@ -63,27 +140,27 @@
                 <ul class="sibeBarContent">
                     <li>
                         <span class="material-symbols-outlined">video_library</span>
-                        <span class="library" id="library">library</span>
+                        <span class="subtitle library" id="library">library</span>
                     </li>
                     <li>
                         <span class="material-symbols-outlined">history</span>
-                        <span class="history" id="history">history</span>
+                        <span class="subtitle history" id="history">history</span>
                     </li>
                     <li>
                         <span class="material-symbols-outlined">smart_display</span>
-                        <span class="yourVideos" id="yourVideos">Your Videos</span>
+                        <span class="subtitle yourVideos" id="yourVideos">Your Videos</span>
                     </li>
                     <li>
                         <span class="material-symbols-outlined">pace</span>
-                        <span class="watch" id="watch">Watch Later</span>
+                        <span class="subtitle watch" id="watch">Watch Later</span>
                     </li>
                     <li>
                         <span class="material-symbols-outlined">thumb_up</span>
-                        <span class="likeVideo" id="likeVideo">Liked Videos</span>
+                        <span class="subtitle likeVideo" id="likeVideo">Liked Videos</span>
                     </li>
                     <li>
                         <span class="material-symbols-outlined">stat_minus_1</span>
-                        <span class="showMore" id="showMore">Show More</span>
+                        <span class="subtitle showMore" id="showMore">Show More</span>
                     </li>
                 </ul>
                 <hr class="border">
@@ -94,35 +171,35 @@
                 <ul class="sibeBarContent">
                     <li>
                         <img src="imgHome/Profile.svg" alt="">
-                        <span class="channelName" id="channelName">James Gouse</span>
+                        <span class="subtitle channelName" id="channelName">James Gouse</span>
                     </li>
                     <li>
                         <img src="imgHome/Profile.svg" alt="">
-                        <span class="channelName" id="channelName">James Gouse</span>
+                        <span class="subtitle channelName" id="channelName">James Gouse</span>
                     </li>
                     <li>
                         <img src="imgHome/Profile.svg" alt="">
-                        <span class="channelName" id="channelName">James Gouse</span>
+                        <span class="subtitle channelName" id="channelName">James Gouse</span>
                     </li>
                     <li>
                         <img src="imgHome/Profile.svg" alt="">
-                        <span class="channelName" id="channelName">James Gouse</span>
+                        <span class="subtitle channelName" id="channelName">James Gouse</span>
                     </li>
                     <li>
                         <img src="imgHome/Profile.svg" alt="">
-                        <span class="channelName" id="channelName">James Gouse</span>
+                        <span class="subtitle channelName" id="channelName">James Gouse</span>
                     </li>
                     <li>
                         <img src="imgHome/Profile.svg" alt="">
-                        <span class="channelName" id="channelName">James Gouse</span>
+                        <span class="subtitle channelName" id="channelName">James Gouse</span>
                     </li>
                     <li>
                         <img src="imgHome/Profile.svg" alt="">
-                        <span class="channelName" id="channelName">James Gouse</span>
+                        <span class="subtitle channelName" id="channelName">James Gouse</span>
                     </li>
                     <li>
                         <span class="material-symbols-outlined">stat_minus_1</span>
-                        <span class="showMoreSub" id="showMoreSub">Show 13 More</span>
+                        <span class="subtitle showMoreSub" id="showMoreSub">Show 13 More</span>
                     </li>
                 </ul>
                 <hr class="border">
@@ -133,15 +210,39 @@
                 <ul class="sibeBarContent">
                     <li>
                         <img src="imgHome/premium.svg" alt="">
-                        <span class="premium" id="premium">Youtube Premium</span>
+                        <span class="subtitle premium" id="premium">Youtube Premium</span>
                     </li>
                     <li>
                         <img src="imgHome/gaming.svg" alt="">
-                        <span class="gaming" id="gaming">Gaming</span>
+                        <span class="subtitle gaming" id="gaming">Gaming</span>
                     </li>
                     <li>
                         <img src="imgHome/live.svg" alt="">
-                        <span class="live" id="live">Live</span>
+                        <span class="subtitle live" id="live">Live</span>
+                    </li>
+                    <li>
+                        <img src="imgHome/premium.svg" alt="">
+                        <span class="subtitle sports" id="sports">Sports</span>
+                    </li>
+                </ul>
+                <!-- sidebar bottom(settins 부분) -->
+                <hr class="border">
+                <ul class="sibeBarContent">
+                    <li>
+                        <img src="imgHome/setting.svg" alt="">
+                        <span class="subtitle settings" id="settings">Settings</span>
+                    </li>
+                    <li>
+                        <img src="imgHome/history.svg" alt="">
+                        <span class="subtitle report history" id="report history">Report history</span>
+                    </li>
+                    <li>
+                        <img src="imgHome/help.svg" alt="">
+                        <span class="subtitle help" id="help">Help</span>
+                    </li>
+                    <li>
+                        <img src="imgHome/feedback.svg" alt="">
+                        <span class="subtitle send feedback" id="send feedback">Send feedback</span>
                     </li>
                 </ul>
             </div>
@@ -149,7 +250,174 @@
     </div>
     <!--main(video list part)-->
     <section>
+        <div class="thumbnailRow" id="thumbnailRow">
+            <div class="thumbnailRowItem" id="thumbnailRowItem">
+                <div class="thumbnailImages" id="thumbnailImages">
+                    <img class="image1" src="imgHome/thumbnail.svg">
+                    <div class="videotime">23:45</div>
+                </div>
+            </div>
 
+            <div class="thumbnailinfo" id="thumbnailinfo">
+                <div class="channelpic" id="channelpic">
+                    <img class="channelPic" src="imgHome/channelPic.svg">
+                </div>
+            </div>
+            
+            <div class="thumbnailDesc" id="thumbnailDesc">
+                <div class="videoTitle">Lorem ipsum dolor sit amet, consecte <br/>adipiscing elit.</div>
+                <div class="thumbnailDescInfo">
+                    <div class="channelName">James Gouse</div>
+                    <div class="viewTime">15K Views .1 week ago</div>
+                </div>
+            </div>
+
+            <div class="thumbnailRowItem" id="thumbnailRowItem">
+                <div class="thumbnailImages" id="thumbnailImages">
+                    <img class="image1" src="imgHome/thumbnail.svg">
+                    <div class="videotime">23:45</div>
+                </div>
+            </div>
+
+            <div class="thumbnailinfo" id="thumbnailinfo">
+                <div class="channelpic" id="channelpic">
+                    <img class="channelPic" src="imgHome/channelPic.svg">
+                </div>
+            </div>
+
+            <div class="thumbnailDesc" id="thumbnailDesc">
+                <div class="videoTitle">Lorem ipsum dolor sit amet, consecte <br/>adipiscing elit.</div>
+                <div class="thumbnailDescInfo">
+                    <div class="channelName">James Gouse</div>
+                    <div class="viewTime">15K Views .1 week ago</div>
+                </div>
+            </div>            
+            
+            <div class="thumbnailRowItem" id="thumbnailRowItem">
+                <div class="thumbnailImages" id="thumbnailImages">
+                    <img class="image1" src="imgHome/thumbnail.svg">
+                    <div class="videotime">23:45</div>
+                </div>
+            </div>
+
+            <div class="thumbnailinfo" id="thumbnailinfo">
+                <div class="channelpic" id="channelpic">
+                    <img class="channelPic" src="imgHome/channelPic.svg">
+                </div>
+            </div>
+
+            <div class="thumbnailDesc" id="thumbnailDesc">
+                <div class="videoTitle">Lorem ipsum dolor sit amet, consecte <br/>adipiscing elit.</div>
+                <div class="thumbnailDescInfo">
+                    <div class="channelName">James Gouse</div>
+                    <div class="viewTime">15K Views .1 week ago</div>
+                </div>
+            </div>
+
+            <div class="thumbnailRowItem" id="thumbnailRowItem">
+                <div class="thumbnailImages" id="thumbnailImages">
+                    <img class="image1" src="imgHome/thumbnail.svg">
+                    <div class="videotime">23:45</div>
+                </div>
+            </div>
+
+            <div class="thumbnailinfo" id="thumbnailinfo">
+                <div class="channelpic" id="channelpic">
+                    <img class="channelPic" src="imgHome/channelPic.svg">
+                </div>
+            </div>
+
+            <div class="thumbnailDesc" id="thumbnailDesc">
+                <div class="videoTitle">Lorem ipsum dolor sit amet, consecte <br/>adipiscing elit.</div>
+                <div class="thumbnailDescInfo">
+                    <div class="channelName">James Gouse</div>
+                    <div class="viewTime">15K Views .1 week ago</div>
+                </div>
+            </div>
+
+            <div class="thumbnailRowItem" id="thumbnailRowItem">
+                <div class="thumbnailImages" id="thumbnailImages">
+                    <img class="image1" src="imgHome/thumbnail.svg">
+                    <div class="videotime">23:45</div>
+                </div>
+            </div>
+
+            <div class="thumbnailinfo" id="thumbnailinfo">
+                <div class="channelpic" id="channelpic">
+                    <img class="channelPic" src="imgHome/channelPic.svg">
+                </div>
+            </div>
+
+            <div class="thumbnailDesc" id="thumbnailDesc">
+                <div class="videoTitle">Lorem ipsum dolor sit amet, consecte <br/>adipiscing elit.</div>
+                <div class="thumbnailDescInfo">
+                    <div class="channelName">James Gouse</div>
+                    <div class="viewTime">15K Views .1 week ago</div>
+                </div>
+            </div>
+            
+            <div class="thumbnailRowItem" id="thumbnailRowItem">
+                <div class="thumbnailImages" id="thumbnailImages">
+                    <img class="image1" src="imgHome/thumbnail.svg">
+                    <div class="videotime">23:45</div>
+                </div>
+            </div>
+
+            <div class="thumbnailinfo" id="thumbnailinfo">
+                <div class="channelpic" id="channelpic">
+                    <img class="channelPic" src="imgHome/channelPic.svg">
+                </div>
+            </div>
+
+            <div class="thumbnailDesc" id="thumbnailDesc">
+                <div class="videoTitle">Lorem ipsum dolor sit amet, consecte <br/>adipiscing elit.</div>
+                <div class="thumbnailDescInfo">
+                    <div class="channelName">James Gouse</div>
+                    <div class="viewTime">15K Views .1 week ago</div>
+                </div>
+            </div>
+
+            <div class="thumbnailRowItem" id="thumbnailRowItem">
+                <div class="thumbnailImages" id="thumbnailImages">
+                    <img class="image1" src="imgHome/thumbnail.svg">
+                    <div class="videotime">23:45</div>
+                </div>
+            </div>
+
+            <div class="thumbnailinfo" id="thumbnailinfo">
+                <div class="channelpic" id="channelpic">
+                    <img class="channelPic" src="imgHome/channelPic.svg">
+                </div>
+            </div>
+
+            <div class="thumbnailDesc" id="thumbnailDesc">
+                <div class="videoTitle">Lorem ipsum dolor sit amet, consecte <br/>adipiscing elit.</div>
+                <div class="thumbnailDescInfo">
+                    <div class="channelName">James Gouse</div>
+                    <div class="viewTime">15K Views .1 week ago</div>
+                </div>
+            </div>
+
+            <div class="thumbnailRowItem" id="thumbnailRowItem">
+                <div class="thumbnailImages" id="thumbnailImages">
+                    <img class="image1" src="imgHome/thumbnail.svg">
+                    <div class="videotime">23:45</div>
+                </div>
+            </div>
+
+            <div class="thumbnailinfo" id="thumbnailinfo">
+                <div class="channelpic" id="channelpic">
+                    <img class="channelPic" src="imgHome/channelPic.svg">
+                </div>
+            </div>
+
+            <div class="thumbnailDesc" id="thumbnailDesc">
+                <div class="videoTitle">Lorem ipsum dolor sit amet, consecte <br/>adipiscing elit.</div>
+                <div class="thumbnailDescInfo">
+                    <div class="channelName">James Gouse</div>
+                    <div class="viewTime">15K Views .1 week ago</div>
+                </div>
+            </div>
     </section>
 </body>
 </html>
