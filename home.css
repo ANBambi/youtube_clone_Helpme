@@ -34,7 +34,6 @@ body {
     font-family: 'Roboto', sans-serif;
 }
 
-<<<<<<< HEAD
 /* border
     line for dividing part */
 .border {
@@ -45,47 +44,12 @@ body {
     margin-bottom: 10px;
 }
 
-=======
->>>>>>> 734ece5 (modify css file name)
 /*header div*/
 .wrap{
     background-color: #212121;
 }
 
-<<<<<<< HEAD
 /* header */
-=======
-/*search*/
-.searchBox{
-    display: flex;
-    border: 1px solid #ddd;
-    height: 4px;
-}
-
-.searchInput{
-    width: 400px;
-    padding: 7px;
-    border: 0;
-    height: 100%;
-    border-radius: 2px 0 0 2px;
-}
-
-.searchBtn{
-    height: 100%;
-    width: 60px;
-    border: none;
-}
-
-.mic{
-    margin-top: 10px;
-}
-
-.profile{
-    align-items: center;
-}
-
-/* 헤더 */
->>>>>>> 734ece5 (modify css file name)
 .navigation {
     display: flex;
     justify-content: space-between;
@@ -96,7 +60,6 @@ body {
     padding: 15px;
 }
 
-<<<<<<< HEAD
 /* header left
     topLeft for grouping left content(hamburger and logo) */
 .leftContent{
@@ -260,23 +223,6 @@ body {
     top: 0px;
     bottom: 1148px;
 } */
-=======
-/* 메인 전체 (사이드바, 컨텐츠 */
-main {
-    height: calc(100vh - 70px);
-    display: flex;
-    background-color: #f9f9f9;
-}
-
-/* Sidebar */ 
-nav {
-    height: 100%;
-    width: 17%;
-    color: var(--white-color);
-    background: #212121;
-    overflow-y: hidden;
-} 
->>>>>>> 734ece5 (modify css file name)
 
 
 /* 반응형 */
@@ -286,42 +232,6 @@ nav {
     }
 }
 
-<<<<<<< HEAD
 
 
-=======
-/* .left {
-    display: flex;
-    align-items: center;
-}
-   
-.left #menu {
-    padding: 0 7px;
-    cursor: pointer;
-} */
-
-/* 햄버거 */
-.topLeft{
-    color: var(--white-color);
-}
-
-.searchBox{
-    display: flex;
-    width: 470px;
-    height: 40px;
-    justify-content: center;
-    align-items: flex-start;
-    gap: 4px;
-    flex-shrink: 0;
-}
-
-.profile {
-    display: flex;
-    width: 204px;
-    height: 40px;
-    justify-content: center;
-    align-items: flex-end;
-    gap: 8px;
-}
->>>>>>> 734ece5 (modify css file name)
 
