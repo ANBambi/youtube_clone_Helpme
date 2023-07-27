@@ -6,10 +6,13 @@
    <!-- Google Fonts link-->
    <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined" rel="stylesheet" />
    <title>Video</title>
+ JS1
+
    <link rel="stylesheet" href="video.css">
    <script src="video.js" defer></script>
    <!-- 아이콘 svg 연결-->
    
+ main
 </head>
 <body>
    <!--header(search)-->
@@ -18,6 +21,16 @@
          <!--section(Video Player)-->
          <div class="wrapVideo">
             <!--video player-->
+ JS1
+            <section style="display: flex;">
+
+               <div id="videoInfo"></div>
+               <aside>
+                   <div id="videolist"></div>
+               </aside>
+           </section>
+
+ main
             <section class="videoPlayer" id="VideoPlayer">
                <div class="videoContainer">
                   [video player]
@@ -31,6 +44,15 @@
                      <span class="views" id="views"> [views]</span>
                      <span class="uploadDate" id="uploadDate"></span>
                      <ul>
+ JS1
+                        <li>
+                           <span class="material-symbols-outlined">thumb_up</span>
+                           <span class="likesCount" id="likesCount">[좋아요수]</span>
+                        </li>
+                        <li>
+                           <span class="material-symbols-outlined">thumb_down</span>
+                           <span class="dislikeCount" id="dislikeCount">[싫어요수]</span>
+
                         <li><!-- 35번 라인 부터  38번 까지 수정했습니다. 여기만 건드려 보고 계속 진행하겠습니다. -->
                            <button class="material-symbols-outlined thumb_up">thumb_up</button>
                            <span class="likesCount" id="likeCount">0</span>
@@ -41,6 +63,7 @@
                         <li>
                            <span class="material-symbols-outlined">thumb_down</span>
                            <span class="dislikeCount" id="dislikeCount">[싫어요 수]</span>
+main
                         </li>
                         <li>
                            <img src="videoImg/Group.svg" alt="">
@@ -163,4 +186,18 @@
       </aside>
    </div>
 </body>
+JS1
+<script src="./getvideo.js"></script>
+<script src="./communication.js"></script>
+<script>
+document.addEventListener('DOMContentLoaded', () => {
+    let url = window.location.search;
+    let res = url.match(/id=(\d+)/);
+    let id = res? res[1]:1;
+    displayVideo(id).catch(error => {
+        console.error('error', error);
+    });
+});    
+</script>
+ main
 </html>
