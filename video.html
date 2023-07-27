@@ -31,19 +31,15 @@
                      <span class="views" id="views"> [views]</span>
                      <span class="uploadDate" id="uploadDate"></span>
                      <ul>
-                        <li><!-- 35번 라인 부터  38번 까지 수정했습니다. 여기만 건드려 보고 계속 진행하겠습니다. -->
-                           <button class="material-symbols-outlined thumb_up">thumb_up</button>
-                           <span class="likesCount" id="likeCount">0</span>
-                           
-                           <button class="material-symbols-outlined thumb_down">thumb_down</span>
-                           <span class="dislikeCount" id="dislikeCount">0</span>
-                        </li><!--Test 진행 한 부분-->
                         <li>
-                           <span class="material-symbols-outlined">thumb_down</span>
-                           <span class="dislikeCount" id="dislikeCount">[싫어요 수]</span>
+                           <button class="material-symbols-outlined videoLike">thumb_up</button>
+                           <span class="videoLikesCount" id="videoLikesCount">0</span>
+
+                           <button class="material-symbols-outlined videoDislike">thumb_down</button>
+                           <span class="videoDislikeCount" id="videoDislikeCount">0</span>
                         </li>
                         <li>
-                           <img src="videoImg/Group.svg" alt="">
+                           <img src="videoImg/share.svg" alt="">
                            <span class="share" id="share">SHARE</span>
                         </li>
                         <li>
@@ -70,15 +66,14 @@
                      <p class="subscribers" id="subscribers">[subscribers number] subscribers</p>
                   </div>
                   <div class="subscribeBtn">
-                     <button class="subscribe" id="subscribe">
-                        <img src="videoImg/Subscribes-Btn.svg" alt="">
-                     </button>
+                     <button class="subscribe" id="subscribe">SUBSCRIBES</button>
                   </div>
                </div>
                <div class="videoExplain" id="videoExplain">
                   <p class="videoText" id="videoText">
                      [video explanation]
                   </p>
+                  <a href="#" class="showMore" id="showMore">SHOW MORE</a>
                </div>
             </section>
             <hr class="border">
@@ -116,12 +111,11 @@
                         <div class="commentLike">
                            <ul>
                               <li>
-                                 <span class="material-symbols-outlined">thumb_up</span>
-                                 <span class="likesCount" id="likesCount">[좋아요수]</span>
-                              </li>
-                              <li>
-                                 <span class="material-symbols-outlined">thumb_down</span>
-                                 <span class="dislikeCount" id="dislikeCount">[싫어요수]</span>
+                                 <button class="material-symbols-outlined commentLike">thumb_up</button>
+                                 <span class="commentlikesCount" id="commentlikesCount">0</span>
+                              
+                                 <button class="material-symbols-outlined commentDislike">thumb_down</button>
+                                 <span class="commentDislikeCount" id="commentDislikeCount">0</span>
                               </li>
                               <li>
                                  <span class="reply" id="reply">REPLY</span>
