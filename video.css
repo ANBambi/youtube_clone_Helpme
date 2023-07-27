@@ -1,3 +1,4 @@
+ CSS_2
 @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;700&display=swap');
 :root {
     /* color */
@@ -92,10 +93,22 @@ body{
 .videoInfo img,
 .material-symbols-outlined{
    margin-right: 9px;
+
+* {
+    list-style-type: none;
+}
+
+
+.material-symbols-outlined {
+
+    border: none;
+    background-color: white
+ main
 }
 
 
 
+ CSS_2
 /* aside */
 .secondary{
    margin-top: 24px;
@@ -162,3 +175,27 @@ body{
 }
 
 
+
+
+.material-symbols-outlined.thumb_up {
+    /* 여기에 버튼의 기본 스타일을 설정해주세요 */
+    color: black; /* 예시로 기본 색상을 검정으로 설정했습니다. */
+}
+
+.material-symbols-outlined.thumb_down {
+    /* 여기에 버튼의 기본 스타일을 설정해주세요 */
+    color: black; /* 예시로 기본 색상을 검정으로 설정했습니다. */
+}
+
+
+  /* 버튼이 눌렸을 때 스타일 */
+  .material-symbols-outlined.thumb_up.active {
+    color: gray; /* 버튼이 눌린 상태일 때 색상을 회색으로 변경합니다. */
+}
+  
+
+    /* 버튼이 눌렸을 때 스타일 */
+.material-symbols-outlined.thumb_down.active {
+        color: gray; /* 버튼이 눌린 상태일 때 색상을 회색으로 변경합니다. */
+}
+ main
