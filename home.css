@@ -29,8 +29,8 @@
   box-sizing: border-box;
 }
 
-li{
-  list-style: none;}
+/* li{
+  list-style: none;} */
 
 /* font */
 body {
@@ -123,22 +123,7 @@ body {
 
 .create,
 .apps,
-.notifications,
-.profile{
-    flex:content;
-    /* border: none; */
-    /* border-radius: var(--yt-img-border-radius,none); */
-    border-radius: 40px;
-
-    /* display: block; */
-    /* margin-left: var(--yt-img-margin-left,auto);
-    margin-right: var(--yt-img-margin-right,auto);
-    max-height: var(--yt-img-max-height,none);
-    max-width: var(--yt-img-max-width,100%);
-    
-    position: relative;
-    /* flex-direction: row; */
-
+.notifications{
     padding: 8px;
 }
 /* Topmenu */
@@ -147,9 +132,9 @@ body {
     height: 56px;
     background: #212121;
     flex: none;
-    /* order: 1;
+    order: 1;
     align-self: stretch;
-    flex-grow: 0; */
+    flex-grow: 0;
 }
 
 .allBtn,
@@ -160,24 +145,8 @@ body {
     background-color: #303030;
     border: 1px solid #AAAAAA;
     border-radius: 32px;
-
-    outline: none;
-    overflow: hidden;
-    cursor: pointer;
-    /* -webkit-user-select: none; */
-    /* -moz-user-select: none;
-    -ms-user-select: none; */
-    /* user-select: none; */
-    position: relative;
-    /* line-height: 2rem; */
-    /* font-weight: 400; */
-    /* display: flex; */
-    flex-direction: row;
-    /* align-items: center; */
-    /* display: inline-flex; */
-    
-
 }
+
 /* btn mouse hover */
 .topMenu button:hover{
     color: #303030;
