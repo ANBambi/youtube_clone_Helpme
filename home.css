@@ -236,6 +236,69 @@ hamburger와 사이드바 이미지 왼쪽여백 길이 맞추기
     height: 40px;
 }
 
+/* top menu */
+
+.topMenu{
+    width: 1349px;
+    height: 40px;
+    /* position: relative; */
+    background-color:#212121;
+    /* padding-top: 12px;
+    padding-bottom: 12px;
+    padding-right: 12px; left: 76px; top: 0px;  */
+    /* position: absolute;  */
+    justify-content: center; 
+    align-items: center; 
+    gap: 10px; 
+    display: inline-flex
+}
+
+
+.allBtn,
+.topMenuBtn{
+    margin: auto, 0;
+    margin-bottom: 8px;
+    padding: 8px 12px;
+    color: #fff;
+    background-color: #303030;
+    border: 1px solid #AAAAAA;
+    border-radius: 32px;
+}
+
+/* btn mouse hover */
+.topMenu button:hover{
+    color: #303030;
+    background-color: #fff;
+ }
+
+
+/* main(video list part) */
+/* 7/27하고 있는데 잘 안되서 다시 만져야할것같아요_다운ㅠㅠ */
+
+/* .thumbnail { */
+    /* height: calc(100vh - 70px);
+    display: flex;
+    background-color: #f9f9f9; */
+    /* display: flex;
+    width: 1143px;
+    height: 252px;
+    position: absolute; */
+    /* flex-direction: column; */
+    /* /* align-items: flex-start; */
+    /* background-color: #212121; */
+    /* color: #FFFFFF; */
+
+
+/* .ThumnailRow{
+    position: absolute;
+    
+    left: 0px;
+    right: 0px;
+    top: 0px;
+    bottom: 1148px;
+} */
+
+
 /* 반응형 */
 @media (max-width: 900px) {
     .search input {
