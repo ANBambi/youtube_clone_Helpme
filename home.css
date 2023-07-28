@@ -1,42 +1,3 @@
- CSS_2
-
-/* CSS 제일 첫 번째 선언  
-아래 *표시는 전체 선택자(모든요소)에 영향
-*/
-* {
-    box-sizing: border-box; /* content box 보다 border box로 시작*/
-    color: white;
-}
-/*  구간 선 border */
-.border {
-    width: 224px;
-    height: 1px;
-    color : #303030
-}
-
-
-/* hamburger */
-.topLeft {
-    
-    display: flex;
-    padding: 24px;
-    align-items: flex-start;
-    gap: 10px;
-}
-
-
-/* Navigations -- header */
-.wrap {
-    width: 1440px;
-    height: 56px;
-    flex-shrink: 0;
-    background-color: #212121;
-}
-
-
-
-/* side bar */
-
 @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;700&display=swap');
 
 :root {
@@ -67,6 +28,9 @@
   padding: 0;
   box-sizing: border-box;
 }
+
+li{
+  list-style: none;}
 
 /* font */
 body {
@@ -156,52 +120,75 @@ body {
 .rightContent{
     margin: 8px 8px 8px 0px;
 }
+
 .create,
 .apps,
-.notifications{
+.notifications,
+.profile{
+    flex:content;
+    /* border: none; */
+    /* border-radius: var(--yt-img-border-radius,none); */
+    border-radius: 40px;
+
+    /* display: block; */
+    /* margin-left: var(--yt-img-margin-left,auto);
+    margin-right: var(--yt-img-margin-right,auto);
+    max-height: var(--yt-img-max-height,none);
+    max-width: var(--yt-img-max-width,100%);
+    
+    position: relative;
+    /* flex-direction: row; */
+
     padding: 8px;
+}
+/* Topmenu */
+.topMenu{
+    width: 1200px;
+    height: 56px;
+    background: #212121;
+    flex: none;
+    /* order: 1;
+    align-self: stretch;
+    flex-grow: 0; */
+}
+
+.allBtn,
+.topMenuBtn{
+    margin-bottom: 8px;
+    padding: 8px 12px;
+    color: #fff;
+    background-color: #303030;
+    border: 1px solid #AAAAAA;
+    border-radius: 32px;
+
+    outline: none;
+    overflow: hidden;
+    cursor: pointer;
+    /* -webkit-user-select: none; */
+    /* -moz-user-select: none;
+    -ms-user-select: none; */
+    /* user-select: none; */
+    position: relative;
+    /* line-height: 2rem; */
+    /* font-weight: 400; */
+    /* display: flex; */
+    flex-direction: row;
+    /* align-items: center; */
+    /* display: inline-flex; */
+    
+
+}
+/* btn mouse hover */
+.topMenu button:hover{
+    color: #303030;
+    background-color: #fff;
 }
 
 /* Sidebar */ 
-main
 .wrapNav {
     display: flex;
-    width: 240px;
+    width: 224px;
     height: 1395px;
- CSS_2
-    padding: 0px 16px 42px 0px;
-    flex-direction: column;
-    align-items: flex-start;
-    background-color: #212121;
-    
-}
-
-/* ----------------------  list 수정 -------------------------- */
-ul {
-    line-height: 2;
-    list-style-type: none;              /* 리스트 점 삭제 */
-}
-
-.material-symbols-outlined,
-.yourVideos {
-  display: inline-block;
-  margin-right: 20px;                   /* 요소 사이의 간격 설정 */
-  
-}
-
-/* ----------------------  todolist ------------------
-
-
-searchbox, mic, 배열 맞추기
-youtube 이미지 추가하기 
-이미지와 channelName 배열 맞추기 
-(사이드바 이미지와 name 위치가 삐뚤..
-
-hamburger와 사이드바 이미지 왼쪽여백 길이 맞추기
-
-
-*/
-
     flex-direction: column;
     align-items: flex-start;
     background-color: #212121;
@@ -210,12 +197,14 @@ hamburger와 사이드바 이미지 왼쪽여백 길이 맞추기
 }
 
 /* icon gap control  */
-.sideBar li{
+.sideBar li:hover{
+    background-color: #696666;
     display: flex;
     align-items: center;
     width: 224px;
     height: 40px;
-    margin: 8px 0px 8px 24px;
+    padding: 8px 0px 8px 24px;
+    justify-content: flex-start;
 }
 
 /*side bar title*/
@@ -236,77 +225,9 @@ hamburger와 사이드바 이미지 왼쪽여백 길이 맞추기
     height: 40px;
 }
 
-/* top menu */
-
-.topMenu{
-    width: 1349px;
-    height: 40px;
-    /* position: relative; */
-    background-color:#212121;
-    /* padding-top: 12px;
-    padding-bottom: 12px;
-    padding-right: 12px; left: 76px; top: 0px;  */
-    /* position: absolute;  */
-    justify-content: center; 
-    align-items: center; 
-    gap: 10px; 
-    display: inline-flex
-}
-
-
-.allBtn,
-.topMenuBtn{
-    margin: auto, 0;
-    margin-bottom: 8px;
-    padding: 8px 12px;
-    color: #fff;
-    background-color: #303030;
-    border: 1px solid #AAAAAA;
-    border-radius: 32px;
-}
-
-/* btn mouse hover */
-.topMenu button:hover{
-    color: #303030;
-    background-color: #fff;
- }
-
-
-/* main(video list part) */
-/* 7/27하고 있는데 잘 안되서 다시 만져야할것같아요_다운ㅠㅠ */
-
-/* .thumbnail { */
-    /* height: calc(100vh - 70px);
-    display: flex;
-    background-color: #f9f9f9; */
-    /* display: flex;
-    width: 1143px;
-    height: 252px;
-    position: absolute; */
-    /* flex-direction: column; */
-    /* /* align-items: flex-start; */
-    /* background-color: #212121; */
-    /* color: #FFFFFF; */
-
-
-/* .ThumnailRow{
-    position: absolute;
-    
-    left: 0px;
-    right: 0px;
-    top: 0px;
-    bottom: 1148px;
-} */
-
-
 /* 반응형 */
 @media (max-width: 900px) {
     .search input {
       width: 25rem;
     }
 }
-
-
-
- main
-
