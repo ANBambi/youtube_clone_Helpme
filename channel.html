@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+   <meta charset="UTF-8">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <link href="https://fonts.googleapis.com/icon?family=Material+Icons"
+      rel="stylesheet">
+   <title>Channel</title>
+</head>
+<body>
+   <div class="common">
+      <!--Header and Nav part -->
+   </div>
+
+   <!--channel information-->
+   <section class="channel">
+      <header class="channelBasicInfo">
+         <div class="channelCover">
+            <img src="imgChannel/channelCover.svg" alt="">
+         </div>
+         <div class="channelInfo">
+            <div class="channelTitle">
+               <!--channel cover-->
+               <div class="channelimg">
+                  <img src="videoImg/Pic.svg" alt="">
+               </div>
+               <!--channel owner info-->
+               <div class="channelInfo">
+                  <p class="channelName" id="channelName">Marcus Levin</p>
+                  <p class="subscribers" id="subscribers">[subscribers number] subscribers</p>
+               </div>
+               <div class="subscribeBtn">
+                  <button class="subscribe" id="subscribe">subscribe</button>    
+               </div>
+            </div>
+      </header>
+   </section>
+   <!--Main-->
+   <section class="channelMain">
+      <!--header Navigation-->
+      <header class="channelNav">
+         <div>
+            <ul class="navContainer">
+               <li class="navContainer-item" > HOME</li>
+               <li class="navContainer-item" >VIDEOS</li>
+               <li class="navContainer-item" >PLAYLISTS</li>
+               <li class="navContainer-item" >COMMUNITY</li>
+               <li class="navContainer-item" >CHANNELS</li>
+               <li class="navContainer-item" >ABOUT</li>
+               <li class="navContainer-item" >
+                  <span class="navContainer-item">search</span>
+               </li>
+               <li>
+                  <span class="material-symbols-outlined">arrow_forward_ios</span>
+               </li>
+            </ul>
+         </div>
+         </div>
+      </header>
+      <!-- video part-->
+      <article class="channelVideo">
+
+      </article>
+   </section>
+</body>
+ JS1
+<script src="./getvideo.js"></script>
+<script src="./communication.js"></script>
+<script>
+document.addEventListener('DOMContentLoaded', () => {
+    displayChannel().catch(error => {
+        console.error('error', error);
+    });
+});    
+</script>
+=======
+ main
+</html>
