@@ -20,6 +20,7 @@
     --font-medium: 14px;
     --font-small: 12px;
     --font-micro: 10px;
+    
  }
 
 /* reset */
@@ -42,10 +43,14 @@ body {
     color : #303030;
     margin-top: 10px;
     margin-bottom: 10px;
+    border-bottom: 1px solid #303030; 
 }
 
 /*header div*/
 .wrapHeader{
+    position: sticky;       /*스티키 헤더 추가하기*/
+    top: 0;
+    z-index: 100;
     background-color: #212121;
 }
 
@@ -134,7 +139,7 @@ body {
     align-items: flex-start;
     background-color: #212121;
     color: #FFFFFF;
-    white-space: nowrap; /*prevent auto enter*/
+    white-space: nowrap; /*prevent auto  enter*/
 }
 
 /* icon gap control  */
@@ -159,8 +164,10 @@ body {
 
 /*side bar title*/
 .sideBarTitle{
-    margin: 12px 68px 12px 24px;
-    font-weight: bold;
+    padding: 8px 24px;
+    font-size: 13px;
+    text-transform: uppercase;
+    color: #AAAAAA;
 }
 
 /* li title */
@@ -178,22 +185,23 @@ body {
     div for grouping main content */
 .mainContainer{
     display: flex;
-    background-color: #212121;
+    background-color: #000000;
 }
 
 /* Topmenu */
 .topMenu{
     /* height: 56px;      고민해보기 */
-    width : 100%;
-    order: 1;
-    align-items: center;
-    flex-grow: 0;
+    display: fixed;
+    width: 100%;
+    flex-direction: column;
+    align-items: flex-start;
 }
 
 /* buttonDiv
     div for grouping buttons */
 .buttonDiv{
     margin: 12px 0px 12px 24px;
+    background-color: #212121;
 }
 
 /* top menu btn */
@@ -214,12 +222,20 @@ body {
     background-color: #fff;
 }
 
+.ThumbnailRow {
+    display: flex;
+    flex-wrap: wrap;
+    margin: 0 auto;
+    max-width: 1200px; /* 영상이 최대 1200px 까지만 보이도록 설정합니다. */
+}
+
 /* main(video list part) */
 .ThumbnailRowThumbnailItem{
     float: left;
     justify-content:space-between;
     margin: 1px;
-    padding: 15px;
+    padding: 24px;
+    
 }
 
 .ThumbnailDesc{
