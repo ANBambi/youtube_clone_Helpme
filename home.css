@@ -139,7 +139,7 @@ body {
     align-items: flex-start;
     background-color: #212121;
     color: #FFFFFF;
-    white-space: nowrap; /*prevent auto enter*/
+    white-space: nowrap; /*prevent auto  enter*/
 }
 
 /* icon gap control  */
