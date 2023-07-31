@@ -37,6 +37,15 @@ body {
     font-family: 'Roboto', sans-serif;
 }
 
+/* header section*/
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 60px;
+    padding: 15px;
+  }
+
 /* border
     line for dividing part */
 .border {
@@ -46,6 +55,12 @@ body {
     margin-top: 10px;
     margin-bottom: 10px;
 }
+
+main {
+    height: calc(100vh - 70px);
+    display: flex;
+    background-color: #f9f9f9;
+  }
 
 /*header div*/
 .wrap{
@@ -68,9 +83,20 @@ body {
 .leftContent{
     margin-left: 16px;
 }
+
 .leftContent span{
     color: white;
     padding-right: 11px;
+}
+
+.left {
+    display: flex;
+    align-items: center;
+}
+   
+   .left #menu {
+    padding: 0 7px;
+    cursor: pointer;
 }
 
 /*search*/
@@ -136,6 +162,15 @@ ul {
     }
 
     /* Sidebar */ 
+
+/* Sidebar */ 
+.side-bar {
+    height: 100%;
+    width: 17%;
+    background-color: white;
+    overflow-y: hidden;
+  } 
+
 .wrapNav {
     display: flex;
     width: 224px;
@@ -176,9 +211,23 @@ ul {
     height: 40px;
 }
 
-/* 반응 */
 @media (max-width: 900px) {
     .search input {
-      width: 25rem;
-    }
+        width: 600px;
+        padding:10px;
+        border: 0;
+        height: 100%;
+        border-radius: 2px 0 0 2px
+      }
+      
+      input:focus {
+        outline: none;
+        border: 1px solid #ddd;
+      }
 }
+
+@media (max-width: 768px) {
+    .side-bar {
+      display: none;
+    }
+  }
