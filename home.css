@@ -1,8 +1,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;700&display=swap');
 
 :root { 
-    /* color */ 
-    
+    /* color */
     --white-color: #fff;
     --black-color: #140a00;
     --blue-color: #1359c7;
@@ -30,9 +29,6 @@
   box-sizing: border-box;
 }
 
-/* li{
-  list-style: none;} */
-
 /* font */
 body {
     font-family: 'Roboto', sans-serif;
@@ -49,7 +45,7 @@ body {
 }
 
 /*header div*/
-.wrap{
+.wrapHeader{
     background-color: #212121;
 }
 
@@ -91,7 +87,9 @@ body {
     border: 0;
     height: 100%;
     border-radius: 2px 0 0 2px;
+    padding: 10px;
 }
+
 
 .searchBtn{
     border: none; /*remove button style */
@@ -127,36 +125,9 @@ body {
 .notifications{
     padding: 8px;
 }
-/* Topmenu */
-.topMenu{
-    width: 1200px;
-    height: 56px;
-    background: #212121;
-    flex: none;
-    order: 1;
-    align-self: stretch;
-    flex-grow: 0;
-}
-
-.allBtn,
-.topMenuBtn{
-    margin-bottom: 8px;
-    padding: 8px 12px;
-    color: #fff;
-    background-color: #303030;
-    border: 1px solid #AAAAAA;
-    border-radius: 32px;
-}
-
-/* btn mouse hover */
-.topMenu button:hover{
-    color: #303030;
-    background-color: #fff;
-}
 
 /* Sidebar */ 
 .wrapNav {
-    display: flex;
     width: 224px;
     height: 1395px;
     flex-direction: column;
@@ -167,6 +138,15 @@ body {
 }
 
 /* icon gap control  */
+.sideBar li{
+    background-color: #212121;
+    display: flex;
+    align-items: center;
+    width: 224px;
+    height: 40px;
+    padding: 8px 0px 8px 24px;
+    justify-content: flex-start;
+}
 .sideBar li:hover{
     background-color: #696666;
     display: flex;
@@ -189,13 +169,71 @@ body {
     font-size: 14px;
     line-height: 40px;
 }
-
 .sideBarSubscriptions img{
     width: 40px;
     height: 40px;
 }
 
-/* 반응형 */
+/* main container
+    div for grouping main content */
+.mainContainer{
+    display: flex;
+    background-color: #212121;
+}
+
+/* Topmenu */
+.topMenu{
+    /* height: 56px;      고민해보기 */
+    width : 100%;
+    order: 1;
+    align-items: center;
+    flex-grow: 0;
+}
+
+/* buttonDiv
+    div for grouping buttons */
+.buttonDiv{
+    margin: 12px 0px 12px 24px;
+}
+
+/* top menu btn */
+.allBtn,
+.topMenuBtn{
+    margin-right: 12px;
+    margin-bottom: 8px;
+    padding: 8px 12px;
+    color: #fff;
+    background-color: #303030;
+    border: 1px solid #AAAAAA;
+    border-radius: 32px;
+}
+
+/* top btn mouse hover */
+.topMenu button:hover{
+    color: #303030;
+    background-color: #fff;
+}
+
+/* main(video list part) */
+.ThumbnailRowThumbnailItem{
+    float: left;
+    justify-content:space-between;
+    margin: 1px;
+    padding: 15px;
+}
+
+.ThumbnailDesc{
+    color: var(--grey-dark-color);
+    font-size: 14px;
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+    -webkit-line-clamp: 1;
+}
+
+.ThumbnailChannel{
+    float:left;
+}
+
 @media (max-width: 900px) {
     .search input {
       width: 25rem;
