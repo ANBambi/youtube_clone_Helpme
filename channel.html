@@ -3,8 +3,8 @@
 <head>
    <meta charset="UTF-8">
    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-   <link href="https://fonts.googleapis.com/icon?family=Material+Icons"
-      rel="stylesheet">
+   <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+   <link href="./imgHome/Logo_mini.svg" rel="shortcut icon" type="image/x-icon">
    <title>Channel</title>
 </head>
 <body>
@@ -57,22 +57,58 @@
          </div>
          </div>
       </header>
-      <!-- video part-->
+      <!-- video part // js 완성시 교체-->
       <article class="channelVideo">
-
+         <div class="playList" style="display: inline-block;">
+            <div class="videoCard"><img width="200" class="thumbnail"
+                    src="https://storage.googleapis.com/oreumi.appspot.com/img_1.jpg">
+                <div class="detail">
+                    <div class="infoText">
+                        <div class="title">title</div>
+                        <div class="channelName">oreumi</div>
+                        <div class="viewsAndUploaded">11111Views, 1month ago</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="playList" style="display: inline-block;">
+            <div class="videoCard"><img width="200" class="thumbnail"
+                    src="https://storage.googleapis.com/oreumi.appspot.com/img_2.jpg">
+                <div class="detail">
+                    <div class="infoText">
+                        <div class="title">title</div>
+                        <div class="channelName">oreumi</div>
+                        <div class="viewsAndUploaded">1111Views, 1month ago</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="playList" style="display: inline-block;">
+            <div class="videoCard"><img width="200" class="thumbnail"
+                    src="https://storage.googleapis.com/oreumi.appspot.com/img_3.jpg">
+                <div class="detail">
+                    <div class="infoText">
+                        <div class="title">title</div>
+                        <div class="channelName">oreumi</div>
+                        <div class="viewsAndUploaded">111Views, 1month ago</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="playList" style="display: inline-block;">
+            <div class="videoCard"><img width="200" class="thumbnail"
+                    src="https://storage.googleapis.com/oreumi.appspot.com/img_4.jpg">
+                <div class="detail">
+                    <div class="infoText">
+                        <div class="title">title</div>
+                        <div class="channelName">oreumi</div>
+                        <div class="viewsAndUploaded">11Views, 1month ago</div>
+                    </div>
+                </div>
+            </div>
+        </div>
       </article>
    </section>
 </body>
- JS1
-<script src="./getvideo.js"></script>
-<script src="./communication.js"></script>
-<script>
-document.addEventListener('DOMContentLoaded', () => {
-    displayChannel().catch(error => {
-        console.error('error', error);
-    });
-});    
-</script>
-=======
- main
+<script src="header.js"></script>
 </html>
