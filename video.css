@@ -1,6 +1,5 @@
 @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;700&display=swap');
-:root { 
-   
+:root {
     /* color */
     --white-color: #fff;
     --black-color: #140a00;
@@ -22,25 +21,11 @@
     --font-micro: 10px;
 }
 
-@font-face {
-   font-family: 'Material Icons';
-   font-style: normal;
-   font-weight: 400;
-   src: url(https://example.com/MaterialIcons-Regular.eot); /* For IE6-8 /
-   src: local('Material Icons'),
-     local('MaterialIcons-Regular'),
-     url(https://example.com/MaterialIcons-Regular.woff2) format('woff2'),
-     url(https://example.com/MaterialIcons-Regular.woff) format('woff'),
-     url(https://example.com/MaterialIcons-Regular.ttf) format('truetype');
- }
-
-/--------------------------------------------------------------------------------/
-
 .material-icons {
    font-family: 'Material Icons';
    font-weight: normal;
    font-style: normal;
-   font-size: 24px;  / Preferred icon size /
+   font-size: 24px; 
    display: inline-block;
    line-height: 1;
    text-transform: none;
@@ -48,26 +33,7 @@
    word-wrap: normal;
    white-space: nowrap;
    direction: ltr;
- 
-   / Support for all WebKit browsers. /
-   -webkit-font-smoothing: antialiased;
-   / Support for Safari and Chrome. /
-   text-rendering: optimizeLegibility;
- 
-   / Support for Firefox. /
-   -moz-osx-font-smoothing: grayscale;
- 
-   / Support for IE. /
-   font-feature-settings: 'liga';
  }
-
-.shareBtn,
-.videoShaveBtn,
-.moreHorizBtn {
-   background-color: #181818;
-   border: none;
-   color: #fff
-}
 
 body{
    background-color: #181818;
@@ -414,29 +380,4 @@ body{
    font-size: 12px;
    width: 200px;
    height: 18px;
-}
-
-
-.material-symbols-outlined.thumb_up {
-    /* 여기에 버튼의 기본 스타일을 설정해주세요 */
-    color: black; /* 예시로 기본 색상을 검정으로 설정했습니다. */
-}
-
-.material-symbols-outlined.thumb_down {
-    /* 여기에 버튼의 기본 스타일을 설정해주세요 */
-    color: black; /* 예시로 기본 색상을 검정으로 설정했습니다. */
-}
-
-
-  /* 버튼이 눌렸을 때 스타일 */
-  .material-symbols-outlined.thumb_up.active {
-    color: gray; /* 버튼이 눌린 상태일 때 색상을 회색으로 변경합니다. */
-}
-  
-
-    /* 버튼이 눌렸을 때 스타일 */
-.material-symbols-outlined.thumb_down.active {
-        color: gray; /* 버튼이 눌린 상태일 때 색상을 회색으로 변경합니다. */
-}
-
 }
