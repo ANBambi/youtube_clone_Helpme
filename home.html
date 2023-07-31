@@ -1,0 +1,694 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!--css import-->
+    <link rel="stylesheet" href="reset.css">
+    <link rel="stylesheet" href="./home.css"/>
+    <!-- Google Fonts link-->
+    <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined" rel="stylesheet" />
+    <title>HOME</title>
+
+    <!-- <script src="dawoon.js" defer></script> -->
+
+</head>
+<body>
+    <!--header container-->
+    <div class="wrap">
+        <!--Top Navigation-->
+        <header id="navigation" class="navigation">
+<!--header(search) left part(menu icon & logo)-->
+            <div id="topLeft" class="topLeft">
+                <div class="leftContent">
+                    <span class="material-symbols-outlined">menu</span>
+                    <img src="imgHome/Youtube-Logo.svg" alt="">
+                </div>
+            </div>
+
+            <!-- center part(search)-->
+            <div class="searchBox" id="searchBox">
+                <input type="text" name="searchInput" id="searchInput" class="searchInput">
+                <button class="searchBtn" id="searchBtn">
+                    <span class="material-symbols-outlined">search</span>
+                </button>
+
+                <button class="micButton" id="micButton">
+                  <img class="mic" id="mic" src="imgHome/mic.svg" alt="">
+                </button>
+
+             <!--right part(profile)-->
+            <div class="profile" id="profile">
+              <div class="rightContent" id="rightContent">
+                  <img class="create" id="create" src="imgHome/create.svg" alt="">
+                  <img class="apps" id="apps" src="imgHome/apps.svg" alt="">
+                  <img class="notifications" id="notifications" src="imgHome/notifications.svg" alt="">
+                  <img class="profile" id="profile" src="imgHome/Profile.svg" alt="">
+              </div>
+            </div>
+
+    <!-- top menu -->
+    <section class="topMenu" id = "topMenu">
+        <button class="allBtn" id="allBtn">All</button>
+        <button class="topMenuBtn">Item</button>
+        <button class="topMenuBtn">음악</button>
+        <button class="topMenuBtn">실시간</button>
+        <button class="topMenuBtn">뉴스</button>
+        <button class="topMenuBtn">게임</button>
+        <button class="topMenuBtn">야구</button>
+        <button class="topMenuBtn">요리</button>
+        <button class="topMenuBtn">만화 영화</button>
+        <button class="topMenuBtn">축구</button>
+        <button class="topMenuBtn">최근에 업로드된 동영상</button>
+      </section>
+     
+<!-- 수정ㅇㄴㅁㄹㅁㄹ-->
+    <!--nav container-->
+    <div class="wrapNav" id="wrapNav">
+      <!--sideBar-->
+      <nav class="sideBar" id="sideBar">
+          <!--sibebar Top-->
+          <div class="sideBarTop" id="sideBarTop">
+              <ul class="sibeBarContent">
+                  <li>
+                      <span class="material-symbols-outlined">home</span>
+                      <span class="subtitle home" id="home">Home</span>
+                  </li>
+                  <li>
+                      <span class="material-symbols-outlined">explore</span>
+                      <span class="subtitle explore" id="explore">Explore</span>
+                  </li>
+                  <li>
+                      <span class="material-symbols-outlined">subscriptions</span>
+                      <span class=" subtitle subscriptions" id="subscription">subscriptions</span>
+                  </li>
+              </ul>
+              <hr class="border">
+          </div>
+          <!--sibebar Top2-->
+          <div class="sibeBarTop2" id="sibeBarTop2">
+              <ul class="sibeBarContent">
+                  <li>
+                      <span class="material-symbols-outlined">video_library</span>
+                      <span class="subtitle library" id="library">library</span>
+                  </li>
+                  <li>
+                      <span class="material-symbols-outlined">history</span>
+                      <span class="subtitle history" id="history">history</span>
+                  </li>
+                  <li>
+                      <span class="material-symbols-outlined">smart_display</span>
+                      <span class="subtitle yourVideos" id="yourVideos">Your Videos</span>
+                  </li>
+                  <li>
+                      <span class="material-symbols-outlined">pace</span>
+                      <span class="subtitle watch" id="watch">Watch Later</span>
+                  </li>
+                  <li>
+                      <span class="material-symbols-outlined">thumb_up</span>
+                      <span class="subtitle likeVideo" id="likeVideo">Liked Videos</span>
+                  </li>
+                  <li>
+                      <span class="material-symbols-outlined">stat_minus_1</span>
+                      <span class="subtitle showMore" id="showMore">Show More</span>
+                  </li>
+              </ul>
+              <hr class="border">
+          </div>
+          <!--sibebar subscriptions-->
+          <div class="sideBarSubscriptions" id="sideBarSubscriptions">
+              <p class="sideBarTitle">SUBSCRIPTIONS</p>
+              <ul class="sibeBarContent">
+                  <li>
+                      <img src="imgHome/Profile.svg" alt="">
+                      <span class="subtitle channelName" id="channelName">James Gouse</span>
+                  </li>
+                  <li>
+                      <img src="imgHome/Profile.svg" alt="">
+                      <span class="subtitle channelName" id="channelName">James Gouse</span>
+                  </li>
+                  <li>
+                      <img src="imgHome/Profile.svg" alt="">
+                      <span class="subtitle channelName" id="channelName">James Gouse</span>
+                  </li>
+                  <li>
+                      <img src="imgHome/Profile.svg" alt="">
+                      <span class="subtitle channelName" id="channelName">James Gouse</span>
+                  </li>
+                  <li>
+                      <img src="imgHome/Profile.svg" alt="">
+                      <span class="subtitle channelName" id="channelName">James Gouse</span>
+                  </li>
+                  <li>
+                      <img src="imgHome/Profile.svg" alt="">
+                      <span class="subtitle channelName" id="channelName">James Gouse</span>
+                  </li>
+                  <li>
+                      <img src="imgHome/Profile.svg" alt="">
+                      <span class="subtitle channelName" id="channelName">James Gouse</span>
+                  </li>
+                  <li>
+                      <span class="material-symbols-outlined">stat_minus_1</span>
+                      <span class="subtitle showMoreSub" id="showMoreSub">Show 13 More</span>
+                  </li>
+              </ul>
+              <hr class="border">
+          </div>
+          <!--sidebar bottom-->
+          <div class="sideBarBottom" id="sideBarBottom">
+              <p class="sideBarTitle">MORE FROM YOUTUBE</p>
+              <ul class="sibeBarContent">
+                  <li>
+                      <img src="imgHome/premium.svg" alt="">
+                      <span class="subtitle premium" id="premium">Youtube Premium</span>
+                  </li>
+                  <li>
+                      <img src="imgHome/gaming.svg" alt="">
+                      <span class="subtitle gaming" id="gaming">Gaming</span>
+                  </li>
+                  <li>
+                      <img src="imgHome/live.svg" alt="">
+                      <span class="subtitle live" id="live">Live</span>
+                  </li>
+              </ul>
+                <!-- sidebar bottom(settins 부분) -->
+              <hr class="border">
+              <ul class="sideBarContent">
+                  <li>
+                      <img src="imgHome/setting.svg" alt="">
+                      <span class="subtitle settings" id="settings">Settings</span>
+                  </li>
+                  <li>
+                      <img src="imgHome/history.svg" alt="">
+                      <span class="subtitle report history" id="report history">Report history</span>
+                  </li>
+                  <li>
+                      <img src="imgHome/help.svg" alt="">
+                      <span class="subtitle help" id="help">Help</span>
+                  </li>
+                  <li>
+                      <img src="imgHome/feedback.svg" alt="">
+                      <span class="subtitle send feedback" id="send feedback">Send feedback</span>
+                  </li>
+              </ul>
+            </div>
+        </nav>
+    </div>
+    <!--main(video list part)-->
+    <section class="thumbnail" id="thumbnail" >
+        <div class="thumbnailImage" id="thumbnailImage">
+            <div class="ThumbnailRow">
+
+        <div class="thumbnailRowThumbnailItem">
+                <div class="thumbnailImages">
+                    <img class="image1" src="imgHome/thumbnail.svg">
+                  <div class="videoTime">
+                    <div class="videoTime">23:45</div>
+                  </div>
+                </div>
+        <div class="thumnail"> <!--오타수정함-->
+            <div class="thumbnailProfilePic">
+            <div class="userAvatar">
+                <img class="userAvatar" src="imgHome/Profile.svg">
+            </div>
+            </div>
+            <div class="ThumbnailDesc">
+            <div class="ThumbnailDescTitle">
+                <div class="LoremIpsumDolorSitAmetConsecteAdipiscingElit">Lorem ipsum dolor sit amet, consecte <br/>adipiscing elit.</div>
+            </div>
+            <div class="ThumbnailDescInfo">
+                <div class="channelName">James Gouse</div>
+                <div class="time">15K Views .1 week ago</div>
+            </div>
+            </div>
+        </div>
+        </div>
+              <div class="thumbnailRowThumbnailItem">
+                <div class="thumbnailImages">
+                    <img class="image1" src="imgHome/thumbnail.svg">
+                  <div class="videoTime">
+                    <div class="videoTime">23:45</div>
+                  </div>
+                </div>
+                <div class="thumnail">
+                  <div class="thumbnailProfilePic">
+                    <div class="userAvatar">
+                      <img class="userAvatar" src="imgHome/Profile.svg">
+                    </div>
+                  </div>
+                  <div class="ThumbnailDesc">
+                    <div class="ThumbnailDescTitle">
+                      <div class="LoremIpsumDolorSitAmetConsecteAdipiscingElit">Lorem ipsum dolor sit amet, consecte <br/>adipiscing elit.</div>
+                    </div>
+                    <div class="ThumbnailDescInfo">
+                      <div class="channelName">Alan Cooper</div>
+                      <div class="time">15K Views .1 week ago</div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="thumbnailRowThumbnailItem">
+                <div class="thumbnailImages">
+                    <img class="image1" src="imgHome/thumbnail.svg">
+                  <div class="videoTime">
+                    <div class="videoTime">23:45</div>
+                  </div>
+                </div>
+                <div class="thumnail">
+                  <div class="thumbnailProfilePic">
+                    <div class="userAvatar">
+                      <img class="userAvatar" src="imgHome/Profile.svg">
+                    </div>
+                  </div>
+                  <div class="ThumbnailDesc">
+                    <div class="ThumbnailDescTitle">
+                      <div class="LoremIpsumDolorSitAmetConsecteAdipiscingElit">Lorem ipsum dolor sit amet, consecte <br/>adipiscing elit.</div>
+                    </div>
+                    <div class="ThumbnailDescInfo">
+                      <div class="channelName">Marcus Levin</div>
+                      <div class="time">15K Views .1 week ago</div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="thumbnailRowThumbnailItem">
+                <div class="thumbnailImages">
+                    <img class="image1" src="imgHome/thumbnail.svg">
+                  <div class="videoTime">
+                    <div class="videoTime"">23:45</div>
+                  </div>
+                </div>
+                <div class="thumnail">
+                  <div class="thumbnailProfilePic">
+                    <div class="userAvatar">
+                      <img class="userAvatar" src="imgHome/Profile.svg">
+                    </div>
+                  </div>
+                  <div class="ThumbnailDesc">
+                    <div class="ThumbnailDescTitle">
+                      <div class="LoremIpsumDolorSitAmetConsecteAdipiscingElit">Lorem ipsum dolor sit amet, consecte <br/>adipiscing elit.</div>
+                    </div>
+                    <div class="ThumbnailDescInfo">
+                      <div class="channelName" >Alexis Sears</div>
+                      <div class="time">15K Views .1 week ago</div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="ThumbnailRow">
+              <div class="thumbnailRowThumbnailItem">
+                <div class="thumbnailImages">
+                    <img class="image1" src="imgHome/thumbnail.svg">
+                  <div class="videoTime">
+                    <div class="videoTime">23:45</div>
+                  </div>
+                </div>
+                <div class="thumnail">
+                  <div class="thumbnailProfilePic">
+                    <div class="userAvatar">
+                      <img class="userAvatar" src="imgHome/Profile.svg">
+                    </div>
+                  </div>
+                  <div class="ThumbnailDesc">
+                    <div class="ThumbnailDescTitle">
+                      <div class="LoremIpsumDolorSitAmetConsecteAdipiscingElit" >Lorem ipsum dolor sit amet, consecte <br/>adipiscing elit.</div>
+                    </div>
+                    <div class="ThumbnailDescInfo">
+                      <div class="channelName">James Gouse</div>
+                      <div class="time">15K Views .1 week ago</div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="thumbnailRowThumbnailItem">
+                <div class="thumbnailImages">
+                    <img class="image1" src="imgHome/thumbnail.svg">
+                  <div class="videoTime">
+                    <div class="videoTime">23:45</div>
+                  </div>
+                </div>
+                <div class="thumnail">
+                  <div class="thumbnailProfilePic">
+                    <div class="userAvatar">
+                      <img class="userAvatar" src="imgHome/Profile.svg">
+                    </div>
+                  </div>
+                  <div class="ThumbnailDesc">
+                    <div class="ThumbnailDescTitle">
+                      <div class="LoremIpsumDolorSitAmetConsecteAdipiscingElit">Lorem ipsum dolor sit amet, consecte <br/>adipiscing elit.</div>
+                    </div>
+                    <div class="ThumbnailDescInfo">
+                      <div class="channelName">James Gouse</div>
+                      <div class="time">15K Views .1 week ago</div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="thumbnailRowThumbnailItem">
+                <div class="thumbnailImages">
+                    <img class="image1" src="imgHome/thumbnail.svg">
+                  <div class="videoTime">
+                    <div class="videoTime">23:45</div>
+                  </div>
+                </div>
+                <div class="thumnail">
+                  <div class="thumbnailProfilePic">
+                    <div class="userAvatar">
+                      <img class="userAvatar" src="imgHome/Profile.svg">
+                    </div>
+                  </div>
+                  <div class="ThumbnailDesc">
+                    <div class="ThumbnailDescTitle">
+                      <div class="LoremIpsumDolorSitAmetConsecteAdipiscingElit" >Lorem ipsum dolor sit amet, consecte <br/>adipiscing elit.</div>
+                    </div>
+                    <div class="ThumbnailDescInfo">
+                      <div class="channelName">James Gouse</div>
+                      <div class="time">15K Views .1 week ago</div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="thumbnailRowThumbnailItem">
+                <div class="thumbnailImages">
+                    <img class="image1" src="imgHome/thumbnail.svg">
+                  <div class="videoTime">
+                    <div class="videoTime">23:45</div>
+                  </div>
+                </div>
+                <div class="thumnail">
+                  <div class="thumbnailProfilePic">
+                    <div class="userAvatar">
+                      <img class="userAvatar" src="imgHome/Profile.svg">
+                    </div>
+                  </div>
+                  <div class="ThumbnailDesc">
+                    <div class="ThumbnailDescTitle">
+                      <div class="LoremIpsumDolorSitAmetConsecteAdipiscingElit" >Lorem ipsum dolor sit amet, consecte <br/>adipiscing elit.</div>
+                    </div>
+                    <div class="ThumbnailDescInfo">
+                      <div class="channelName">James Gouse</div>
+                      <div class="time">15K Views .1 week ago</div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="ThumbnailRow">
+              <div class="thumbnailRowThumbnailItem">
+                <div class="thumbnailImages">
+                    <img class="image1" src="imgHome/thumbnail.svg">
+                  <div class="videoTime">
+                    <div class="videoTime">23:45</div>
+                  </div>
+                </div>
+                <div class="thumnail">
+                  <div class="thumbnailProfilePic">
+                    <div class="userAvatar">
+                      <img class="userAvatar" src="imgHome/Profile.svg">
+                    </div>
+                  </div>
+                  <div class="ThumbnailDesc">
+                    <div class="ThumbnailDescTitle">
+                      <div class="LoremIpsumDolorSitAmetConsecteAdipiscingElit">Lorem ipsum dolor sit amet, consecte <br/>adipiscing elit.</div>
+                    </div>
+                    <div class="ThumbnailDescInfo">
+                      <div class="channelName">Jesica Lambert</div>
+                      <div class="time">15K Views .1 week ago</div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="thumbnailRowThumbnailItem">
+                <div class="thumbnailImages">
+                    <img class="image1" src="imgHome/thumbnail.svg">
+                  <div class="videoTime">
+                    <div class="videoTime">23:45</div>
+                  </div>
+                </div>
+                <div class="thumnail">
+                  <div class="thumbnailProfilePic">
+                    <div class="userAvatar" >
+                      <img class="userAvatar" src="imgHome/Profile.svg">
+                    </div>
+                  </div>
+                  <div class="ThumbnailDesc">
+                    <div class="ThumbnailDescTitle">
+                      <div class="LoremIpsumDolorSitAmetConsecteAdipiscingElit" >Lorem ipsum dolor sit amet, consecte <br/>adipiscing elit.</div>
+                    </div>
+                    <div class="ThumbnailDescInfo">
+                      <div class="channelName">Anna White</div>
+                      <div class="time">15K Views .1 week ago</div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="thumbnailRowThumbnailItem">
+                <div class="thumbnailImages">
+                    <img class="image1" src="imgHome/thumbnail.svg">
+                  <div class="videoTime">
+                    <div class="videoTime">23:45</div>
+                  </div>
+                </div>
+                <div class="thumnail">
+                  <div class="thumbnailProfilePic">
+                    <div class="userAvatar" >
+                      <img class="userAvatar" src="imgHome/Profile.svg">
+                    </div>
+                  </div>
+                  <div class="ThumbnailDesc">
+                    <div class="ThumbnailDescTitle">
+                      <div class="LoremIpsumDolorSitAmetConsecteAdipiscingElit" >Lorem ipsum dolor sit amet, consecte <br/>adipiscing elit.</div>
+                    </div>
+                    <div class="ThumbnailDescInfo">
+                      <div class="channelName">Skylar Dias</div>
+                      <div class="time">15K Views .1 week ago</div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="thumbnailRowThumbnailItem">
+                <div class="thumbnailImages">
+                    <img class="image1" src="imgHome/thumbnail.svg">
+                  <div class="videoTime">
+                    <div class="videoTime">23:45</div>
+                  </div>
+                </div>
+                <div class="thumnail">
+                  <div class="thumbnailProfilePic">
+                    <div class="userAvatar" >
+                      <img class="userAvatar" src="imgHome/Profile.svg">
+                    </div>
+                  </div>
+                  <div class="ThumbnailDesc">
+                    <div class="ThumbnailDescTitle">
+                      <div class="LoremIpsumDolorSitAmetConsecteAdipiscingElit" >Lorem ipsum dolor sit amet, consecte <br/>adipiscing elit.</div>
+                    </div>
+                    <div class="ThumbnailDescInfo">
+                      <div class="channelName">James Gouse</div>
+                      <div class="time">15K Views .1 week ago</div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="ThumbnailRow" style="width: 1151px; height: 247px; left: 0px; top: 861px; position: absolute">
+              <div class="thumbnailRowThumbnailItem">
+                <div class="thumbnailImages">
+                    <img class="image1" src="imgHome/thumbnail.svg">
+                  <div class="videoTime">
+                    <div class="videoTime">23:45</div>
+                  </div>
+                </div>
+                <div class="thumnail">
+                  <div class="thumbnailProfilePic">
+                    <div class="userAvatar" >
+                      <img class="userAvatar" src="imgHome/Profile.svg">
+                    </div>
+                  </div>
+                  <div class="ThumbnailDesc">
+                    <div class="ThumbnailDescTitle">
+                      <div class="LoremIpsumDolorSitAmetConsecteAdipiscingElit" >Lorem ipsum dolor sit amet, consecte <br/>adipiscing elit.</div>
+                    </div>
+                    <div class="ThumbnailDescInfo">
+                      <div class="channelName">James Gouse</div>
+                      <div class="time">15K Views .1 week ago</div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="thumbnailRowThumbnailItem">
+                <div class="thumbnailImages">
+                    <img class="image1" src="imgHome/thumbnail.svg">
+                  <div class="videoTime">
+                    <div class="videoTime">23:45</div>
+                  </div>
+                </div>
+                <div class="thumnail">
+                  <div class="thumbnailProfilePic">
+                    <div class="userAvatar" >
+                      <img class="userAvatar" src="imgHome/Profile.svg">
+                    </div>
+                  </div>
+                  <div class="ThumbnailDesc">
+                    <div class="ThumbnailDescTitle">
+                      <div class="LoremIpsumDolorSitAmetConsecteAdipiscingElit" >Lorem ipsum dolor sit amet, consecte <br/>adipiscing elit.</div>
+                    </div>
+                    <div class="ThumbnailDescInfo">
+                      <div class="channelName">James Gouse</div>
+                      <div class="time">15K Views .1 week ago</div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="thumbnailRowThumbnailItem">
+                <div class="thumbnailImages">
+                    <img class="image1" src="imgHome/thumbnail.svg">
+                  <div class="videoTime">
+                    <div class="videoTime">23:45</div>
+                  </div>
+                </div>
+                <div class="thumnail">
+                  <div class="thumbnailProfilePic">
+                    <div class="userAvatar" >
+                      <img class="userAvatar" src="imgHome/Profile.svg">
+                    </div>
+                  </div>
+                  <div class="ThumbnailDesc">
+                    <div class="ThumbnailDescTitle">
+                      <div class="LoremIpsumDolorSitAmetConsecteAdipiscingElit" >Lorem ipsum dolor sit amet, consecte <br/>adipiscing elit.</div>
+                    </div>
+                    <div class="ThumbnailDescInfo">
+                      <div class="channelName">James Gouse</div>
+                      <div class="time">15K Views .1 week ago</div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="thumbnailRowThumbnailItem">
+                <div class="thumbnailImages">
+                    <img class="image1" src="imgHome/thumbnail.svg">
+                  <div class="videoTime">
+                    <div class="videoTime">23:45</div>
+                  </div>
+                </div>
+                <div class="thumnail">
+                  <div class="thumbnailProfilePic">
+                    <div class="userAvatar" >
+                      <img class="userAvatar" src="imgHome/Profile.svg">
+                    </div>
+                  </div>
+                  <div class="ThumbnailDesc">
+                    <div class="ThumbnailDescTitle">
+                      <div class="LoremIpsumDolorSitAmetConsecteAdipiscingElit" >Lorem ipsum dolor sit amet, consecte <br/>adipiscing elit.</div>
+                    </div>
+                    <div class="ThumbnailDescInfo">
+                      <div class="channelName">James Gouse</div>
+                      <div class="time">15K Views .1 week ago</div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="ThumbnailRow">
+              <div class="thumbnailRowThumbnailItem">
+                <div class="thumbnailImages">
+                    <img class="image1" src="imgHome/thumbnail.svg">
+                  <div class="videoTime">
+                    <div class="videoTime">23:45</div>
+                  </div>
+                </div>
+                <div class="thumnail">
+                  <div class="thumbnailProfilePic">
+                    <div class="userAvatar" >
+                      <img class="userAvatar" src="imgHome/Profile.svg">
+                    </div>
+                  </div>
+                  <div class="ThumbnailDesc">
+                    <div class="ThumbnailDescTitle">
+                      <div class="LoremIpsumDolorSitAmetConsecteAdipiscingElit" >Lorem ipsum dolor sit amet, consecte <br/>adipiscing elit.</div>
+                    </div>
+                    <div class="ThumbnailDescInfo">
+                      <div class="channelName">James Gouse</div>
+                      <div class="time">15K Views .1 week ago</div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="thumbnailRowThumbnailItem">
+                <div class="thumbnailImages">
+                    <img class="image1" src="imgHome/thumbnail.svg">
+                  <div class="videoTime">
+                    <div class="videoTime">23:45</div>
+                  </div>
+                </div>
+                <div class="thumnail">
+                  <div class="thumbnailProfilePic">
+                    <div class="userAvatar" >
+                      <img class="userAvatar" src="imgHome/Profile.svg">
+                    </div>
+                  </div>
+                  <div class="ThumbnailDesc">
+                    <div class="ThumbnailDescTitle">
+                      <div class="LoremIpsumDolorSitAmetConsecteAdipiscingElit" >Lorem ipsum dolor sit amet, consecte <br/>adipiscing elit.</div>
+                    </div>
+                    <div class="ThumbnailDescInfo">
+                      <div class="channelName">James Gouse</div>
+                      <div class="time">15K Views .1 week ago</div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="thumbnailRowThumbnailItem">
+                <div class="thumbnailImages">
+                    <img class="image1" src="imgHome/thumbnail.svg">
+                  <div class="videoTime">
+                    <div class="videoTime">23:45</div>
+                  </div>
+                </div>
+                <div class="thumnail">
+                  <div class="thumbnailProfilePic">
+                    <div class="userAvatar" >
+                      <img class="userAvatar" src="imgHome/Profile.svg">
+                    </div>
+                  </div>
+                  <div class="ThumbnailDesc">
+                    <div class="ThumbnailDescTitle">
+                      <div class="LoremIpsumDolorSitAmetConsecteAdipiscingElit" >Lorem ipsum dolor sit amet, consecte <br/>adipiscing elit.</div>
+                    </div>
+                    <div class="ThumbnailDescInfo">
+                      <div class="channelName">James Gouse</div>
+                      <div class="time">15K Views .1 week ago</div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="thumbnailRowThumbnailItem">
+                <div class="thumbnailImages">
+                    <img class="image1" src="imgHome/thumbnail.svg">
+                  <div class="videoTime">
+                    <div class="videoTime">23:45</div>
+                  </div>
+                </div>
+                <div class="thumnail">
+                  <div class="thumbnailProfilePic">
+                    <div class="userAvatar" >
+                      <img class="userAvatar" src="imgHome/Profile.svg">
+                    </div>
+                  </div>
+                  <div class="ThumbnailDesc">
+                    <div class="ThumbnailDescTitle">
+                      <div class="LoremIpsumDolorSitAmetConsecteAdipiscingElit" >Lorem ipsum dolor sit amet, consecte <br/>adipiscing elit.</div>
+                    </div>
+                    <div class="ThumbnailDescInfo">
+                      <div class="channelName">James Gouse</div>
+                      <div class="time">15K Views .1 week ago</div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+    </section>
+</body>
+</html>
