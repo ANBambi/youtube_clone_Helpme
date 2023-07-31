@@ -176,7 +176,7 @@ ul {
     height: 40px;
 }
 
-/* 반응형 */
+/* 반응 */
 @media (max-width: 900px) {
     .search input {
       width: 25rem;
