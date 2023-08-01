@@ -162,6 +162,35 @@ body {
     padding: 8px;
 }
 
+.micButton:hover {
+    background-color: #2980b9;
+}
+
+.micContainer {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    display: none;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.micModal {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    max-width: 80%;
+    row-gap: 15px;
+    padding: 30px;
+    background-color: #dfdfdf;
+    border: 1px solid rgb(192, 192, 192);
+    border-radius: 7px;
+}
+
 #drop-content{
     position: absolute;
     z-index: 1;
@@ -179,6 +208,8 @@ body {
 
 /* Sidebar */ 
 .wrapNav {
+    position: sticky;
+    top: 56px;
     width: 224px;
     height: 1395px;
     flex-direction: column;
@@ -231,24 +262,16 @@ body {
     div for grouping main content */
 .mainContainer{
     display: flex;
-    background-color: #000000;
+    background-color: #212121;
 }
 
 /* Topmenu 카테고리 ----------------------------------------------------------------
 .topMenu{
     /* height: 56px;      고민해보기 */
-    /* display: fixed;
     width: 100%;
     flex-direction: column;
     align-items: flex-start;
 }
-
-/* buttonDiv
-    div for grouping buttons 카테고리 전체*/
-/* .buttonDiv{
-    margin: 12px 0px 12px 24px;
-    background-color: #212121;
-} */
 
 /* top menu btn 카테고리 버튼 */
 /* .allBtn,
@@ -260,6 +283,7 @@ body {
     background-color: #303030;
     border: 1px solid #AAAAAA;
     border-radius: 32px;
+    
 }
 
 /* top btn mouse hover */
@@ -368,7 +392,6 @@ body {
     justify-content:space-between;
     margin: 1px;
     padding: 24px;
-    
 }
 
 .ThumbnailDesc{
