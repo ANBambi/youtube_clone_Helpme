@@ -5,14 +5,6 @@ function enterkey() {
     }
 }
 
-/* 참고용(미완성.dw)
-searchButton.addEventListener("click, function(){
-  let searchKeword = searchBox.value;
-  getVideoList().then((videolist)) =>
-  ")
-
-/*if (event.keycode === 13){}*/
-
 function fn_search(){
     
     var searchInput = document.getElementById('searchInput');
