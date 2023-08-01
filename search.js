@@ -15,7 +15,10 @@ function fn_search(){
     }
 
    const ThumbnailRowThumbnailItem = document.getElementById('ThumbnailRowThumbnailItem');
-   
+   ThumbnailRowThumbnailItem.innerHTML = '';
+    
+   var itemCnt = 0;
+
    fetch("http://oreumi.appspot.com/video/getVideoList")
    .then((resonse)=>resonse.json())
    .then((data) =>{
@@ -25,6 +28,8 @@ function fn_search(){
         // 없을 경우 continue
         if(data[i].video_title.indexOf(searchInput.value) == -1){
            continue;
+        }else{
+          itemCnt++;
         }
        // create div for thumbnail image
        let thumbnailImgDiv = document.createElement('div');
@@ -41,10 +46,11 @@ function fn_search(){
            <div id="ThumbnailImages">
              <img class="Image1" src="${dataImg.image_link}">
            </div>
-           <div class="Videotime">
-             <div class="Videotime">23:45</div>
-           </div>
            `;
+          //검색결과에서 time 안보이게
+          //  <div class="Videotime">
+          //    <div class="Videotime">23:45</div>
+          //  </div>
            thumbnailImgDiv.innerHTML = imgDiv;
        });
        ThumbnailRowThumbnailItem.append(thumbnailImgDiv);
@@ -69,7 +75,8 @@ function fn_search(){
          `;
          thumbnailChannel.innerHTML = channelProfilePic;
        });
-       ThumbnailRowThumbnailItem.append(thumbnailChannel);
+      //  검색결과에서 썸네일 이미지 안 보이게.
+      //  ThumbnailRowThumbnailItem.append(thumbnailChannel);
        
        //create div for video desc
        let thumbnailDecs = document.createElement('div');
@@ -157,11 +164,21 @@ function fn_search(){
          </div>
          <div class="ThumbnailDescInfo">
            <div class="ChanelName">${data[i].video_channel}</div>
-           <div class="Time"> ${calcViews} .${calcDate}</div>
+           
          </div>
        `;
+      //  <div class="Time"> ${calcViews} .${calcDate}</div>
        thumbnailDecs.innerHTML = thumbnailVideoDesc;
        ThumbnailRowThumbnailItem.append(thumbnailDecs);
      }
+     
+    if(itemCnt < 1) {
+    alert("검색결과가 없습니다.");
+    }
+
+
+
+
+
    });
 }
