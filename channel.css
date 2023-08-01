@@ -28,9 +28,34 @@
   padding: 0;
   box-sizing: border-box;
 }
+/*-------------------수정 부분 ---------------*/
+.navContainer li {
+  list-style-type: none;
+}
 
-li{
-  list-style: none;}
+.channelNav {
+    background-color: #212121;
+}
+
+.navContainer-item {
+    float: left;
+}
+/*----------- ::after 처리 시 2줄이든 3줄이 되든 
+------------- 안정적으로 float 사용할 수 있는 장점------*/
+.navContainer::after {  
+    content: '';
+    display: block;
+    clear: left;
+}
+
+.navContainer-item a {
+    display: block;
+    padding: 16px 32px 15px 32px;
+    text-decoration: none;   
+}
+
+/*-------------------수정 부분 ---------------*/
+
 
 /* font */
 body {
