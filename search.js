@@ -5,7 +5,6 @@ function enterkey() {
     }
 }
 
-
 function fn_search(){
     
     var searchInput = document.getElementById('searchInput');
@@ -175,10 +174,5 @@ function fn_search(){
     if(itemCnt < 1) {
     alert("검색결과가 없습니다.");
     }
-
-
-
-
-
    });
 }
