@@ -5,6 +5,13 @@ function enterkey() {
     }
 }
 
+/* 참고용(미완성.dw)
+searchButton.addEventListener("click, function(){
+  let searchKeword = searchBox.value;
+  getVideoList().then((videolist)) =>
+  ")
+
+/*if (event.keycode === 13){}*/
 
 function fn_search(){
     
@@ -175,10 +182,5 @@ function fn_search(){
     if(itemCnt < 1) {
     alert("검색결과가 없습니다.");
     }
-
-
-
-
-
    });
 }
