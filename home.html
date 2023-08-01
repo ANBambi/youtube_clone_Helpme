@@ -35,32 +35,35 @@
                 </button>
                     <div class="micContainer">
                         <div class="micModal">
-                            <h2>승인대기중</h2>
-                                <p>
-                                    음성으로 검색하려면 마이크에 대한 액세스를 허용하세요.
-                                </p>
-                            <button class="closeMic">close</button>
+                            <div class="micModalClose">
+                                <button class="closeMic" id="closeMic">
+                                    <span class="material-symbols-outlined">close</span>
+                                </button>
+                            </div>
+                            <div class="micModalContent" id="micModalContent">
+                                <!-- modal content -->
+                            </div>
                         </div>
                     </div>
             </div>
                 <div class="profile" id="profile">
                     <div class="rightContent" id="rightContent">
-                        <img class="create" id="create" onclick="dropdown()" src="imgHome/create.svg" alt="">
-                            <div style="display: none;" id="drop-content">
-                                <a hreaf='#'>동영상 업로드</a>
-                                <a hreaf='#'>라이브 스트리밍 시작</a>
+                        <img class="create" id="create" src="imgHome/create.svg" alt="">
+                            <div class="createContainer">
+                                <!-- modal content -->
                             </div>
-                        <img class="apps" id="apps" onclick="dropdown()" src="imgHome/apps.svg" alt="">
-                            <div style="display: none;" id="drop-content">
-                                <a hreaf='#'>앱스</a>
-                                <a hreaf='#'>앱스 내용</a>
+                        <img class="apps" id="apps" src="imgHome/apps.svg" alt="">
+                        <img class="notifications" id="notifications" src="imgHome/notifications.svg" alt="">
+                        <div class="notiContainer">
+                            <div class="notiHeader">
+                                <p class="notiTitle">알림</p>
+                                <span class="material-symbols-outlined">settings</span>
                             </div>
-                        <img class="notifications" id="notifications" onclick="dropdown()" src="imgHome/notifications.svg" alt="">
-                        <div style="display: none;" id="drop-content">
-                            <a hreaf='#'>알림</a>
-                            <a hreaf='#'>알림 내용</a>
+                            <div class="notiContent" id="notiContent">
+                                <!-- modal content -->
+                            </div>
                         </div>
-                        <img class="profile" id="profile" onclick="dropdown()" src="imgHome/Profile.svg" alt="">
+                        <img class="profile" id="profile" src="imgHome/Profile.svg" alt="">
                         <div style="display: none;" id="drop-content">
                             <a hreaf='#'>프로필</a>
                             <a hreaf='#'>프로필 내용</a>
@@ -264,7 +267,8 @@
         </div>
     </div> 
 </body>
-<script src="getVideoList.js"></script>
 <script src="header.js"></script>
-<script src="Home.js"></script>
+<script src="search.js"></script>
+<script src="getVideoList.js"></script>
+
 </html>
