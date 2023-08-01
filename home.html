@@ -217,9 +217,22 @@
         </div> 
         <div class="mainContainer">
             <!-- MAIN --> 
+            <!-- 카테고리 -->
             <section class = "main">
-            <!-- top menu -->
-                <header class="topMenu" id = "topMenu">
+                <div id="tagArea">
+                    <nav id="tagNav"></nav>
+                    <div id="tagNavScrollBtn">
+                        <div id="tagNavScrollForward" class="display_none">
+                            <button onclick="onclickTagNavForward()"><img class="icon" src="./imgHome/leftArrow.svg"
+                                    style="transform: rotate(180deg);"></button>
+                        </div>
+                        <div id="tagNavScrollBackward">
+                            <button onclick="onclickTagNavBackward()"><img class="icon"
+                                    src="./imgHome/leftArrow.svg"></button>
+                        </div>
+                    </div>
+                </div>
+                <!-- <header class="topMenu" id = "topMenu">
                     <div class="buttonDiv">
                         <button class="allBtn" id="allBtn">All</button>
                         <button class="topMenuBtn" id="topMenuBtn">Item</button>
@@ -233,7 +246,7 @@
                         <button class="topMenuBtn" id="topMenuBtn">축구</button>
                         <button class="topMenuBtn" id="topMenuBtn">최근에 업로드된 동영상</button>
                     </div>
-                </header>
+                </header> -->
         
                 <!--main(video list part)-->
                 <article class="ThumbnailRow">
@@ -257,4 +270,5 @@
 <script src="header.js"></script>
 <script src="search.js"></script>
 <script src="getVideoList.js"></script>
+
 </html>
