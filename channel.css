@@ -1,0 +1,280 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;700&display=swap');
+
+:root { 
+    /* color */
+    --white-color: #fff;
+    --black-color: #140a00;
+    --blue-color: #1359c7;
+    --red-color: #e30504;
+    --grey-dark-color: #616161;
+    --gray-light-color: #8e8e8e;
+  
+    /* size */
+    --padding:12px;
+    --avatar-size: 36px;
+  
+    /* font size */
+    --font-superlarge: 22px;
+    --font-verylarge: 20px;
+    --font-large: 18px;
+    --font-medium: 14px;
+    --font-small: 12px;
+    --font-micro: 10px;
+ }
+
+/* reset */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+li{
+  list-style: none;}
+
+/* font */
+body {
+    font-family: 'Roboto', sans-serif;
+}
+
+/* header section*/
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 60px;
+    padding: 15px;
+  }
+
+/* border
+    line for dividing part */
+.border {
+    width: 224px;
+    height: 100%;
+    color : #303030;
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+
+main {
+    height: calc(100vh - 70px);
+    display: flex;
+    background-color: #f9f9f9;
+  }
+
+/*header div*/
+.wrap{
+    background-color: #212121;
+}
+
+/* header */
+.navigation {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 56px;
+    width: 100%;
+    flex-shrink: 0;
+    padding: 15px;
+}
+
+/* header left
+    topLeft for grouping left content(hamburger and logo) */
+.leftContent{
+    margin-left: 16px;
+}
+
+.leftContent span{
+    color: white;
+    padding-right: 11px;
+}
+
+.left {
+    display: flex;
+    align-items: center;
+}
+   
+   .left #menu {
+    padding: 0 7px;
+    cursor: pointer;
+}
+
+/*search*/
+.searchBox{
+    display: flex;
+    width: 470px;
+    height: 40px;
+    justify-content: center;
+    align-items: flex-start;
+    flex-shrink: 0;
+}
+.searchInput{
+    border: 1px solid #303030;
+    background-color: #121212;
+    color: #AAAAAA;
+    width: 400px;
+    border: 0;
+    height: 100%;
+    border-radius: 2px 0 0 2px;
+}
+
+.searchBtn{
+    border: none; /*remove button style */
+    border: 1px solid #303030;
+    background-color: #303030;
+    color: white;
+    height: 100%;
+    width: 60px;
+    margin-right: 4px;
+}
+
+/*mic button*/
+.micButton{
+    width: 40px;
+    height: 40px;
+    background-color: #000000;
+    border: none; /*remove button style*/
+    border-radius: 40px;
+}
+.mic{
+    color: white;
+}
+
+/* header right
+    profile for grouping right content */
+/* right Content(div) */
+.rightContent{
+    margin: 8px 8px 8px 0px;
+}
+
+.create,
+.apps,
+.notifications,
+.profile{
+    flex:content;
+    border-radius: 40px;
+    padding: 8px;
+}
+
+
+.micButton:hover {
+    background-color: #2980b9;
+}
+
+.micContainer {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    display: none;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.micModal {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    max-width: 80%;
+    row-gap: 15px;
+    padding: 30px;
+    background-color: #dfdfdf;
+    border: 1px solid rgb(192, 192, 192);
+    border-radius: 7px;
+}
+
+
+#drop-content{
+    position: absolute;
+    z-index: 1;
+}
+
+#drop-content a{
+    display:block;
+    font-size: 20px;
+    background-color: #dfdfdf;
+    color: black;
+    text-decoration: none;
+    padding: 10px 36px;
+    margin: 2px 0px 0px 0px;
+}
+
+/* Topmenu */
+ul {
+    list-style-type: none;
+    padding-left: 0; 
+    }
+
+    /* Sidebar */ 
+
+/* Sidebar */ 
+.side-bar {
+    height: 100%;
+    width: 17%;
+    background-color: white;
+    overflow-y: hidden;
+  } 
+
+.wrapNav {
+    display: flex;
+    width: 224px;
+    height: 1395px;
+    flex-direction: column;
+    align-items: flex-start;
+    background-color: #212121;
+    color: #FFFFFF;
+    white-space: nowrap; /*prevent auto enter*/
+}
+
+/* icon gap control  */
+.sideBar li:hover{
+    background-color: #696666;
+    display: flex;
+    align-items: center;
+    width: 224px;
+    height: 40px;
+    padding: 8px 0px 8px 24px;
+    justify-content: flex-start;
+}
+
+/*sidebar title*/
+.sideBarTitle{
+    margin: 12px 68px 12px 24px;
+    font-weight: bold;
+}
+
+/* list, title */
+.subtitle{
+    margin-left: 24px;
+    font-size: 14px;
+    line-height: 40px;
+}
+
+.sideBarSubscriptions img{
+    width: 40px;
+    height: 40px;
+}
+
+@media (max-width: 900px) {
+    .search input {
+        width: 600px;
+        padding:10px;
+        border: 0;
+        height: 100%;
+        border-radius: 2px 0 0 2px
+      }
+      
+      input:focus {
+        outline: none;
+        border: 1px solid #ddd;
+      }
+}
+
+@media (max-width: 768px) {
+    .side-bar {
+      display: none;
+    }
+  }
