@@ -176,3 +176,41 @@ function fn_search(){
     }
    });
 }
+
+// videoAction _ 2023-08-01 이민영
+// 추가작성예정
+export const getSubscribedChannel = (id) => async (dispatch) => {
+    try {
+      dispatch({
+        type: CHANNEL_REQUEST,
+        id:id
+      })
+
+
+      // get upload playist ID
+      const { data } = await requestAnimationFrame('/subscriptions', {
+        params: {
+          part: 'snippet, contentDetails',
+
+        },
+        headers: {
+          Authorization: `Bearer ${getState().auth.accessToken}`,
+        },
+      })
+      dispatch({
+        type: SUBCRIPTIONS_CHANNEL_SUCCESS,
+        payload: data.items,
+      })
+    } catch (error) {
+      console.log(error.response.data)
+      dispatch({
+        type: SUBSCRIPTIONS_CHANNEL_FAIL,
+        payload: error.response.data,
+      })
+    }
+  }
+
+// actionType _ 2023-08-01 이민영
+export const CHANNEL_VIDEOS_REQUEST = 'CHANNEL_VIDEOS_REQUEST'
+export const CHANNEL_VIDEOS_SUCCESS = 'CHANNEL_VIDEOS_SUCCESS'
+export const CHANNEL_VIDEOS_FAIL = 'CHANNEL_VIDEOS_FAIL'

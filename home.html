@@ -5,9 +5,10 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <!--css import-->
     <link rel="stylesheet" href="reset.css">
-    <link rel="stylesheet" href="./home.css"/>
+    <link rel="stylesheet" href="home.css"/>
     <!-- Google Fonts link-->
     <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined" rel="stylesheet" />
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
     <link href="./imgHome/Logo_mini.svg" rel="shortcut icon" type="image/x-icon">
     <title>HOME</title>
 </head>
@@ -26,47 +27,32 @@
             <!-- center part(search)-->
             <div class="searchBox" id="searchBox">
                 <input type="text" name="searchInput" id="searchInput" onkeyup="enterkey();" class="searchInput" placeholder="search">
-                    <button class="searchBtn" id="searchBtn" onclick="fn_search();">
+                    <button class="searchBtn" id="searchBtn" onclick="fn_search()">
                         <span class="material-symbols-outlined">search</span>
                     </button>
                 </button>
                 <button class="micButton" id="micButton">
                     <img class="mic" id="mic" src="imgHome/mic.svg" alt="">
                 </button>
-                    <div class="micContainer">
-                        <div class="micModal">
-                            <div class="micModalClose">
-                                <button class="closeMic" id="closeMic">
-                                    <span class="material-symbols-outlined">close</span>
-                                </button>
-                            </div>
-                            <div class="micModalContent" id="micModalContent">
-                                <!-- modal content -->
-                            </div>
-                        </div>
-                    </div>
+                <div class="micContainer" id="micContainer">
+                    <!-- mic modal content -->
+                </div>
             </div>
                 <div class="profile" id="profile">
                     <div class="rightContent" id="rightContent">
                         <img class="create" id="create" src="imgHome/create.svg" alt="">
-                            <div class="createContainer">
-                                <!-- modal content -->
-                            </div>
+                            <!-- <div class="createContainer" id="createContainer"> -->
+                                <!-- create modal content -->
+                            <!-- </div> -->
                         <img class="apps" id="apps" src="imgHome/apps.svg" alt="">
-                        <img class="notifications" id="notifications" src="imgHome/notifications.svg" alt="">
-                        <div class="notiContainer">
-                            <div class="notiHeader">
-                                <p class="notiTitle">알림</p>
-                                <span class="material-symbols-outlined">settings</span>
-                            </div>
-                            <div class="notiContent" id="notiContent">
-                                <!-- modal content -->
-                            </div>
+                        <span class="notifications material-symbols-outlined" id="notifications">notifications</span>
+                        <!-- notiContainer의 inline style 적용은 css 작업후 지울 예정 -->
+                        <div class="notiContainer" id="notiContainer" style="display: none;">
+                            <!-- notification modal content -->
                         </div>
                         <img class="profile" id="profile" src="imgHome/Profile.svg" alt="">
-                        <div style="display: none;" id="drop-content">
-                            <a hreaf='#'>프로필</a>
-                            <a hreaf='#'>프로필 내용</a>
+                        <div class="profileContainer" id="profileContainer">
+
                         </div>
                     </div>
                 </div>
@@ -217,22 +203,9 @@
         </div> 
         <div class="mainContainer">
             <!-- MAIN --> 
-            <!-- 카테고리 -->
             <section class = "main">
-                <div id="tagArea">
-                    <nav id="tagNav"></nav>
-                    <div id="tagNavScrollBtn">
-                        <div id="tagNavScrollForward" class="display_none">
-                            <button onclick="onclickTagNavForward()"><img class="icon" src="./imgHome/leftArrow.svg"
-                                    style="transform: rotate(180deg);"></button>
-                        </div>
-                        <div id="tagNavScrollBackward">
-                            <button onclick="onclickTagNavBackward()"><img class="icon"
-                                    src="./imgHome/leftArrow.svg"></button>
-                        </div>
-                    </div>
-                </div>
-                <!-- <header class="topMenu" id = "topMenu">
+            <!-- top menu -->
+                <header class="topMenu" id = "topMenu">
                     <div class="buttonDiv">
                         <button class="allBtn" id="allBtn">All</button>
                         <button class="topMenuBtn" id="topMenuBtn">Item</button>
@@ -246,7 +219,7 @@
                         <button class="topMenuBtn" id="topMenuBtn">축구</button>
                         <button class="topMenuBtn" id="topMenuBtn">최근에 업로드된 동영상</button>
                     </div>
-                </header> -->
+                </header>
         
                 <!--main(video list part)-->
                 <article class="ThumbnailRow">
@@ -270,5 +243,4 @@
 <script src="header.js"></script>
 <script src="search.js"></script>
 <script src="getVideoList.js"></script>
-
 </html>

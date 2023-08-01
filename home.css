@@ -229,6 +229,7 @@ body {
     padding: 8px 0px 8px 24px;
     justify-content: flex-start;
 }
+
 .sideBar li:hover{
     background-color: #696666;
     display: flex;
@@ -265,39 +266,12 @@ body {
     background-color: #212121;
 }
 
-/* Topmenu 카테고리 ----------------------------------------------------------------
-.topMenu{
-    /* height: 56px;      고민해보기 */
-    width: 100%;
-    flex-direction: column;
-    align-items: flex-start;
-}
-
-/* top menu btn 카테고리 버튼 */
-/* .allBtn,
-.topMenuBtn{
-    margin-right: 12px;
-    margin-bottom: 8px;
-    padding: 8px 12px;
-    color: #fff;
-    background-color: #303030;
-    border: 1px solid #AAAAAA;
-    border-radius: 32px;
-    
-}
-
-/* top btn mouse hover */
-/* .topMenu button:hover{
-    color: #303030;
-    background-color: #fff;  ----------------------------------------------------------*/
-
 #tagArea {
   position: fixed;
   width: calc(100% - 15.5rem);
 }
 
 #tagNav {
-
   scroll-behavior: smooth;
   display: flex;
   position: relative;
@@ -309,20 +283,13 @@ body {
   border-top: 0.0625rem solid #303030;
 }
 
-/* #tagNavScrollBtn {
-  display: flex;
-  position: relative;
-  top: -3.5rem;
-  width: 100%;
-} */
-
 #tagNavScrollForward,
 #tagNavScrollBackward {
   position: relative;
-  top: -3.5rem;
+  top: -13.5rem;
+  /* top 기본값 3.5rem  js 완성후 수정*/
   height: 3.5rem;
   width: 7rem;
-
 }
 
 #tagNavScrollForward {
@@ -330,10 +297,18 @@ body {
   background: linear-gradient(to right, #212121 50%, transparent);
 }
 
+#tagNavScrollForward:hover {
+  background: linear-gradient(to right, #303030 50%, transparent);
+}
+
 #tagNavScrollBackward {
   float: right;
   background: linear-gradient(to left, #212121 50%, transparent);
   text-align: right;
+}
+
+#tagNavScrollBackward:hover {
+  background: linear-gradient(to left, #303030 50%, transparent);
 }
 
 #tagNavScrollForward button,
@@ -343,9 +318,7 @@ body {
 }
 
 #tagNav button {
-  /* display: inline-flex; */
   flex-direction: column;
-  /*아이템이 가로 방향으로*/
   background-color: #303030;
   color: white;
   padding: 0.5rem 0.75rem;
@@ -373,11 +346,8 @@ body {
 }
 
 #tagNav::-webkit-scrollbar {
-  display: none;
-}
-
-
-/* ------------------------------------------------------------------------------- */
+    display: none;
+  }
 
 .ThumbnailRow {
     display: flex;
