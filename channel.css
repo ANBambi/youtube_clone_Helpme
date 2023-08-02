@@ -28,38 +28,11 @@
   padding: 0;
   box-sizing: border-box;
 }
-/*-------------------수정 부분 ---------------*/
-.navContainer li {
-  list-style-type: none;
-}
-
-.channelNav {
-    background-color: #212121;
-}
-
-.navContainer-item {
-    float: left;
-}
-/*----------- ::after 처리 시 2줄이든 3줄이 되든 
-------------- 안정적으로 float 사용할 수 있는 장점------*/
-.navContainer::after {  
-    content: '';
-    display: block;
-    clear: left;
-}
-
-.navContainer-item a {
-    display: block;
-    padding: 16px 32px 15px 32px;
-    text-decoration: none;   
-}
-
-/*-------------------수정 부분 ---------------*/
-
 
 /* font */
 body {
     font-family: 'Roboto', sans-serif;
+    background-color: #000000;
 }
 
 /* header section*/
@@ -282,6 +255,258 @@ ul {
     width: 40px;
     height: 40px;
 }
+
+/*-------------------수정 부분 ---------------*/
+.navContainer li {
+  list-style-type: none;
+}
+
+/* Banner */
+.banner {
+    display: flex;
+    width: 100%;
+    height: 192px;
+    justify-content: center;
+    align-items: center;
+    flex-shrink: 0;
+}
+
+.banner img {
+    width: 1200px;
+    height: 192px;
+    flex-shrink: 0;
+}
+
+/* Channel Title */
+.channelTitle {
+    background-color: #181818;
+    display: flex;
+    padding: 16px 65px 4px 65px;
+    align-items: flex-start;
+    position: relative;
+}
+
+.channelProfile {
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+}
+
+.channelProfileName {
+    display: flex;
+    flex-direction: column;
+    display: flex;
+    padding: 18px 0px;
+    align-items: flex-start;
+}
+
+.button {
+    border-radius: 2rem;
+    background-color: var(--white-color);
+    color: var(--black-color);
+    font-size: 14px;
+    line-height: 36px;
+    cursor: pointer;
+    padding: 0 16px;
+    position: absolute;
+    left: 60%;
+}
+
+#options {
+    display: block;
+    padding-left: 0px;
+    gap: 202px;
+    color: var(--white-color);
+}
+
+
+#options img {
+    height: 25px;
+    filter: opacity(0.5) drop-shadow(0 0 0 rgb(255, 255, 255));
+}
+
+.channelProfilePic {
+    display: flex;
+    padding-right: 24px;
+    align-items: flex-start;
+    gap: 10px;
+}
+
+.channelProfilePic>img {
+    display: flex;
+    width: 80px;
+    height: 80px;
+    justify-content: center;
+    align-items: center;
+    border-radius: 80px;
+    opacity: 0.6499999761581421;
+}
+
+.profileImg {
+    display: flex;
+    width: 80px;
+    height: 80px;
+    justify-content: center;
+    align-items: center;
+}
+
+.channelName {
+    color: var(--white-color, #FFF);
+    font-family: Roboto;
+    font-size: 24px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+}
+
+.subscribers {
+    color: var(--gray-color, #AAA);
+    font-family: Roboto;
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+}
+
+.channelNav {
+    background-color: #181818;
+    display: flex;
+    padding: 0px 65px;
+    align-items: flex-start;
+}
+
+.navContainer {
+    /* Layout */
+    display: flex;
+    padding: 16px 32px 15px 32px;
+    flex-direction: row;
+    align-items: flex-start;
+    gap: 10px;
+    color: var(--white-color, #FFF);
+    /* Fonts Attribute */
+    font-family: Roboto;
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: normal;
+    text-transform: uppercase;
+}
+
+.material-symbols-outlined {
+    display: flex;
+    padding-left: 0px;
+    align-items: flex-start;
+    gap: 202px;
+}
+
+/* Playlist */
+.playlistContainer {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+}
+
+.playList {
+    display: flex;
+    padding: 0px 65px;
+    flex-direction: column;
+    align-items: flex-start;
+}
+
+.playlistHeader {
+    display: flex;
+    padding-top: 8px;
+    align-items: center;
+    flex-direction: row;
+}
+
+.playBtn {
+    display: flex;
+    padding: 6px 16px;
+    align-items: flex-start;
+    flex-direction: row;
+    
+}
+
+.playBtn img {
+    display: flex;
+    width: 12px;
+    height: 12px;
+    border: 4px 6px;
+    justify-content: center;
+    align-items: center;
+    margin-top: 7px;
+}
+
+.playBtn p {
+    /* Layout */
+    display: flex;
+    padding: 3px 0px 2px 8px;
+    align-items: flex-start;
+    gap: 10px;
+
+    /* Font Attribute */
+    color: var(--gray-color, #AAA);
+    font-family: Roboto;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: normal;
+    text-transform: uppercase;
+}
+
+.contentsList {
+    display: flex;
+    padding: 24px 0px;
+    align-items: flex-start;
+}
+
+.playlistVideo {
+    display: flex;
+    width: 214px;
+    padding-right: 4px;
+    flex-direction: column;
+    align-items: flex-start;
+}
+
+.playThumbnail {
+    width: 210px;
+    height: 118px;
+}
+
+.playlistDesc {
+    display: flex;
+    width: 186px;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+}
+
+.plVideoName {
+    /* Layout */
+    display: flex;
+    padding: 8px 0px;
+    align-items: flex-start;
+    gap: 10px;
+    /* Font Attributes */
+    color: var(--white-color, #FFF);
+    font-family: Roboto;
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: normal;
+}
+
+.plVideoInfo {
+    color: var(--gray-color, #AAA);
+    font-family: Roboto;
+    font-size: 12px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+}
+
 
 @media (max-width: 900px) {
     .search input {
