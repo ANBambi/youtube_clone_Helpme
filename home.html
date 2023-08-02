@@ -38,24 +38,21 @@
                     <!-- mic modal content -->
                 </div>
             </div>
-                <div class="profile" id="profile">
-                    <div class="rightContent" id="rightContent">
-                        <img class="create" id="create" src="imgHome/create.svg" alt="">
-                            <!-- <div class="createContainer" id="createContainer"> -->
-                                <!-- create modal content -->
-                            <!-- </div> -->
-                        <img class="apps" id="apps" src="imgHome/apps.svg" alt="">
-                        <span class="notifications material-symbols-outlined" id="notifications">notifications</span>
-                        <!-- notiContainer의 inline style 적용은 css 작업후 지울 예정 -->
-                        <div class="notiContainer" id="notiContainer" style="display: none;">
-                            <!-- notification modal content -->
+            <div class="profile" id="profile">
+                <div class="rightContent" id="rightContent">
+                    <img class="create" id="create" src="imgHome/create.svg" alt="">
+                        <div class="createContainer" id="createContainer">
                         </div>
-                        <img class="profile" id="profile" src="imgHome/Profile.svg" alt="">
-                        <div class="profileContainer" id="profileContainer">
-
-                        </div>
+                    <img class="apps" id="apps" src="imgHome/apps.svg" alt="">
+                    <span class="notifications material-symbols-outlined" id="notifications">notifications</span>
+                    <div class="notiContainer" id="notiContainer">
+                        <!-- notification modal content -->
+                    </div>
+                    <img class="profileButton" id="profileButton" src="imgHome/Profile.svg" alt="">
+                    <div class="profileContainer" id="profileContainer">
                     </div>
                 </div>
+            </div>
         </header>
     </div>
 
@@ -193,54 +190,56 @@
                             <span class="subtitle send feedback" id="send feedback">Send feedback</span>
                         </li>
                     </ul>
-                    <footer id="navFooter">
-                        <div id="footerDescription" style="color: #717171;">
-                            © 2023 HelpMe YouTube Clone
-                        </div>
-                    </footer>
                 </div>
             </nav>
         </div> 
         <div class="mainContainer">
             <!-- MAIN --> 
             <section class = "main">
-            <!-- top menu -->
-                <header class="topMenu" id = "topMenu">
-                    <div class="buttonDiv">
-                        <button class="allBtn" id="allBtn">All</button>
-                        <button class="topMenuBtn" id="topMenuBtn">Item</button>
-                        <button class="topMenuBtn" id="topMenuBtn">음악</button>
-                        <button class="topMenuBtn" id="topMenuBtn">실시간</button>
-                        <button class="topMenuBtn" id="topMenuBtn">뉴스</button>
-                        <button class="topMenuBtn" id="topMenuBtn">게임</button>
-                        <button class="topMenuBtn" id="topMenuBtn">야구</button>
-                        <button class="topMenuBtn" id="topMenuBtn">요리</button>
-                        <button class="topMenuBtn" id="topMenuBtn">만화 영화</button>
-                        <button class="topMenuBtn" id="topMenuBtn">축구</button>
-                        <button class="topMenuBtn" id="topMenuBtn">최근에 업로드된 동영상</button>
+                <!-- top menu -->
+                <div id="tagArea">
+                    <div id="tagNavScrollBtn">
+                            <button class="allBtn" id="allBtn">All</button>
+                            <button class="topMenuBtn" id="topMenuBtn">Item</button>
+                            <button class="topMenuBtn" id="topMenuBtn">음악</button>
+                            <button class="topMenuBtn" id="topMenuBtn">실시간</button>
+                            <button class="topMenuBtn" id="topMenuBtn">뉴스</button>
+                            <button class="topMenuBtn" id="topMenuBtn">게임</button>
+                            <button class="topMenuBtn" id="topMenuBtn">야구</button>
+                            <button class="topMenuBtn" id="topMenuBtn">요리</button>
+                            <button class="topMenuBtn" id="topMenuBtn">만화 영화</button>
+                            <button class="topMenuBtn" id="topMenuBtn">축구</button>
+                            <button class="topMenuBtn" id="topMenuBtn">최근에 업로드된 동영상</button>
                     </div>
-                </header>
+                </div>
         
                 <!--main(video list part)-->
-                <article class="ThumbnailRow">
-                    <div class="ThumbnailRowThumbnailItem" id="ThumbnailRowThumbnailItem">
-                        <!-- <div class="ThumbnailImages">
-                            thumbnailimg
-                        </div> -->
-
-                        <!-- <div class="ThumbnailChannel">
-                            channel img
-                        </div> -->
-                        <!-- <div class="ThumbnailDesc">
-                            title, channelName, Time
+                <article class="ThumbnailContainer" id="ThumbnailContainer">
+                    <div class="ThumbnailRow" id="ThumbnailRow">
+                        <!-- <div class="ThumbnailRowThumbnailItem" id="ThumbnailRowThumbnailItem">
+                            <div class="ThumbnailImages">
+                                <div class="thumbnailDescContainer">
+                                    <div class="ThumbnailChannel">
+                                        channel img
+                                    </div>
+                                <div class="ThumbnailDesc">
+                                    title, channelName, Time
+                                </div>   
+                            </div>
                         </div> -->
                     </div>
                 </article>
             </section>
         </div>
     </div> 
+    <footer id="navFooter">
+        <div id="footerDescription" style="color: #717171;">
+            © 2023 HelpMe YouTube Clone
+        </div>
+    </footer>
 </body>
 <script src="header.js"></script>
 <script src="search.js"></script>
 <script src="getVideoList.js"></script>
+<script src="home.js"></script>
 </html>
