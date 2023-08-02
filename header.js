@@ -1,162 +1,159 @@
-//html : onclick=''추가, css:추가 필요 
-
-
 //mic modal
-const openMic = document.querySelector('.mic');
-const micContainer = document.querySelector('.micContainer')
-const closeMic = document.querySelector('.closeMic')
+const openMic = document.querySelector('.micButton');
+const closeMic = document.querySelector('.closeMic');
 
+let micContent = "";
+const micContainer = document.getElementById('micContainer');
 openMic.addEventListener('click', () => {
-    micContainer.style.display = 'flex';
-    openMic.style.display = 'none';
+    micContainer.style.display = 'block';
+    if (!confirm("마이크에 대한 엑세스를 허용하시겠습니까?")) {
+        //허용 안할 경우
+        micContent = `
+                <div class="micModal">
+                    <div class="micModalClose">
+                        <button class="closeMic" id="closeMic" onclick="micClose()">
+                            <span class="material-symbols-outlined">close</span>
+                        </button>
+                    </div>
+                    <div class="micModalContent" id="micModalContent">
+                        <div class="micModalText">
+                            <h2>승인대기중...</h2>
+                            <p>음성으로 검색하려면 마이크에 대한 액세스를 허용하세요.</p>
+                        </div>
+                        <div class"micModalBtn">
+                            <button class="checkMic" id="checkMic" onclick="micClose()">확인</button>
+                        </div>
+                    </div>
+                </div>
+        `;
+        micContainer.innerHTML = micContent;
+    } else {
+        micContent = `
+                <div class="micModal">
+                    <div class="micModalClose">
+                        <button class="closeMic" id="closeMic" onclick="micClose()">
+                            <span class="material-symbols-outlined">close</span>
+                        </button>
+                    </div>
+                    <div class="micModalContent" id="micModalContent">
+                        <div class="micModalText">
+                            <h2>듣는중...</h2>
+                        </div>
+                        <div class"micModalBtn">
+                            <button class="record" id="record">
+                                <img class="mic" id="mic" src="imgHome/mic.svg" alt="">
+                            </button>
+                        </div>
+                    </div>
+                </div>
+        `;
+        micContainer.innerHTML = micContent;
+    }
 });
 
-closeMic.addEventListener('click', () => {
+function micClose(){
     micContainer.style.display = 'none';
-    openMic.style.display = 'block';
-});
-
-// mic modal html 예시
-
-// </button>
-// <button class="micButton" id="micButton">
-//   <img class="mic" id="mic" src="imgHome/mic.svg" alt="">
-// </button>
-
-// <div class="micContainer">
-//   <div class="micModal">
-//     <h2>승인대기중</h2>
-//     <p>
-//       음성으로 검색하려면 마이크에 대한 액세스를 허용하세요.
-//     </p>
-//     <button class="closeMic">Close</button>
-//   </div>
-// </div>
-
-// mic modal css 예시
-
-// .micButton:hover {
-//     background-color: #2980b9;
-//   }
-    
-//   .micContainer {
-//     position: absolute;
-//     top: 0;
-//     left: 0;
-//     width: 100vw;
-//     height: 100vh;
-//     display: none;
-//     flex-direction: column;
-//     justify-content: center;
-//     align-items: center;
-//   }
-    
-//   .micModal {
-//     display: flex;
-//     flex-direction: column;
-//     justify-content: center;
-//     align-items: center;
-//     max-width: 80%;
-//     row-gap: 15px;
-//     padding: 30px;
-//     border: 1px solid lightgray;
-//     border-radius: 7px;
-//     box-shadow: 3px 5px 15px rgba(0, 0, 0, 0.2);
-//   }
-
+}
 
 //------------------------------------------------------------------------------------------------------------------
-//dropdown
-function dropdown(){
-    let click = document.getElementById("drop-content");
-    if(click.style.display === "none"){
-        click.style.display = "block";
+//profile modal event
+const create = document.getElementById('create');
 
-    }else{
-        click.style.display = "none";
-
-    }
-}
-//dropdown html 예시
-// <!--right part(profile)-->
-//             <div class="profile" id="profile">
-//               <div class="rightContent" id="rightContent">
-//                   <img class="create" id="create" onclick="dropdown()" src="imgHome/create.svg" alt="">
-//                   <div style="display: none;" id="drop-content">
-//                     <a hreaf='#'>동영상 업로드</a>
-//                     <a hreaf='#'>라이브 스트리밍 시작</a>
-//                   </div>
-
-//dropdown css 예시
-// #drop-content{
-//     position: absolute;
-//     z-index: 1;
-// }
-// #drop-content a{
-//     display:block;
-//     font-size: 20px;
-//     background-color: #dfdfdf;
-//     color: black;
-//     text-decoration: none;
-//     padding: 10px 36px;
-//     margin: 2px 0px 0px 0px;
-// }
-
-
-//---------------------------------------------------------------------------------------------------------------
-
-//moreview
-document.addEventListener("DOMContentLoaded", function () {
-    var wrap = document.querySelector("#wrap2");
-    var moreButton = document.getElementById("moreButton2");
-    var collButton = document.getElementById("collButton2");
-    var plIcons = document.querySelectorAll('.pl-icon');
-    var plIconCount = plIcons.length;
-    var isExpanded = false
-
-    moreButton.querySelector('p').textContent = `Show ${plIconCount} more`;
-
-    // default
-    var items = wrap.getElementsByTagName("a");
-    for (var i = 0; i < items.length; i++) {
-        if (i >= 4) {
-            items[i].style.display = "none";
-        }
-    }
-
-    // 더보기
-    moreButton.addEventListener("click", function () {
-        event.preventDefault();
-        if (!isExpanded) {
-            collButton.style.display = "flex";
-            moreButton.style.display = "none";
-            for (var i = 4; i < items.length; i++) {
-                items[i].style.display = "flex";
-                isExpanded = true
-            }
-        }
-    });
-
-    collButton.addEventListener("click", function () {
-        event.preventDefault();
-        if (isExpanded) {
-            moreButton.style.display = "flex";
-            collButton.style.display = "none";
-            for (var i = 4; i < items.length; i++) {
-                items[i].style.display = "none";
-                isExpanded = false
-            }
-        }
-    })
+let createContent = "";
+// create button event
+const createContainer = document.getElementById('createContainer');
+create.addEventListener('click', ()=>{
+    createContainer.style.display = 'block';
+    createContent =`
+        <div class="createList">
+            <div class = "videoUpload" >
+                <span class="material-symbols-outlined">smart_display</span>
+                <span class="createListContent">동영상 업로드</span>
+            </div>
+            <div class = "videoLive">
+            <span class="material-symbols-outlined">settings_input_antenna</span>
+                <span class="createListContent">라이브 스트리밍</span>
+            </div>
+        </div>
+    `;
+    createContainer.innerHTML = createContent;
 });
 
+// notification button event
+let notiContent = "";
+const notifications = document.getElementById('notifications');
+const notiContainer = document.getElementById('notiContainer');
+notifications.addEventListener('click',()=>{
+    notiContainer.style.display = 'block';
+    if(notifications.classList.contains('material-symbols-outlined')){
+        notifications.classList.remove('material-symbols-outlined');
+        notifications.classList.add('material-icons');
+        notiContent =`
+        <div class="notiHeader">
+            <p class="notiTitle">NOTIFICATIONS</p>
+            <span class="material-symbols-outlined">settings</span>
+        </div>
+        <div class="notiContent" id="notiContent">
+        <ul class="notifications">
+            <li>
+                <div class="notiChannelImg">
+                    <img class="notiChannelImg" src="imgHome/channelPic.svg" alt="">
+                </div>
+                <div class="notiVideoContent">
+                    <p class="videoInfo">video information</p>
+                    <p class="notiDate"> 2 weeks ago</p>
+                </div>
+            </li>
+        </ul>
+        </div>
+        `;
+        notiContainer.innerHTML = notiContent;
+      }else{
+        notifications.classList.remove('material-icons');
+        notifications.classList.add('material-symbols-outlined');
+        notiContainer.style.display = 'none';
+      }
+});
 
-//sidebar toggle
-function toggleSidebar() {
-    const sidebar = document.querySelector(".sideBar");
-    sidebar.classList.toggle("active");
-}
-const sidebar = document.querySelector(".sideBar");
-const containerList = document.querySelector(".container-list");
-sidebar.classList.toggle("active");
-containerList.classList.toggle("container_big")
+//page click -> modal close
+window.onclick = function (event){
+    if(event.target == createContainer){
+        createContainer.style.display = "none";
+    }else if(event.target == notiContainer){
+        notiContainer.style.display = "none";
+    }
+};
+// profile button event
+let profileContent = "";
+const profile = document.getElementById('profileButton');
+const profileContainer = document.getElementById('profileContainer');
+profile.addEventListener('click', ()=>{
+    profileContainer.style.display = 'block';
+    profileContent =`
+        <div class="profileList">
+            <div class="userName">
+                <h3> Oreumi님!</h3>
+            </div>
+            <div class="myPage">
+                <h3>마이 페이지 </h3>
+            </div>
+            <div class="logOutDiv">
+                <span class="material-symbols-outlined">logout</span>
+                <span class="logout">logout</span>
+            </div>
+        </div>
+    `;
+    profileContainer.innerHTML = profileContent;
+});
+
+window.onclick = function (event){
+    if(event.target == createContainer){
+        createContainer.style.display = "none";
+    }
+    if(event.target == notiContainer){
+        notiContainer.style.display = "none";
+    }
+    if(event.target == profileContainer){
+        profileContainer.style.display = "none";
+    }
+};
