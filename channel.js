@@ -235,4 +235,31 @@ const subScribeButton = document.getElementById('subscribe');
 });
 
 
+//----------0803 배영덕 측 사이드바 더 보기 버튼 활성화 ------------------
+
+document.addEventListener("DOMContentLoaded", function () {
+  const showMoreButton = document.getElementById("showMore");
+  const hiddenElements = document.querySelectorAll(".hidden");
+
+  let isHidden = true;
+
+  showMoreButton.addEventListener("click", function () {
+    if (isHidden) {
+      hiddenElements.forEach(function (element) {
+        element.style.display = "block";
+        element.style.marginTop = "10px"; 
+      });
+      showMoreButton.innerText = "간략하게 보기";
+    } else {
+      hiddenElements.forEach(function (element) {
+        element.style.display = "none"
+        element.style.marginTop = "0"; // 여백 제거
+      });
+      showMoreButton.innerText = "더보기";
+    }
+
+    isHidden = !isHidden;
+  });
+});
+
 
