@@ -56,7 +56,7 @@ function selectOption(option) {
 
 // 취소시 원래상태로
 function subCancle() {
-    if (confirm("${id}구독을 취소하시겠습니까?")) {
+    if (confirm("구독을 취소하시겠습니까?")) {
         restoreState();
     }
 }
