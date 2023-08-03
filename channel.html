@@ -1,17 +1,19 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-   <meta charset="UTF-8">
-   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-   <!--css import-->
-   <link rel="stylesheet" href="reset.css">
-   <link rel="stylesheet" href="channel.css">
-   <!-- Google Fonts link-->
-   <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined" rel="stylesheet" />
-   <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
-   <link href="./imgHome/Logo_mini.svg" rel="shortcut icon" type="image/x-icon">
-   <title>Channel</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!--css import-->
+    <link rel="stylesheet" href="reset.css">
+    <link rel="stylesheet" href="channel.css">
+    <!-- Google Fonts link-->
+    <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined" rel="stylesheet" />
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <link href="./imgHome/Logo_mini.svg" rel="shortcut icon" type="image/x-icon">
+    <title>Channel</title>
 </head>
+
 <body>
     <!--header container -->
     <div class="wrapHeader">
@@ -20,19 +22,20 @@
             <!--header(search) left part(menu icon & logo)-->
             <div id="topLeft" class="topLeft">
                 <div class="leftContent">
-                    <i class="material-symbols-outlined" onclick="toggleSidebar()">menu</i>
-                    <img src="imgHome/Youtube-Logo.svg" alt="">
+                    <span class="material-symbols-outlined" onclick="toggleSidebar()">menu</span>
+                    <img src="imgHome/Youtube-Logo.svg" alt="YouTube Logo"> <!-- YouTube Logo 추가-->
                 </div>
             </div>
             <!-- center part(search)-->
             <div class="searchBox" id="searchBox">
-                <input type="text" name="searchInput" id="searchInput" onkeyup="enterkey();" class="searchInput" placeholder="search">
-                    <button class="searchBtn" id="searchBtn" onclick="fn_search()">
-                        <span class="material-symbols-outlined">search</span>
-                    </button>
+                <input type="text" name="searchInput" id="searchInput" onkeyup="enterkey();" class="searchInput"
+                    placeholder="search">
+                <button class="searchBtn" id="searchBtn" onclick="fn_search()">
+                    <span class="material-symbols-outlined">search</span>
+                </button>
                 </button>
                 <button class="micButton" id="micButton">
-                    <img class="mic" id="mic" src="imgHome/mic.svg" alt="">
+                    <img class="mic" id="mic" src="imgHome/mic.svg" alt="Microphone"> <!--Microphone 추가-->
                 </button>
                 <div class="micContainer" id="micContainer">
                     <!-- mic modal content -->
@@ -40,24 +43,25 @@
             </div>
             <div class="profile" id="profile">
                 <div class="rightContent" id="rightContent">
-                    <img class="create" id="create" src="imgHome/create.svg" alt="">
-                        <!-- <div class="createContainer" id="createContainer"> -->
-                            <!-- create modal content -->
-                        <!-- </div> -->
-                    <img class="apps" id="apps" src="imgHome/apps.svg" alt="">
+                    <img class="create" id="create" src="imgHome/create.svg" alt="Create Icon"> <!--create icon 추가-->
+                    <!-- <div class="createContainer" id="createContainer"> -->
+                    <!-- create modal content -->
+                    <!-- </div> -->
+                    <img class="apps" id="apps" src="imgHome/apps.svg" alt="Apps Icon"> <!-- Apps icon 추가-->
                     <span class="notifications material-symbols-outlined" id="notifications">notifications</span>
                     <!-- notiContainer의 inline style 적용은 css 작업후 지울 예정 -->
                     <div class="notiContainer" id="notiContainer" style="display: none;">
                         <!-- notification modal content -->
                     </div>
-                    <img class="profile" id="profile" src="imgHome/Profile.svg" alt="">
+                    <img class="profile" id="profileImage" src="imgHome/Profile.svg" alt="Profile Icon">
                     <div class="profileContainer" id="profileContainer">
                     </div>
                 </div>
             </div>
         </header>
     </div>
-
+    <!-- header 는 모두 공통적으로 잡아놓기 -->
+    <!--Main-->
     <!-- main container -->
     <div class="mainContainer">
         <!--nav container-->
@@ -195,133 +199,167 @@
                 </div>
             </nav>
         </div>
-        <!-- ㅇㅇㅇㅇㅇㅇㅇㅇㅇㅇㅇㅇㅇㅇㅇㅇㅇㅇㅇㅇ -->
+        <div class="wrapMain">
+            <!--channel information-->
+            <div class="channelContainer">
+                <div class="banner">
+                    <img src="imgChannel/channelCover.svg">
+                </div>
+                <div class="channelTitle">
+                    <div class="channelProfile">
+                        <div class="channelProfilePic">
+                            <img src="imgChannel/paka.jpg" class="profileImg">
+                        </div>
+                        <div class="channelProfileName">
+                            <span id="channelName" class="channelName">Marcus Levin</span>
+                            <span id="subscribers" class="subscribers">1.2M subscribers</span>
+                        </div>
+                    </div>
+                    <div class="buttoncon"> <!-- 종민님이 작업하신다고 했다. 안해오시면 내가 해야지. -->
+                        <button onclick="changeImg()" class="button" id="subscribe">구독</button>
+                        <div style="display: none;" id="options">
+                            <a id="all" onclick="selectOption('all')">
+                                <img src="imgChannel/notifications_active.svg">전체</a>
+                            <a id="custom" onclick="selectOption('custom')">
+                                <img src="imgChannel/notifications.svg">맞춤설정</a>
+                            <a id="none" onclick="selectOption('none')">
+                                <img src="imgChannel/notifications_off.svg">없음</a>
+                            <a id="cancel" onclick="subCancle()">
+                                <img src="imgChannel/person_remove.svg">구독취소</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="channelMain">
+                    <!--header Navigation-->
+                    <header class="channelNav">
+                        <div>
+                            <ul class="navContainer">
+                                <li class="navContainer-item">
+                                    <a href="#">HOME</a>
+                                </li>
+                                <li class="navContainer-item">
+                                    <a href="#">VIDEOS</a>
+                                </li>
+                                <li class="navContainer-item">
+                                    <a href="#">PLAYLISTS</a>
+                                </li>
+                                <li class="navContainer-item">
+                                    <a href="#">COMMUNITY</a>
+                                </li>
+                                <li class="navContainer-item">
+                                    <a href="#">CHANNELS</a>
+                                </li>
+                                <li class="navContainer-item">
+                                    <a href="#">ABOUT</a>
+                                </li>
+                                <li class="navContainer-item">
+                                    <span class="material-symbols-outlined">
+                                        <a href="#">search</a>
+                                    </span>
+                                </li>
+                                <li class="navContainer-item">
+                                    <span class="material-symbols-outlined rightArrow">
+                                        <a>arrow_forward_ios</a>
+                                    </span>
+                                </li>
+                            </ul>
+                        </div>
+                    </header>
+                </div>
+            </div>
+            <!-- main video part -->
+            <div class="ChannelMainVideo" id="ChannelMainVideo">
+                <div class="mainVideoContainer" id="mainVideoContainer">
+                    <div class="videoPart" id="videoPart">
+                        <video src="https://storage.googleapis.com/oreumi.appspot.com/video_1.mp4" controls autoplay
+                            muted></video>
+                    </div>
+                    <div class="videoDescPart" id="videoDescPart">
+                        <div class="mainVideoTitle" id="mainVideoTitle">
+                            <p>video title</p>
+                        </div>
+                        <div class="mainVideoInfo" id="mainVideoInfo">
+                            <span class="mainVideoViews" id="mainVideoViews">
+                                [views]
+                            </span>
+                            <span class="mainVideoUploadDates" id="mainVideoUploadDates">
+                                [upload date]
+                            </span>
+                        </div>
+                        <div class="mainVideoDesc" id="mainVideoDesc">
+                            Chris Fisher, also known as the Blind Woodturner...
+                        </div>
+                    </div>
+                </div>
+                <hr class="endLine">
+            </div>
+            <!-- video part // js 완성시 교체-->
+            <div class="playlistContainer">
+                <div class="playList">
+                    <div class="playlistHeader">
+                        <span class="playlistTitle" style="color: #FFF;">동영상</span>
+                        <div class="playBtn">
+                            <img src="imgChannel/playAllimg.svg" alt="재생버튼">
+                            <p>모두재생</p>
+                        </div>
+                    </div>
+                    <div class="contentsList">
+                        <div class="playlistVideo">
+                            <img class="playThumbnail" src="https://storage.googleapis.com/oreumi.appspot.com/img_3.jpg"
+                                alt="썸네일">
+                            <div class="playlistDesc">
+                                <span class="plVideoName">AI</span>
+                                <span class="plVideoInfo" id="plVideoChannel">Marcus Levin</span>
+                                <span class="plVideoInfo" id="plVideoViews">329K views. 1 month ago</span>
+                            </div>
+                        </div>
+                        <div class="playlistVideo">
+                            <img class="playThumbnail" src="https://storage.googleapis.com/oreumi.appspot.com/img_4.jpg"
+                                alt="썸네일">
+                            <div class="playlistDesc">
+                                <span class="plVideoName">BIO</span>
+                                <span class="plVideoInfo" id="plVideoChannel">Marcus Levin</span>
+                                <span class="plVideoInfo" id="plVideoViews">329K views. 1 month ago</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="playList">
+                    <div class="playlistHeader">
+                        <span class="playlistTitle" style="color: #FFF;">인기 동영상</span>
+                        <div class="playBtn">
+                            <img src="imgChannel/playAllimg.svg" alt="재생버튼">
+                            <p>모두 재생</p>
+                        </div>
+                    </div>
+                    <div class="contentsList">
+                        <div class="playlistVideo">
+                            <img class="playThumbnail" src="https://storage.googleapis.com/oreumi.appspot.com/img_1.jpg"
+                                alt="썸네일">
+                            <div class="playlistDesc">
+                                <span class="plVideoName"> Blockchain</span>
+                                <span class="plVideoInfo" id="plVideoChannel">Marcus Levin</span>
+                                <span class="plVideoInfo" id="plVideoViews">11 views. 1 month ago</span>
+                            </div>
+                        </div>
+                        <div class="playlistVideo">
+                            <img class="playThumbnail" src="https://storage.googleapis.com/oreumi.appspot.com/img_2.jpg"
+                                alt="썸네일">
+                            <div class="playlistDesc">
+                                <span class="plVideoName">Future</span>
+                                <span class="plVideoInfo" id="plVideoChannel">Marcus Levin</span>
+                                <span class="plVideoInfo" id="plVideoViews">111 views. 1 month ago</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                </section>
+            </div>
+        </div>
+    </div>
 
-   <!--channel information-->
-   <div class="banner">
-      <img src="imgChannel/channelCover.svg">
-   </div>
-   <div class="channelTitle">
-      <div class="channelProfile">
-          <div class="channelProfilePic">
-              <img src="imgChannel/paka.jpg" class="profileImg">
-          </div>
-          <div class="channelProfileName">
-              <span id="channelName" class="channelName">Marcus Levin</span>
-              <span id="subscribers" class="subscribers">1.2M subscribers</span>
-          </div>
-      </div>
-      <div class="buttoncon">
-          <button onclick="changeImg()" class="button" id="sub">구독</button>
-          <div style="display: none;" id="options">
-              <a id="all" onclick="selectOption('all')">
-                  <img src="imgChannel/notifications_active.svg">전체</a>
-              <a id="custom" onclick="selectOption('custom')">
-                  <img src="imgChannel/notifications.svg">맞춤설정</a>
-              <a id="none" onclick="selectOption('none')">
-                  <img src="imgChannel/notifications_off.svg">없음</a>
-              <a id="cancel" onclick="subCancle()">
-                  <img src="imgChannel/person_remove.svg">구독취소</a>
-          </div>
-      </div>
-  </div>
-   <!--Main-->
-   <section class="channelMain">
-      <!--header Navigation-->
-      <header class="channelNav">
-         <div>
-            <ul class="navContainer">
-               <li class="navContainer-item">
-                  <a href="#">HOME</a>
-               </li>
-               <li class="navContainer-item">
-                  <a href="#">VIDEOS</a>
-               </li>
-               <li class="navContainer-item">
-                  <a href="#">PLAYLISTS</a>
-               </li>
-               <li class="navContainer-item">
-                  <a href="#">COMMUNITY</a>
-               </li>
-               <li class="navContainer-item">
-                  <a href="#">CHANNELS</a>
-               </li>
-               <li class="navContainer-item">
-                  <a href="#">ABOUT</a>
-               </li>
-               <li class="navContainer-item">
-                  <span class="material-symbols-outlined">
-                     <a href="#">search</a>
-                  </span>
-               </li>
-               <li>
-                  <span class="material-symbols-outlined">
-                     <a >arrow_forward_ios</a>
-                  </span>
-               </li>
-            </ul>
-         </div>
-         </div>
-      </header>
-      <!-- video part // js 완성시 교체-->
-      <div class="playlistContainer">
-         <div class="playList">
-             <div class="playlistHeader">
-                 <span class="playlistTitle" style="color: #FFF;">동영상</span>
-                 <div class="playBtn">
-                     <img src="imgChannel/playAllimg.svg" alt="재생버튼">
-                     <p>모두재생</p>
-                 </div>
-             </div>
-             <div class="contentsList">
-                 <div class="playlistVideo">
-                     <img class="playThumbnail" src="https://storage.googleapis.com/oreumi.appspot.com/img_3.jpg" alt="썸네일">
-                     <div class="playlistDesc">
-                         <span class="plVideoName">AI</span>
-                         <span class="plVideoInfo" id="plVideoChannel">Marcus Levin</span>
-                         <span class="plVideoInfo" id="plVideoViews">329K views. 1 month ago</span>
-                     </div>
-                 </div>
-                 <div class="playlistVideo">
-                     <img class="playThumbnail" src="https://storage.googleapis.com/oreumi.appspot.com/img_4.jpg" alt="썸네일">
-                     <div class="playlistDesc">
-                         <span class="plVideoName">BIO</span>
-                         <span class="plVideoInfo" id="plVideoChannel">Marcus Levin</span>
-                         <span class="plVideoInfo" id="plVideoViews">329K views. 1 month ago</span>
-                     </div>
-                 </div>
-             </div>
-         </div>
-         <div class="playList">
-            <div class="playlistHeader">
-                <span class="playlistTitle" style="color: #FFF;">인기 동영상</span>
-                <div class="playBtn">
-                    <img src="imgChannel/playAllimg.svg" alt="재생버튼">
-                    <p>모두 재생</p>
-                </div>
-            </div>
-            <div class="contentsList">
-                <div class="playlistVideo">
-                    <img class="playThumbnail" src="https://storage.googleapis.com/oreumi.appspot.com/img_1.jpg" alt="썸네일">
-                    <div class="playlistDesc">
-                        <span class="plVideoName"> Blockchain</span>
-                        <span class="plVideoInfo" id="plVideoChannel">Marcus Levin</span>
-                        <span class="plVideoInfo" id="plVideoViews">11 views. 1 month ago</span>
-                    </div>
-                </div>
-                <div class="playlistVideo">
-                    <img class="playThumbnail" src="https://storage.googleapis.com/oreumi.appspot.com/img_2.jpg" alt="썸네일">
-                    <div class="playlistDesc">
-                        <span class="plVideoName">Future</span>
-                        <span class="plVideoInfo" id="plVideoChannel">Marcus Levin</span>
-                        <span class="plVideoInfo" id="plVideoViews">111 views. 1 month ago</span>
-                    </div>
-                </div>
-            </div>
-        </div>  
-   </section>
 </body>
 <script src="header.js"></script>
-<script src="subcribe.js"></script>
-<script src="script channel.js"></script>
+<script src="channel.js"></script>
+
 </html>

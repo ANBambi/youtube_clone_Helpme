@@ -41,16 +41,14 @@
             <div class="profile" id="profile">
                 <div class="rightContent" id="rightContent">
                     <img class="create" id="create" src="imgHome/create.svg" alt="">
-                        <!-- <div class="createContainer" id="createContainer"> -->
-                            <!-- create modal content -->
-                        <!-- </div> -->
+                        <div class="createContainer" id="createContainer">
+                        </div>
                     <img class="apps" id="apps" src="imgHome/apps.svg" alt="">
                     <span class="notifications material-symbols-outlined" id="notifications">notifications</span>
-                    <!-- notiContainer의 inline style 적용은 css 작업후 지울 예정 -->
-                    <div class="notiContainer" id="notiContainer" style="display: none;">
+                    <div class="notiContainer" id="notiContainer">
                         <!-- notification modal content -->
                     </div>
-                    <img class="profile" id="profile" src="imgHome/Profile.svg" alt="">
+                    <img class="profileButton" id="profileButton" src="imgHome/Profile.svg" alt="">
                     <div class="profileContainer" id="profileContainer">
                     </div>
                 </div>
@@ -58,6 +56,143 @@
         </header>
     </div>
     <!--header(search)-->
+    <div class="mainContainer">
+        <!--nav container-->
+        <div class="wrapNav" id="wrapNav">
+            <!--sideBar-->
+            <nav class="sideBar" id="sideBar">
+                <!--sidebar Top-->
+                <div class="sideBarTop" id="sideBarTop">
+                    <ul class="sideBarContent">
+                        <li>
+                            <span class="material-symbols-outlined">home</span>
+                            <span class="subtitle home" id="home">Home</span>
+                        </li>
+                        <li>
+                            <span class="material-symbols-outlined">explore</span>
+                            <span class="subtitle explore" id="explore">Explore</span>
+                        </li>
+                        <li>
+                            <span class="material-symbols-outlined">subscriptions</span>
+                            <span class=" subtitle subscriptions" id="subscription">subscriptions</span>
+                        </li>
+                    </ul>
+                    <hr class="sideborder">
+                </div>
+                <!--sidebar Top2-->
+                <div class="sideBarTop2" id="sideBarTop2">
+                    <ul class="sideBarContent">
+                        <li>
+                            <span class="material-symbols-outlined">video_library</span>
+                            <span class="subtitle library" id="library">library</span>
+                        </li>
+                        <li>
+                            <span class="material-symbols-outlined">history</span>
+                            <span class="subtitle history" id="history">history</span>
+                        </li>
+                        <li>
+                            <span class="material-symbols-outlined">smart_display</span>
+                            <span class="subtitle yourVideos" id="yourVideos">Your Videos</span>
+                        </li>
+                        <li>
+                            <span class="material-symbols-outlined">pace</span>
+                            <span class="subtitle watch" id="watch">Watch Later</span>
+                        </li>
+                        <li>
+                            <span class="material-symbols-outlined">thumb_up</span>
+                            <span class="subtitle likeVideo" id="likeVideo">Liked Videos</span>
+                        </li>
+                        <li>
+                            <span class="material-symbols-outlined">stat_minus_1</span>
+                            <span class="subtitle showMore" id="showMore">Show More</span>
+                        </li>
+                    </ul>
+                    <hr class="sideborder">
+                </div>
+                <!--sidebar subscriptions-->
+                <div class="sideBarSubscriptions" id="sideBarSubscriptions">
+                    <p class="sideBarTitle">SUBSCRIPTIONS</p>
+                    <ul class="sideBarContent">
+                        <li>
+                            <img src="imgHome/Profile.svg" alt="">
+                            <span class="subtitle channelName" id="channelName">James Gouse</span>
+                        </li>
+                        <li>
+                            <img src="imgHome/Profile.svg" alt="">
+                            <span class="subtitle channelName" id="channelName">James Gouse</span>
+                        </li>
+                        <li>
+                            <img src="imgHome/Profile.svg" alt="">
+                            <span class="subtitle channelName" id="channelName">James Gouse</span>
+                        </li>
+                        <li>
+                            <img src="imgHome/Profile.svg" alt="">
+                            <span class="subtitle channelName" id="channelName">James Gouse</span>
+                        </li>
+                        <li>
+                            <img src="imgHome/Profile.svg" alt="">
+                            <span class="subtitle channelName" id="channelName">James Gouse</span>
+                        </li>
+                        <li>
+                            <img src="imgHome/Profile.svg" alt="">
+                            <span class="subtitle channelName" id="channelName">James Gouse</span>
+                        </li>
+                        <li>
+                            <img src="imgHome/Profile.svg" alt="">
+                            <span class="subtitle channelName" id="channelName">James Gouse</span>
+                        </li>
+                        <li>
+                            <span class="material-symbols-outlined">stat_minus_1</span>
+                            <span class="subtitle showMoreSub" id="showMoreSub">Show 13 More</span>
+                        </li>
+                    </ul>
+                    <hr class="sideborder">
+                </div>
+                <!--sidebar bottom-->
+                <div class="sideBarBottom" id="sideBarBottom">
+                    <p class="sideBarTitle">MORE FROM YOUTUBE</p>
+                    <ul class="sideBarContent">
+                        <li>
+                            <img src="imgHome/premium.svg" alt="">
+                            <span class="subtitle premium" id="premium">Youtube Premium</span>
+                        </li>
+                        <li>
+                            <img src="imgHome/gaming.svg" alt="">
+                            <span class="subtitle gaming" id="gaming">Gaming</span>
+                        </li>
+                        <li>
+                            <img src="imgHome/live.svg" alt="">
+                            <span class="subtitle live" id="live">Live</span>
+                        </li>
+                        <li>
+                            <img src="imgHome/premium.svg" alt="">
+                            <span class="subtitle sports" id="sports">Sports</span>
+                        </li>
+                    </ul>
+                    <!-- sidebar bottom(settings 부분) -->
+                    <hr class="sideborder">
+                    <ul class="sideBarContent">
+                        <li>
+                            <img src="imgHome/setting.svg" alt="">
+                            <span class="subtitle settings" id="settings">Settings</span>
+                        </li>
+                        <li>
+                            <img src="imgHome/history.svg" alt="">
+                            <span class="subtitle report history" id="report history">Report history</span>
+                        </li>
+                        <li>
+                            <img src="imgHome/help.svg" alt="">
+                            <span class="subtitle help" id="help">Help</span>
+                        </li>
+                        <li>
+                            <img src="imgHome/feedback.svg" alt="">
+                            <span class="subtitle send feedback" id="send feedback">Send feedback</span>
+                        </li>
+                    </ul>
+                </div>
+            </nav>
+        </div>
+    <!--main(Video Player&aside_video list)-->
     <div class="container">
         <div class="wrapArticle">
             <article class="primary" id="primary">
