@@ -73,18 +73,6 @@ document.addEventListener("DOMContentLoaded", ()=>{
    });
    //=======================================================
    //=======================================================
-   // 구독 버튼 클릭 시 subscribe -> subscribed 로 변경
-   const subScribeButton = document.getElementById('subscribe');
- 
-   subScribeButton.addEventListener("click", function(){
-     if (subScribeButton.classList.contains("active")) {
-       subScribeButton.classList.remove("active");
-       subScribeButton.textContent = "SUBSCRIBES"
-     } else {
-       subScribeButton.classList.add("active");
-       subScribeButton.textContent = "SUBSCRIBED";
-     }
-   });
    // comment like and dislike button event
    const commentLike = document.getElementById('commentLike');
    const commentDislike = document.getElementById('commentDislike');
