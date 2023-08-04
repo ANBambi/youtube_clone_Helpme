@@ -212,6 +212,14 @@ body {
     color: #AAAAAA;
 }
 
+.sideBarBottom img {
+    width: 24px;
+    height: 24px;
+} 
+
+
+
+
 /* li title */
 .subtitle {
     color: white;
@@ -516,6 +524,12 @@ span {
 }
 
 .contentsList {
+    display: flex;
+    padding: 24px 0px;
+    align-items: flex-start;
+}
+.contentsListFavorite,
+.contentsListDate {
     display: flex;
     padding: 24px 0px;
     align-items: flex-start;
