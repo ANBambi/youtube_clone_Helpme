@@ -3,9 +3,10 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="Content-Security-Policy" content="upgrade-insecure-requests" />
     <!--css import-->
-    <link rel="stylesheet" href="reset.css">
-    <link rel="stylesheet" href="home.css"/>
+    <link rel="stylesheet" href="css/reset.css">
+    <link rel="stylesheet" href="css/home.css"/>
     <!-- Google Fonts link-->
     <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined" rel="stylesheet" />
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
@@ -21,7 +22,7 @@
             <div id="topLeft" class="topLeft">
                 <div class="leftContent">
                     <span class="material-symbols-outlined" onclick="toggleSidebar()">menu</span>
-                    <img src="imgHome/Youtube-Logo.svg" alt="">
+                    <img src="imgHome/Youtube-Logo.svg" alt="" onclick="goHome()">
                 </div>
             </div>
             <!-- center part(search)-->
@@ -55,6 +56,7 @@
             </div>
         </header>
     </div>
+
 <!-- 확인 완료 -->
     <!-- main container -->
     <div class="mainContainer">
@@ -78,7 +80,11 @@
                             <span class=" subtitle subscriptions" id="subscription">subscriptions</span>
                         </li>
                     </ul>
-                    <hr class="border">
+
+                    <!-- <hr class="border"> -->
+
+                    <div class="border">
+
                 </div> <!-- 확인 완료 -->
 
                 <!--sidebar Top2  확인 바랍니다! -->
@@ -109,7 +115,11 @@
                             <span class="subtitle showMore" id="showMore">Show More</span>
                         </li>
                     </ul>
-                    <hr class="border">
+
+                    <!-- <hr class="border"> -->
+
+                    <div class="border">
+
                 </div>
                 <!--sidebar subscriptions-->
                 <div class="sideBarSubscriptions" id="sideBarSubscriptions">
@@ -148,7 +158,10 @@
                             <span class="subtitle showMoreSub" id="showMoreSub">Show 13 More</span>
                         </li>
                     </ul>
-                    <hr class="border">
+
+                    <!-- <hr class="border"> -->
+                        <div class="border">
+
                 </div>
                 <!--sidebar bottom-->
                 <div class="sideBarBottom" id="sideBarBottom">
@@ -170,9 +183,14 @@
                             <img src="imgHome/premium.svg" alt="">
                             <span class="subtitle sports" id="sports">Sports</span>
                         </li>
+                        <div class="border">
                     </ul>
                     <!-- sidebar bottom(settings 부분) -->
-                    <hr class="border">
+
+                    <!-- <hr class="border"> -->
+
+                    
+                
                     <ul class="sideBarContent">
                         <li>
                             <img src="imgHome/setting.svg" alt="">
@@ -192,14 +210,39 @@
                         </li>
                     </ul>
                 </div>
+                <div class="border">
             </nav>
+
+            <div class="sideBarFooter">
+                <span class="Footer1"> 
+                    About Press Copyright<br>
+                    Contact us Creators<br>
+                    Advertise Developers
+                </span>
+                <span class="Footer2"> 
+                    Terms Privacy Policy & Safety<br>
+                    How Youtube works<br>
+                    Test new features
+                </span>
+                <span class="Footer3"> 
+                    © 2023 Oreumi 3rd 시작이반<br>
+                    <t>알아서잘하조</t>
+                </span>
+            </div>
         </div> 
+
+        
+        
         <div class="mainContainer">
             <!-- MAIN --> 
             <section class = "main"> <!-- 잘뜨는지 확인해주세요 -->
                 <!-- top menu -->
                 <div id="tagArea">
+
                     <div id="tagNavScrollBtn">
+
+                    <div class="tagNavScrollBtn" id="tagNavScrollBtn">
+
                             <button class="allBtn" id="allBtn">All</button>
                             <button class="topMenuBtn" id="topMenuBtn">Item</button>
                             <button class="topMenuBtn" id="topMenuBtn">음악</button>
@@ -213,7 +256,8 @@
                             <button class="topMenuBtn" id="topMenuBtn">최근에 업로드된 동영상</button>
                     </div>
                 </div>
-        
+
+
                 <!--main(video list part)-->
                 <article class="ThumbnailContainer" id="ThumbnailContainer">
                     <div class="ThumbnailRow" id="ThumbnailRow">
@@ -239,5 +283,5 @@
         </div>
     </footer>
 </body>
-<script src="home.js"></script>
+<script src="js/home.js"></script>
 </html>

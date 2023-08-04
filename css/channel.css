@@ -135,6 +135,7 @@ body {
     border: none;
     /*remove button style*/
     border-radius: 70%;
+    margin-left: 5px;
 }
 
 .micButton:hover {
@@ -211,6 +212,14 @@ body {
     color: #AAAAAA;
 }
 
+.sideBarBottom img {
+    width: 24px;
+    height: 24px;
+} 
+
+
+
+
 /* li title */
 .subtitle {
     color: white;
@@ -230,6 +239,11 @@ body {
     width: 40px;
     height: 40px;
 }
+
+.sideBarBottom img {
+    width: 24px;
+    height: 24px;
+} 
 
 /* main container
     div for grouping main content */
@@ -450,11 +464,12 @@ span {
 /* endLine
     border line for parts */
 .endLine {
+    height: 100%;
     margin-left: 64px;
     margin-right: 69px;
-    border-color: #AAAAAA;
-}
-
+    border-bottom: 3px solid #303030; 
+} 
+sss
 /* Playlist */
 .playlistContainer {
     display: flex;
@@ -465,9 +480,11 @@ span {
 
 .playList {
     display: flex;
-    padding: 0px 65px;
+    padding: 0px;
+    margin-left: 65px;
     flex-direction: column;
     align-items: flex-start;
+    border-bottom: 1px solid #303030;
 }
 
 .playlistHeader {
@@ -513,6 +530,11 @@ span {
 }
 
 .contentsList {
+    display: flex;
+    padding: 24px 0px;
+    align-items: flex-start;
+}
+.contentsListFavorite {
     display: flex;
     padding: 24px 0px;
     align-items: flex-start;
