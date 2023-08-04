@@ -1,142 +1,142 @@
-document.addEventListener("DOMContentLoaded", ()=>{
+document.addEventListener("DOMContentLoaded", () => {
 
   //get video lst
   // get div ThumbnailRowThumbnailItems
   const ThumbnailContainer = document.getElementById('ThumbnailContainer');
   fetch("http://oreumi.appspot.com/video/getVideoList")
-  .then((resonse)=>resonse.json())
-  .then((data) =>{
-    // display home.html
-    for(let i = 0; i < data.length; i++){
-     const ThumbnailRow = document.getElementById('ThumbnailRow');
+    .then((resonse) => resonse.json())
+    .then((data) => {
+      // display home.html
+      for (let i = 0; i < data.length; i++) {
+        const ThumbnailRow = document.getElementById('ThumbnailRow');
 
-      let ThumbnailRowThumbnailItem = document.createElement('div');
-      ThumbnailRowThumbnailItem.className = 'ThumbnailRowThumbnailItem';
-      
-      // create div for thumbnail image
-      let thumbnailImgDiv = document.createElement('div');
-      thumbnailImgDiv.className = 'ThumbnailImages';
+        let ThumbnailRowThumbnailItem = document.createElement('div');
+        ThumbnailRowThumbnailItem.className = 'ThumbnailRowThumbnailItem';
 
-      // url for getting video img
-      let url = "http://oreumi.appspot.com/video/getVideoInfo?video_id=" + data[i].video_id;
-      // get video img
-      fetch(url)
-      .then((responseImg)=> responseImg.json())
-      .then((dataImg)=>{
-        let imgDiv =`
+        // create div for thumbnail image
+        let thumbnailImgDiv = document.createElement('div');
+        thumbnailImgDiv.className = 'ThumbnailImages';
+
+        // url for getting video img
+        let url = "http://oreumi.appspot.com/video/getVideoInfo?video_id=" + data[i].video_id;
+        // get video img
+        fetch(url)
+          .then((responseImg) => responseImg.json())
+          .then((dataImg) => {
+            let imgDiv = `
           <div id="ThumbnailImages">
             <img class="Image1" src="${dataImg.image_link}">
           </div>
           `;
-          thumbnailImgDiv.innerHTML = imgDiv;
-      });
-      ThumbnailRowThumbnailItem.append(thumbnailImgDiv);
+            thumbnailImgDiv.innerHTML = imgDiv;
+          });
+        ThumbnailRowThumbnailItem.append(thumbnailImgDiv);
 
-      //create div for thumbnail channel info
-      const thumbnailDescContainer = document.createElement('div');
-      thumbnailDescContainer.className = 'thumbnailDescContainer';
-      let thumbnailChannel = document.createElement('div');
-      thumbnailChannel.className = thumbnailChannel;
+        //create div for thumbnail channel info
+        const thumbnailDescContainer = document.createElement('div');
+        thumbnailDescContainer.className = 'thumbnailDescContainer';
+        let thumbnailChannel = document.createElement('div');
+        thumbnailChannel.className = thumbnailChannel;
 
-      // get video channel image
-      let channelUrl = "http://oreumi.appspot.com/channel/getChannelInfo?video_channel="+data[i].video_channel;
-      fetch(channelUrl, {
-        method: "POST"
-      })
-      .then((responseChannel)=> responseChannel.json())
-      .then((dataChannel)=>{
-        let channelProfilePic =`
+        // get video channel image
+        let channelUrl = "http://oreumi.appspot.com/channel/getChannelInfo?video_channel=" + data[i].video_channel;
+        fetch(channelUrl, {
+          method: "POST"
+        })
+          .then((responseChannel) => responseChannel.json())
+          .then((dataChannel) => {
+            let channelProfilePic = `
           <div class="ThumbnailProfilePic">
             <div class="UserAvatar">
                 <img class="UserAvatar" src="${dataChannel.channel_profile}" style="width: 36px; height: 36px;">
             </div>
           </div>
         `;
-        thumbnailChannel.innerHTML = channelProfilePic;
-      });
-      thumbnailDescContainer.append(thumbnailChannel);
+            thumbnailChannel.innerHTML = channelProfilePic;
+          });
+        thumbnailDescContainer.append(thumbnailChannel);
 
-      //create div for video desc
-      let thumbnailDecs = document.createElement('div');
-      thumbnailDecs.className = 'ThumbnailDesc';
+        //create div for video desc
+        let thumbnailDecs = document.createElement('div');
+        thumbnailDecs.className = 'ThumbnailDesc';
 
-      // calculate views
-      let views = data[i].views;
-      let calcViews = "";
-      if (views < 1000){
-        calcViews = views + "views";
-      }
-      else if(views >1000 && views < 100000){
-        calcViews = Math.floor(views/1000) +"K Views";
-      }else if(views > 100000 && views < 10000000 ){
-        calcViews = "0."+ Math.floor(views/100000) + "M Views";
-      }else{
-        calcViews = views/1000000 + "M Views";
-      }
-
-      // calculate dates
-      let calcDate = "";
-      const today = new Date();
-      let upload = data[i].upload_date;
-      let uploadDate = upload.split("/");
-      // case: same all
-      if(uploadDate[0] == today.getFullYear() &&
-        uploadDate[1] == today.getMonth()+1 &&
-        uploadDate[2] == today.getDay()){
-        calcDate = "today";
-      }
-      // case: same year and month but different day
-      if(uploadDate[0] == today.getFullYear() &&
-        uploadDate[1] == today.getMonth()+1){
-        let uploadDay = 0;
-        // compare with day which is bigger
-        if(uploadDate[2] > today.getDay()){
-          uploadDay = uploadDate[2] - today.getDay();
-        }else{
-          uploadDay = today.getDay() - uploadDate[2];
+        // calculate views
+        let views = data[i].views;
+        let calcViews = "";
+        if (views < 1000) {
+          calcViews = views + "views";
         }
-        // calculate weeks
-        week = Math.floor(uploadDay/7);
-        switch(week){
-          case 0: 
-            calcDate = uploadDay + " days ago";
-            break;
-          case 1:
-          case 2:
-          case 3:
-            calcDate = week + " week ago";
-            break;
-          case 4:
-            calcDate = "1 month ago";
-            break;
-        }
-      }
-      // case: same year but differnt month
-      if(uploadDate[0] == today.getFullYear() &&
-      uploadDate[1] != today.getMonth()+1){
-        //calculate month
-        let uploadMonth = 0;
-        // compare with day which is bigger
-        if(uploadDate[1] > today.getMonth()+1){
-          uploadMonth = uploadDate[1] - today.getMonth()+1;
-        }else{
-          uploadMonth = today.getMonth()+1 - uploadDate[1];
-        }
-        calcDate = uploadMonth + " month ago";
-      }
-      // case: different year
-      if(uploadDate[0] != today.getFullYear()){
-        let uploadYear = 0;
-        if(uploadDate[0] > today.getFullYear()){
-          uploadYear = uploadDate[0] - today.getFullYear();
-        }else{
-          uploadYear = today.getFullYear() - uploadDate[0];
+        else if (views > 1000 && views < 100000) {
+          calcViews = Math.floor(views / 1000) + "K Views";
+        } else if (views > 100000 && views < 10000000) {
+          calcViews = "0." + Math.floor(views / 100000) + "M Views";
+        } else {
+          calcViews = views / 1000000 + "M Views";
         }
 
-        calcDate = uploadYear + " years ago";
-      }
+        // calculate dates
+        let calcDate = "";
+        const today = new Date();
+        let upload = data[i].upload_date;
+        let uploadDate = upload.split("/");
+        // case: same all
+        if (uploadDate[0] == today.getFullYear() &&
+          uploadDate[1] == today.getMonth() + 1 &&
+          uploadDate[2] == today.getDay()) {
+          calcDate = "today";
+        }
+        // case: same year and month but different day
+        if (uploadDate[0] == today.getFullYear() &&
+          uploadDate[1] == today.getMonth() + 1) {
+          let uploadDay = 0;
+          // compare with day which is bigger
+          if (uploadDate[2] > today.getDay()) {
+            uploadDay = uploadDate[2] - today.getDay();
+          } else {
+            uploadDay = today.getDay() - uploadDate[2];
+          }
+          // calculate weeks
+          week = Math.floor(uploadDay / 7);
+          switch (week) {
+            case 0:
+              calcDate = uploadDay + " days ago";
+              break;
+            case 1:
+            case 2:
+            case 3:
+              calcDate = week + " week ago";
+              break;
+            case 4:
+              calcDate = "1 month ago";
+              break;
+          }
+        }
+        // case: same year but differnt month
+        if (uploadDate[0] == today.getFullYear() &&
+          uploadDate[1] != today.getMonth() + 1) {
+          //calculate month
+          let uploadMonth = 0;
+          // compare with day which is bigger
+          if (uploadDate[1] > today.getMonth() + 1) {
+            uploadMonth = uploadDate[1] - today.getMonth() + 1;
+          } else {
+            uploadMonth = today.getMonth() + 1 - uploadDate[1];
+          }
+          calcDate = uploadMonth + " month ago";
+        }
+        // case: different year
+        if (uploadDate[0] != today.getFullYear()) {
+          let uploadYear = 0;
+          if (uploadDate[0] > today.getFullYear()) {
+            uploadYear = uploadDate[0] - today.getFullYear();
+          } else {
+            uploadYear = today.getFullYear() - uploadDate[0];
+          }
 
-      let thumbnailVideoDesc =`
+          calcDate = uploadYear + " years ago";
+        }
+
+        let thumbnailVideoDesc = `
         <div class="ThumbnailDescTitle">
           <div class="videoTitle">${data[i].video_title}</div>
         </div>
@@ -145,12 +145,12 @@ document.addEventListener("DOMContentLoaded", ()=>{
           <div class="Time"> ${calcViews} .${calcDate}</div>
         </div>
       `;
-      thumbnailDecs.innerHTML = thumbnailVideoDesc;
-      thumbnailDescContainer.append(thumbnailDecs);
-      ThumbnailRowThumbnailItem.append(thumbnailDescContainer);
-      ThumbnailRow.append(ThumbnailRowThumbnailItem);
-    }
-  });
+        thumbnailDecs.innerHTML = thumbnailVideoDesc;
+        thumbnailDescContainer.append(thumbnailDecs);
+        ThumbnailRowThumbnailItem.append(thumbnailDescContainer);
+        ThumbnailRow.append(ThumbnailRowThumbnailItem);
+      }
+    });
 
 });
 
@@ -161,10 +161,10 @@ const closeMic = document.querySelector('.closeMic');
 let micContent = "";
 const micContainer = document.getElementById('micContainer');
 openMic.addEventListener('click', () => {
-    micContainer.style.display = 'block';
-    if (!confirm("마이크에 대한 엑세스를 허용하시겠습니까?")) {
-        //허용 안할 경우
-        micContent = `
+  micContainer.style.display = 'block';
+  if (!confirm("마이크에 대한 엑세스를 허용하시겠습니까?")) {
+    //허용 안할 경우
+    micContent = `
                 <div class="micModal">
                     <div class="micModalClose">
                         <button class="closeMic" id="closeMic" onclick="micClose()">
@@ -182,9 +182,9 @@ openMic.addEventListener('click', () => {
                     </div>
                 </div>
         `;
-        micContainer.innerHTML = micContent;
-    } else {
-        micContent = `
+    micContainer.innerHTML = micContent;
+  } else {
+    micContent = `
                 <div class="micModal">
                     <div class="micModalClose">
                         <button class="closeMic" id="closeMic" onclick="micClose()">
@@ -203,12 +203,12 @@ openMic.addEventListener('click', () => {
                     </div>
                 </div>
         `;
-        micContainer.innerHTML = micContent;
-    }
+    micContainer.innerHTML = micContent;
+  }
 });
 
-function micClose(){
-    micContainer.style.display = 'none';
+function micClose() {
+  micContainer.style.display = 'none';
 }
 
 //----------------------------------------------------------------------
@@ -218,9 +218,9 @@ const create = document.getElementById('create');
 let createContent = "";
 // create button event
 const createContainer = document.getElementById('createContainer');
-create.addEventListener('click', ()=>{
-    createContainer.style.display = 'block';
-    createContent =`
+create.addEventListener('click', () => {
+  createContainer.style.display = 'block';
+  createContent = `
         <div class="createList">
             <div class = "videoUpload" >
                 <span class="material-symbols-outlined">smart_display</span>
@@ -232,19 +232,19 @@ create.addEventListener('click', ()=>{
             </div>
         </div>
     `;
-    createContainer.innerHTML = createContent;
+  createContainer.innerHTML = createContent;
 });
 
 // notification button event
 let notiContent = "";
 const notifications = document.getElementById('notifications');
 const notiContainer = document.getElementById('notiContainer');
-notifications.addEventListener('click',()=>{
-    notiContainer.style.display = 'block';
-    if(notifications.classList.contains('material-symbols-outlined')){
-        notifications.classList.remove('material-symbols-outlined');
-        notifications.classList.add('material-icons');
-        notiContent =`
+notifications.addEventListener('click', () => {
+  notiContainer.style.display = 'block';
+  if (notifications.classList.contains('material-symbols-outlined')) {
+    notifications.classList.remove('material-symbols-outlined');
+    notifications.classList.add('material-icons');
+    notiContent = `
         <div class="notiHeader">
             <p class="notiTitle">NOTIFICATIONS</p>
             <span class="material-symbols-outlined">settings</span>
@@ -263,29 +263,29 @@ notifications.addEventListener('click',()=>{
         </ul>
         </div>
         `;
-        notiContainer.innerHTML = notiContent;
-      }else{
-        notifications.classList.remove('material-icons');
-        notifications.classList.add('material-symbols-outlined');
-        notiContainer.style.display = 'none';
-      }
+    notiContainer.innerHTML = notiContent;
+  } else {
+    notifications.classList.remove('material-icons');
+    notifications.classList.add('material-symbols-outlined');
+    notiContainer.style.display = 'none';
+  }
 });
 
 //page click -> modal close
-window.onclick = function (event){
-    if(event.target == createContainer){
-        createContainer.style.display = "none";
-    }else if(event.target == notiContainer){
-        notiContainer.style.display = "none";
-    }
+window.onclick = function (event) {
+  if (event.target == createContainer) {
+    createContainer.style.display = "none";
+  } else if (event.target == notiContainer) {
+    notiContainer.style.display = "none";
+  }
 };
 // profile button event
 let profileContent = "";
 const profile = document.getElementById('profileButton');
 const profileContainer = document.getElementById('profileContainer');
-profile.addEventListener('click', ()=>{
-    profileContainer.style.display = 'block';
-    profileContent =`
+profile.addEventListener('click', () => {
+  profileContainer.style.display = 'block';
+  profileContent = `
         <div class="profileList">
             <div class="userName">
                 <h3> Oreumi님!</h3>
@@ -299,216 +299,215 @@ profile.addEventListener('click', ()=>{
             </div>
         </div>
     `;
-    profileContainer.innerHTML = profileContent;
+  profileContainer.innerHTML = profileContent;
 });
 
-window.onclick = function (event){
-    if(event.target == createContainer){
-        createContainer.style.display = "none";
-    }
-    if(event.target == notiContainer){
-        notiContainer.style.display = "none";
-    }
-    if(event.target == profileContainer){
-        profileContainer.style.display = "none";
-    }
+window.onclick = function (event) {
+  if (event.target == createContainer) {
+    createContainer.style.display = "none";
+  }
+  if (event.target == notiContainer) {
+    notiContainer.style.display = "none";
+  }
+  if (event.target == profileContainer) {
+    profileContainer.style.display = "none";
+  }
 };
 //----------------------------------------------------------
 //---------------------------search 부분-----------------------------
 // enterkey로 search button 실행
 function enterkey() {
-   if (window.event.keyCode == 13) {
-      fn_search();
-    }
+  if (window.event.keyCode == 13) {
+    fn_search();
+  }
 }
 
 
-function fn_search(){
-    
-    var searchInput = document.getElementById('searchInput');
-    if(searchInput.value == ''){
-          alert("검색어를 입력해주세요.");
-          return false;
-    }
-   //ThumbnailRow
-   const ThumbnailRowThumbnailItem = document.getElementById('ThumbnailRowThumbnailItem');
+function fn_search() {
 
-   const ThumbnailRow = document.getElementById('ThumbnailRow');
-   ThumbnailRow.innerHTML = '';
-    
-   var itemCnt = 0;
+  var searchInput = document.getElementById('searchInput');
+  if (searchInput.value == '') {
+    alert("검색어를 입력해주세요.");
+    return false;
+  }
+  //ThumbnailRow
+  const ThumbnailRowThumbnailItem = document.getElementById('ThumbnailRowThumbnailItem');
 
-   const ThumbnailContainer = document.getElementById('ThumbnailContainer');
-    
-   fetch("http://oreumi.appspot.com/video/getVideoList")
-   .then((resonse)=>resonse.json())
-   .then((data) =>{
-     // display home.html
-     for(let i = 0; i < data.length; i++){
-      const ThumbnailRow = document.getElementById('ThumbnailRow');
+  const ThumbnailRow = document.getElementById('ThumbnailRow');
+  ThumbnailRow.innerHTML = '';
 
-      /**
-       * searchInput , video_title , video_channel 을 모두 대문자로 변환후
-       * 표출되는 searchInput=  video_title and video_channel이 아니면 continue
-       * 맞으면 itemCnt +1
-       */
-      
-      if((data[i].video_title.toLowerCase()).indexOf((searchInput.value).toLowerCase()) == -1 
-      && (data[i].video_channel.toLowerCase()).indexOf((searchInput.value).toLowerCase()) == -1){
-        continue;
-      } else{
-        itemCnt++;
-      }
+  var itemCnt = 0;
 
-       // create div for thumbnail image
-       let ThumbnailRowThumbnailItem = document.createElement('div');
-       ThumbnailRowThumbnailItem.className = 'ThumbnailRowThumbnailItem';
-       
-       // create div for thumbnail image
-       let thumbnailImgDiv = document.createElement('div');
-       thumbnailImgDiv.className = 'ThumbnailImages';
- 
-       // url for getting video img
-       let url = "http://oreumi.appspot.com/video/getVideoInfo?video_id=" + data[i].video_id;
-       // get video img
-       fetch(url)
-       .then((responseImg)=> responseImg.json())
-       .then((dataImg)=>{
-         let imgDiv =`
+  const ThumbnailContainer = document.getElementById('ThumbnailContainer');
+
+  fetch("http://oreumi.appspot.com/video/getVideoList")
+    .then((resonse) => resonse.json())
+    .then((data) => {
+      // display home.html
+      for (let i = 0; i < data.length; i++) {
+        const ThumbnailRow = document.getElementById('ThumbnailRow');
+
+        /**
+         * searchInput , video_title , video_channel 을 모두 대문자로 변환후
+         * 표출되는 searchInput=  video_title and video_channel이 아니면 continue
+         * 맞으면 itemCnt +1
+         */
+
+        if ((data[i].video_title.toLowerCase()).indexOf((searchInput.value).toLowerCase()) == -1
+          && (data[i].video_channel.toLowerCase()).indexOf((searchInput.value).toLowerCase()) == -1) {
+          continue;
+        } else {
+          itemCnt++;
+        }
+
+        // create div for thumbnail image
+        let ThumbnailRowThumbnailItem = document.createElement('div');
+        ThumbnailRowThumbnailItem.className = 'ThumbnailRowThumbnailItem';
+
+        // create div for thumbnail image
+        let thumbnailImgDiv = document.createElement('div');
+        thumbnailImgDiv.className = 'ThumbnailImages';
+
+        // url for getting video img
+        let url = "http://oreumi.appspot.com/video/getVideoInfo?video_id=" + data[i].video_id;
+        // get video img
+        fetch(url)
+          .then((responseImg) => responseImg.json())
+          .then((dataImg) => {
+            let imgDiv = `
            <div id="ThumbnailImages">
             
                <img class="Image1" src="${dataImg.image_link}">
              
            </div>
            `;
-           //  <a href="${dataImg.video_link}" target="_blank"></a>
-           thumbnailImgDiv.innerHTML = imgDiv;
-       });
-       ThumbnailRowThumbnailItem.append(thumbnailImgDiv);
- 
-       //create div for thumbnail channel info
-       const thumbnailDescContainer = document.createElement('div');
-       thumbnailDescContainer.className = 'thumbnailDescContainer';
-       let thumbnailChannel = document.createElement('div');
-       thumbnailChannel.className = thumbnailChannel;
- 
-       // get video channel image
-       let channelUrl = "http://oreumi.appspot.com/channel/getChannelInfo?video_channel="+data[i].video_channel;
-       fetch(channelUrl, {
-         method: "POST"
-       })
-       .then((responseChannel)=> responseChannel.json())
-       .then((dataChannel)=>{
-         let channelProfilePic =`
+            //  <a href="${dataImg.video_link}" target="_blank"></a>
+            thumbnailImgDiv.innerHTML = imgDiv;
+          });
+        ThumbnailRowThumbnailItem.append(thumbnailImgDiv);
+
+        //create div for thumbnail channel info
+        const thumbnailDescContainer = document.createElement('div');
+        thumbnailDescContainer.className = 'thumbnailDescContainer';
+        let thumbnailChannel = document.createElement('div');
+        thumbnailChannel.className = thumbnailChannel;
+
+        // get video channel image
+        let channelUrl = "http://oreumi.appspot.com/channel/getChannelInfo?video_channel=" + data[i].video_channel;
+        fetch(channelUrl, {
+          method: "POST"
+        })
+          .then((responseChannel) => responseChannel.json())
+          .then((dataChannel) => {
+            let channelProfilePic = `
            <div class="ThumbnailProfilePic">
              <div class="UserAvatar">
                  <img class="UserAvatar" src="${dataChannel.channel_profile}" style="width: 36px; height: 36px;">
              </div>
            </div>
          `;
-         thumbnailChannel.innerHTML = channelProfilePic;
-       });
-       //  검색결과에서 썸네일 이미지 안 보이게.
-       //thumbnailDescContainer.append(thumbnailChannel);
- 
-       //create div for video desc
-       let thumbnailDecs = document.createElement('div');
-       thumbnailDecs.className = 'ThumbnailDesc';
- 
-       // calculate views
-       let views = data[i].views;
-       let calcViews = "";
-       if (views < 1000){
-         calcViews = views + "views";
-       }
-       else if(views >1000 && views < 100000){
-         calcViews = Math.floor(views/1000) +"K Views";
-       }else if(views > 100000 && views < 10000000 ){
-         calcViews = "0."+ Math.floor(views/100000) + "M Views";
-       }else{
-         calcViews = views/1000000 + "M Views";
-       }
- 
-       // calculate dates
-       let calcDate = "";
-       const today = new Date();
-       let upload = data[i].upload_date;
-       let uploadDate = upload.split("/");
-       // case: same all
-       if(uploadDate[0] == today.getFullYear() &&
-         uploadDate[1] == today.getMonth()+1 &&
-         uploadDate[2] == today.getDay()){
-         calcDate = "today";
-       }
-       // case: same year and month but different day
-       if(uploadDate[0] == today.getFullYear() &&
-         uploadDate[1] == today.getMonth()+1){
-         let uploadDay = 0;
-         // compare with day which is bigger
-         if(uploadDate[2] > today.getDay()){
-           uploadDay = uploadDate[2] - today.getDay();
-         }else{
-           uploadDay = today.getDay() - uploadDate[2];
-         }
-         // calculate weeks
-         week = Math.floor(uploadDay/7);
-         switch(week){
-           case 0: 
-             calcDate = uploadDay + " days ago";
-             break;
-           case 1:
-           case 2:
-           case 3:
-             calcDate = week + " week ago";
-             break;
-           case 4:
-             calcDate = "1 month ago";
-             break;
-         }
-       }
-       // case: same year but differnt month
-       if(uploadDate[0] == today.getFullYear() &&
-       uploadDate[1] != today.getMonth()+1){
-         //calculate month
-         let uploadMonth = 0;
-         // compare with day which is bigger
-         if(uploadDate[1] > today.getMonth()+1){
-           uploadMonth = uploadDate[1] - today.getMonth()+1;
-         }else{
-           uploadMonth = today.getMonth()+1 - uploadDate[1];
-         }
-         calcDate = uploadMonth + " month ago";
-       }
-       // case: different year
-       if(uploadDate[0] != today.getFullYear()){
-         let uploadYear = 0;
-         if(uploadDate[0] > today.getFullYear()){
-           uploadYear = uploadDate[0] - today.getFullYear();
-         }else{
-           uploadYear = today.getFullYear() - uploadDate[0];
-         }
- 
-         calcDate = uploadYear + " years ago";
-       }
+            thumbnailChannel.innerHTML = channelProfilePic;
+          });
+        thumbnailDescContainer.append(thumbnailChannel);
 
-       let thumbnailVideoDesc =`
+        //create div for video desc
+        let thumbnailDecs = document.createElement('div');
+        thumbnailDecs.className = 'ThumbnailDesc';
+
+        // calculate views
+        let views = data[i].views;
+        let calcViews = "";
+        if (views < 1000) {
+          calcViews = views + "views";
+        }
+        else if (views > 1000 && views < 100000) {
+          calcViews = Math.floor(views / 1000) + "K Views";
+        } else if (views > 100000 && views < 10000000) {
+          calcViews = "0." + Math.floor(views / 100000) + "M Views";
+        } else {
+          calcViews = views / 1000000 + "M Views";
+        }
+
+        // calculate dates
+        let calcDate = "";
+        const today = new Date();
+        let upload = data[i].upload_date;
+        let uploadDate = upload.split("/");
+        // case: same all
+        if (uploadDate[0] == today.getFullYear() &&
+          uploadDate[1] == today.getMonth() + 1 &&
+          uploadDate[2] == today.getDay()) {
+          calcDate = "today";
+        }
+        // case: same year and month but different day
+        if (uploadDate[0] == today.getFullYear() &&
+          uploadDate[1] == today.getMonth() + 1) {
+          let uploadDay = 0;
+          // compare with day which is bigger
+          if (uploadDate[2] > today.getDay()) {
+            uploadDay = uploadDate[2] - today.getDay();
+          } else {
+            uploadDay = today.getDay() - uploadDate[2];
+          }
+          // calculate weeks
+          week = Math.floor(uploadDay / 7);
+          switch (week) {
+            case 0:
+              calcDate = uploadDay + " days ago";
+              break;
+            case 1:
+            case 2:
+            case 3:
+              calcDate = week + " week ago";
+              break;
+            case 4:
+              calcDate = "1 month ago";
+              break;
+          }
+        }
+        // case: same year but differnt month
+        if (uploadDate[0] == today.getFullYear() &&
+          uploadDate[1] != today.getMonth() + 1) {
+          //calculate month
+          let uploadMonth = 0;
+          // compare with day which is bigger
+          if (uploadDate[1] > today.getMonth() + 1) {
+            uploadMonth = uploadDate[1] - today.getMonth() + 1;
+          } else {
+            uploadMonth = today.getMonth() + 1 - uploadDate[1];
+          }
+          calcDate = uploadMonth + " month ago";
+        }
+        // case: different year
+        if (uploadDate[0] != today.getFullYear()) {
+          let uploadYear = 0;
+          if (uploadDate[0] > today.getFullYear()) {
+            uploadYear = uploadDate[0] - today.getFullYear();
+          } else {
+            uploadYear = today.getFullYear() - uploadDate[0];
+          }
+
+          calcDate = uploadYear + " years ago";
+        }
+
+        let thumbnailVideoDesc = `
          <div class="ThumbnailDescTitle">
            <div class="videoTitle">${data[i].video_title}</div>
          </div>
          <div class="ThumbnailDescInfo">
            <div class="ChannelName">${data[i].video_channel}</div>
-
+           <div class="Time"> ${calcViews} .${calcDate}</div>
          </div>
        `;
-       thumbnailDecs.innerHTML = thumbnailVideoDesc;
-       thumbnailDescContainer.append(thumbnailDecs);
-       ThumbnailRowThumbnailItem.append(thumbnailDescContainer);
-       ThumbnailRow.append(ThumbnailRowThumbnailItem);
-     }
-      if(itemCnt < 1) {
-       alert("검색결과가 없습니다.");
+        thumbnailDecs.innerHTML = thumbnailVideoDesc;
+        thumbnailDescContainer.append(thumbnailDecs);
+        ThumbnailRowThumbnailItem.append(thumbnailDescContainer);
+        ThumbnailRow.append(ThumbnailRowThumbnailItem);
       }
-   });
+      if (itemCnt < 1) {
+        alert("검색결과가 없습니다.");
+      }
+    });
 }
 
 document.addEventListener("DOMContentLoaded", function () {
@@ -521,7 +520,7 @@ document.addEventListener("DOMContentLoaded", function () {
     if (isHidden) {
       hiddenElements.forEach(function (element) {
         element.style.display = "block";
-        element.style.marginTop = "10px"; 
+        element.style.marginTop = "10px";
       });
       showMoreButton.innerText = "간략하게 보기";
     } else {
@@ -535,6 +534,10 @@ document.addEventListener("DOMContentLoaded", function () {
     isHidden = !isHidden;
   });
 });
+// move home main
+function goHome(){
+  window.location.href = 'index.html';
+}
 
 
 
