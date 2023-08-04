@@ -23,7 +23,7 @@
             <div id="topLeft" class="topLeft">
                 <div class="leftContent">
                     <span class="material-symbols-outlined" onclick="toggleSidebar()">menu</span>
-                    <img src="imgHome/Youtube-Logo.svg" alt="YouTube Logo"> <!-- YouTube Logo 추가-->
+                    <img src="imgHome/Youtube-Logo.svg" alt="" onclick="goHome()"> <!-- YouTube Logo 추가-->
                 </div>
             </div>
             <!-- center part(search)-->
@@ -84,9 +84,14 @@
                             <span class=" subtitle subscriptions" id="subscription">subscriptions</span>
                         </li>
                     </ul>
+
+                    <!-- <hr class="border"> -->
+
                     <div class="border">
-                </div>
-                <!--sidebar Top2-->
+
+                </div> <!-- 확인 완료 -->
+
+                <!--sidebar Top2  확인 바랍니다! -->
                 <div class="sideBarTop2" id="sideBarTop2">
                     <ul class="sideBarContent">
                         <li>
@@ -114,7 +119,11 @@
                             <span class="subtitle showMore" id="showMore">Show More</span>
                         </li>
                     </ul>
+
+                    <!-- <hr class="border"> -->
+
                     <div class="border">
+
                 </div>
                 <!--sidebar subscriptions-->
                 <div class="sideBarSubscriptions" id="sideBarSubscriptions">
@@ -153,7 +162,10 @@
                             <span class="subtitle showMoreSub" id="showMoreSub">Show 13 More</span>
                         </li>
                     </ul>
-                    <div class="border">
+
+                    <!-- <hr class="border"> -->
+                        <div class="border">
+
                 </div>
                 <!--sidebar bottom-->
                 <div class="sideBarBottom" id="sideBarBottom">
@@ -175,9 +187,14 @@
                             <img src="imgHome/premium.svg" alt="">
                             <span class="subtitle sports" id="sports">Sports</span>
                         </li>
+                        <div class="border">
                     </ul>
                     <!-- sidebar bottom(settings 부분) -->
-                    <div class="border">
+
+                    <!-- <hr class="border"> -->
+
+                    
+                
                     <ul class="sideBarContent">
                         <li>
                             <img src="imgHome/setting.svg" alt="">
@@ -197,8 +214,29 @@
                         </li>
                     </ul>
                 </div>
+                <div class="border">
             </nav>
+            
+            <div class="sideBarFooter">
+                <span class="Footer1"> 
+                    About Press Copyright<br>
+                    Contact us Creators<br>
+                    Advertise Developers
+                </span>
+                <span class="Footer2"> 
+                    Terms Privacy Policy & Safety<br>
+                    How Youtube works<br>
+                    Test new features
+                </span>
+                <span class="Footer3"> 
+                    © 2023 Oreumi 3rd 시작이반<br>
+                    <t>알아서잘하조</t>
+                </span>
+            </div>
         </div>
+
+
+
         <div class="wrapMain">
             <!--channel information-->
             <div class="channelContainer">
@@ -207,16 +245,16 @@
                 </div>
                 <div class="channelTitle">
                     <div class="channelProfile">
-                        <div class="channelProfilePic">
+                        <!-- <div class="channelProfilePic">
                             <img src="imgChannel/paka.jpg" class="profileImg">
                         </div>
                         <div class="channelProfileName">
                             <span id="channelName" class="channelName">Marcus Levin</span>
                             <span id="subscribers" class="subscribers">1.2M subscribers</span>
-                        </div>
+                        </div> -->
                     </div>
-                    <div class="buttoncon"> <!-- 종민님이 작업하신다고 했다. 안해오시면 내가 해야지. -->
-                        <button onclick="changeImg()" class="button" id="subscribe">SUBSCRIBE</button>
+                    <div class="buttoncon">
+                        <button onclick="changeImg()" class="button" id="subscribe">구독</button>
                         <div style="display: none;" id="options">
                             <a id="all" onclick="selectOption('all')">
                                 <img src="imgChannel/notifications_active.svg">전체</a>
@@ -270,7 +308,7 @@
             <!-- main video part -->
             <div class="ChannelMainVideo" id="ChannelMainVideo">
                 <div class="mainVideoContainer" id="mainVideoContainer">
-                    <div class="videoPart" id="videoPart">
+                    <!-- <div class="videoPart" id="videoPart">
                         <video src="https://storage.googleapis.com/oreumi.appspot.com/video_1.mp4" controls autoplay
                             muted></video>
                     </div>
@@ -289,7 +327,7 @@
                         <div class="mainVideoDesc" id="mainVideoDesc">
                             Chris Fisher, also known as the Blind Woodturner...
                         </div>
-                    </div>
+                    </div> -->
                 </div>
                 <div class="endLine">
             </div>
@@ -297,23 +335,14 @@
             <div class="playlistContainer">
                 <div class="playList">
                     <div class="playlistHeader">
-                        <span class="playlistTitle" style="color: #FFF;">동영상</span>
+                        <span class="playlistTitle" style="color: #FFF;"> 인기동영상</span>
                         <div class="playBtn">
                             <img src="imgChannel/playAllimg.svg" alt="재생버튼">
                             <p>모두재생</p>
                         </div>
                     </div>
-                    <div class="contentsList">
-                        <div class="playlistVideo">
-                            <img class="playThumbnail" src="https://storage.googleapis.com/oreumi.appspot.com/img_3.jpg"
-                                alt="썸네일">
-                            <div class="playlistDesc">
-                                <span class="plVideoName">AI</span>
-                                <span class="plVideoInfo" id="plVideoChannel">Marcus Levin</span>
-                                <span class="plVideoInfo" id="plVideoViews">329K views. 1 month ago</span>
-                            </div>
-                        </div>
-                        <div class="playlistVideo">
+                    <div class="contentsListFavorite" id ="contentsListFavorite">
+                        <!-- <div class="playlistVideo">
                             <img class="playThumbnail" src="https://storage.googleapis.com/oreumi.appspot.com/img_4.jpg"
                                 alt="썸네일">
                             <div class="playlistDesc">
@@ -321,19 +350,19 @@
                                 <span class="plVideoInfo" id="plVideoChannel">Marcus Levin</span>
                                 <span class="plVideoInfo" id="plVideoViews">329K views. 1 month ago</span>
                             </div>
-                        </div>
+                        </div> -->
                     </div>
                 </div>
                 <div class="playList">
                     <div class="playlistHeader">
-                        <span class="playlistTitle" style="color: #FFF;">인기 동영상</span>
+                        <span class="playlistTitle" style="color: #FFF;">최근 동영상</span>
                         <div class="playBtn">
                             <img src="imgChannel/playAllimg.svg" alt="재생버튼">
                             <p>모두 재생</p>
                         </div>
                     </div>
-                    <div class="contentsList">
-                        <div class="playlistVideo">
+                    <div class="contentsListDate" id="contentsListDate">
+                        <!-- <div class="playlistVideo">
                             <img class="playThumbnail" src="https://storage.googleapis.com/oreumi.appspot.com/img_1.jpg"
                                 alt="썸네일">
                             <div class="playlistDesc">
@@ -341,18 +370,10 @@
                                 <span class="plVideoInfo" id="plVideoChannel">Marcus Levin</span>
                                 <span class="plVideoInfo" id="plVideoViews">11 views. 1 month ago</span>
                             </div>
-                        </div>
-                        <div class="playlistVideo">
-                            <img class="playThumbnail" src="https://storage.googleapis.com/oreumi.appspot.com/img_2.jpg"
-                                alt="썸네일">
-                            <div class="playlistDesc">
-                                <span class="plVideoName">Future</span>
-                                <span class="plVideoInfo" id="plVideoChannel">Marcus Levin</span>
-                                <span class="plVideoInfo" id="plVideoViews">111 views. 1 month ago</span>
-                            </div>
-                        </div>
+                        </div>-->
                     </div>
                 </div>
+            </div>
                 </section>
             </div>
         </div>
