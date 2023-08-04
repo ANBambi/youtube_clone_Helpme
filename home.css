@@ -127,6 +127,7 @@ body {
     background-color: #000000;
     border: none; /*remove button style*/
     border-radius: 70%;
+    margin-left: 5px;
 }
 
 .micButton:hover {
@@ -273,24 +274,27 @@ body {
    background-color: #fff;
 }
 
-/*================================================ 
-main(video list part) */
+/* ================================================ 
+/================================================ 
+main(video list part)/ */
 .ThumbnailRow{
     display: flex;
+    flex-wrap: wrap;
     margin-top: 24px;
     margin-left: 24px;
 }
-/* thumbnail video */
-/* ThumbnailRowThumbnailItem
-    div for grouping video */
+/* thumbnail video /
+/ ThumbnailRowThumbnailItem
+    div for grouping video /
 .ThumbnailRowThumbnailItem{
     margin-right: 16px;
 }
 
-/* thumbnailDescContainer
+/ thumbnailDescContainer
     div for grouping thumbnail information */
 .thumbnailDescContainer{
     display: flex;
+    margin-bottom: 50px;
 }
 
 /* thumbnail image */
