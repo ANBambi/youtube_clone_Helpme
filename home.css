@@ -127,6 +127,7 @@ body {
     background-color: #000000;
     border: none; /*remove button style*/
     border-radius: 70%;
+    margin-left: 5px;
 }
 
 .micButton:hover {
