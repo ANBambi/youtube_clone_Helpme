@@ -240,6 +240,11 @@ body {
     height: 40px;
 }
 
+.sideBarBottom img {
+    width: 24px;
+    height: 24px;
+} 
+
 /* main container
     div for grouping main content */
 .mainContainer {
@@ -459,11 +464,12 @@ span {
 /* endLine
     border line for parts */
 .endLine {
+    height: 100%;
     margin-left: 64px;
     margin-right: 69px;
-    border-color: #AAAAAA;
-}
-
+    border-bottom: 3px solid #303030; 
+} 
+sss
 /* Playlist */
 .playlistContainer {
     display: flex;
@@ -528,8 +534,7 @@ span {
     padding: 24px 0px;
     align-items: flex-start;
 }
-.contentsListFavorite,
-.contentsListDate {
+.contentsListFavorite {
     display: flex;
     padding: 24px 0px;
     align-items: flex-start;
