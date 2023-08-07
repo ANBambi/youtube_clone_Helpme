@@ -1,9 +1,28 @@
+// enterkey로 search button 실행
+function enterkey() {
+  if (window.event.keyCode == 13) {
+     fn_search();
+   }
+}
+
+//search 기능
+function fn_search(){
+  const searchInput = document.getElementById('searchInput');
+  location.href='./index.html?searchInput='+searchInput.value;
+}
+
 // 0804 getChannelVideoList KimSeoHyun
 document.addEventListener('DOMContentLoaded', () => {
   // get channel info
   const channelProfile = document.getElementsByClassName('channelProfile');
   // channel_name은 임시로 넣은 것.
-  let channel_name = "oreumi";
+
+  //현재 channel.html의 url 가져오기
+  let requestUrl = window.location.href;
+  let url = new URL(requestUrl);
+
+  //channel_name에 video_channel 파라미터 값 넣기
+  let channel_name = url.searchParams.get("video_channel");
   let channelUrl = "https://oreumi.appspot.com/channel/getChannelInfo?video_channel=" + channel_name;
   fetch(channelUrl, {
     method: "POST"
