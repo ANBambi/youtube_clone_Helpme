@@ -28,7 +28,7 @@ document.addEventListener('DOMContentLoaded', () => {
     method: "POST"
   })
     .then((responseChannel) => responseChannel.json())
-    .then((data) => { 
+    .then((data) => {
       let subPeople = data.subscribers;
       let calcsubPeople = "";
       if (subPeople < 1000) {
