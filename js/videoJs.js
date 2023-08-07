@@ -11,7 +11,7 @@ document.addEventListener("DOMContentLoaded", () => {
       // set video content
       const videoContainer = document.getElementById('videoContainer');
       let video = `
-        <video src="${data.video_link}" id="selectedVideo" class="selectedVideo" controls autoplay></video>
+        <video src="${data.video_link}" id="selectedVideo" class="selectedVideo" controls autoplay muted></video>
       `;
       videoContainer.innerHTML = video;
       // set video title
@@ -49,15 +49,19 @@ document.addEventListener("DOMContentLoaded", () => {
           // set channel profile img
           const channelImg = document.getElementById('channelimg');
           let channelProfileImg = `
+          <a href="./channel.html?video_channel=${channelData.channel_name}" target="_self">
             <img src="${channelData.channel_profile}" alt="">
+          </a>
           `;
           channelImg.innerHTML = channelProfileImg;
 
           // set channel name and subscribers
           const channelInfo = document.getElementById('channelInfo');
           let channelDetails = `
-            <p class="channelName" id="channelName">${channelData.channel_name}</p>
-            <p class="subscribers" id="subscribers">${channelData.subscribers} subscribers</p>
+           <a href="./channel.html?video_channel=${channelData.channel_name}" target="_self">
+              <p class="channelName" id="channelName">${channelData.channel_name}</p>
+           </a>
+              <p class="subscribers" id="subscribers">${channelData.subscribers} subscribers</p>
           `;
           channelInfo.innerHTML = channelDetails;
         });
