@@ -534,11 +534,13 @@ sss
     padding: 24px 0px;
     align-items: flex-start;
 }
-.contentsListFavorite {
+.contentsListFavorite,
+.contentsListDate {
     display: flex;
     padding: 24px 0px;
     align-items: flex-start;
 }
+
 
 .playlistVideo {
     display: flex;
