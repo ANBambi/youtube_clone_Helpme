@@ -1,5 +1,6 @@
 document.addEventListener("DOMContentLoaded", ()=>{
-
+ 
+  
   //get video lst
   // get div ThumbnailRowThumbnailItems
   const ThumbnailContainer = document.getElementById('ThumbnailContainer');
@@ -24,9 +25,11 @@ document.addEventListener("DOMContentLoaded", ()=>{
       .then((responseImg)=> responseImg.json())
       .then((dataImg)=>{
         let imgDiv =`
-          <div id="ThumbnailImages">
-            <img class="Image1" src="${dataImg.image_link}">
-          </div>
+            <a href="./video.html?videoId=${data[i].video_id}" target="_self">
+              <div id="ThumbnailImages">
+                  <img class="Image1" src="${dataImg.image_link}">
+              </div>
+            </a>
           `;
           thumbnailImgDiv.innerHTML = imgDiv;
       });
@@ -46,11 +49,13 @@ document.addEventListener("DOMContentLoaded", ()=>{
       .then((responseChannel)=> responseChannel.json())
       .then((dataChannel)=>{
         let channelProfilePic =`
-          <div class="ThumbnailProfilePic">
-            <div class="UserAvatar">
-                <img class="UserAvatar" src="${dataChannel.channel_profile}" style="width: 36px; height: 36px;">
+          <a href="./channel.html?video_channel=${data[i].video_channel}" target="_self">
+            <div class="ThumbnailProfilePic">
+              <div class="UserAvatar">
+                  <img class="UserAvatar" src="${dataChannel.channel_profile}" style="width: 36px; height: 36px;">
+              </div>
             </div>
-          </div>
+          </a>
         `;
         thumbnailChannel.innerHTML = channelProfilePic;
       });
@@ -135,21 +140,36 @@ document.addEventListener("DOMContentLoaded", ()=>{
 
         calcDate = uploadYear + " years ago";
       }
-
+      //video.html, video.js에 해당 video id 값 전달
+      //channel.html, channel.js에 해당 video channel 값 전달
       let thumbnailVideoDesc =`
-        <div class="ThumbnailDescTitle">
-          <div class="videoTitle">${data[i].video_title}</div>
-        </div>
-        <div class="ThumbnailDescInfo">
-          <div class="ChannelName">${data[i].video_channel}</div>
-          <div class="Time"> ${calcViews} .${calcDate}</div>
-        </div>
+        <a href="./video.html?videoId=${data[i].video_id}" target="_self">
+          <div class="ThumbnailDescTitle">
+            <div class="videoTitle">${data[i].video_title}</div>
+          </div>
+        </a>
+        <a href="./channel.html?video_channel=${data[i].video_channel}" target="_self">
+          <div class="ThumbnailDescInfo">
+            <div class="ChannelName">${data[i].video_channel}</div>
+            <div class="Time"> ${calcViews} .${calcDate}</div>
+          </div>
+        </a>
       `;
       thumbnailDecs.innerHTML = thumbnailVideoDesc;
       thumbnailDescContainer.append(thumbnailDecs);
       ThumbnailRowThumbnailItem.append(thumbnailDescContainer);
       ThumbnailRow.append(ThumbnailRowThumbnailItem);
     }
+
+
+    let requestUrl = window.location.href;
+    let url = new URL(requestUrl);
+    //searchParam에 searchInput 파라미터 값 넣기
+    let searchParam = url.searchParams.get("searchInput"); //비디오의 고유번호
+
+    if(searchParam != null){
+      fn_search(searchParam);
+    }   
   });
 
 });
@@ -322,14 +342,22 @@ function enterkey() {
     }
 }
 
+//위에서 받은 searchInput 파라미터를 
+function fn_search(param){
 
-function fn_search(){
-    
-    var searchInput = document.getElementById('searchInput');
-    if(searchInput.value == ''){
-          alert("검색어를 입력해주세요.");
-          return false;
-    }
+  var searchInput = document.getElementById('searchInput');
+  var searchValue = document.getElementById('searchInput').value;
+  //위에서 받은 searchInput 파라미터가 있으면
+  if(param != null ) {
+    searchValue = param;
+    //검색창에 검색 입력값 setting
+    document.getElementById('searchInput').value = param;
+  }
+  if(searchValue == ''){
+        alert("검색어를 입력해주세요.");
+        return false;
+  }
+ 
    //ThumbnailRow
    const ThumbnailRowThumbnailItem = document.getElementById('ThumbnailRowThumbnailItem');
 
@@ -353,8 +381,8 @@ function fn_search(){
        * 맞으면 itemCnt +1
        */
       
-      if((data[i].video_title.toLowerCase()).indexOf((searchInput.value).toLowerCase()) == -1 
-      && (data[i].video_channel.toLowerCase()).indexOf((searchInput.value).toLowerCase()) == -1){
+      if((data[i].video_title.toLowerCase()).indexOf((searchValue).toLowerCase()) == -1 
+      && (data[i].video_channel.toLowerCase()).indexOf((searchValue).toLowerCase()) == -1){
         continue;
       } else{
         itemCnt++;
@@ -375,11 +403,11 @@ function fn_search(){
        .then((responseImg)=> responseImg.json())
        .then((dataImg)=>{
          let imgDiv =`
-           <div id="ThumbnailImages">
-            
-               <img class="Image1" src="${dataImg.image_link}">
-             
-           </div>
+           <a href="./video.html?videoId=${data[i].video_id}" target="_self">
+            <div id="ThumbnailImages">
+                  <img class="Image1" src="${dataImg.image_link}"> 
+            </div>
+           </a>
            `;
            //  <a href="${dataImg.video_link}" target="_blank"></a>
            thumbnailImgDiv.innerHTML = imgDiv;
@@ -399,12 +427,18 @@ function fn_search(){
        })
        .then((responseChannel)=> responseChannel.json())
        .then((dataChannel)=>{
+
+        /** channelProfilePic을 누르면 channel.html로 이동, video_channel 파라미터 전달
+         * 
+         */
          let channelProfilePic =`
+           <a href="./channel.html?video_channel=${data[i].video_channel}" target="_self">
            <div class="ThumbnailProfilePic">
              <div class="UserAvatar">
                  <img class="UserAvatar" src="${dataChannel.channel_profile}" style="width: 36px; height: 36px;">
              </div>
            </div>
+           </a>
          `;
          thumbnailChannel.innerHTML = channelProfilePic;
        });
@@ -492,13 +526,17 @@ function fn_search(){
        }
 
        let thumbnailVideoDesc =`
-         <div class="ThumbnailDescTitle">
-           <div class="videoTitle">${data[i].video_title}</div>
-         </div>
+         <a href="./video.html?videoId=${data[i].video_id}" target="_self">
+           <div class="ThumbnailDescTitle">
+              <div class="videoTitle">${data[i].video_title}</div>
+           </div>
+         </a>
+         <a href="./channel.html?video_channel=${data[i].video_channel}" target="_self">
          <div class="ThumbnailDescInfo">
            <div class="ChannelName">${data[i].video_channel}</div>
 
          </div>
+         </>
        `;
        thumbnailDecs.innerHTML = thumbnailVideoDesc;
        thumbnailDescContainer.append(thumbnailDecs);
@@ -535,7 +573,4 @@ document.addEventListener("DOMContentLoaded", function () {
     isHidden = !isHidden;
   });
 });
-
-
-
 
