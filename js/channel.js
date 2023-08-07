@@ -100,8 +100,7 @@ document.addEventListener('DOMContentLoaded', () => {
           mainVideo += `
           <a href="./video.html?videoId=${videoData.video_id}" target="_self">
             <div class="videoPart" id="videoPart">
-              <video src="${videoData.video_link}" controls autoplay
-                muted></video>
+              <video src="${videoData.video_link}" controls autoplay muted></video>
             </div>
           </a>
           <div class="videoDescPart" id="videoDescPart">
@@ -162,9 +161,13 @@ document.addEventListener('DOMContentLoaded', () => {
                 alt="썸네일">
             </a>
               <div class="playlistDesc">
+                <a href="./video.html?videoId=${dataVideoInfo.video_id}" target="_self">
                   <span class="plVideoName">${dataVideoInfo.video_title}</span>
+                </a>
+                <a href="#banner">
                   <span class="plVideoInfo" id="plVideoChannel">${dataVideoInfo.video_channel}</span>
                   <span class="plVideoInfo" id="plVideoViews">${calcViews} views. ${calculateDate(dataVideoInfo.upload_date)} </span>
+                </a>
               </div>
         `;
             playlistVideo.innerHTML = playList;
@@ -206,9 +209,13 @@ document.addEventListener('DOMContentLoaded', () => {
                 alt="썸네일">
             </a>
               <div class="playlistDesc">
+                <a href="./video.html?videoId=${dataVideoInfo.video_id}" target="_self">
                   <span class="plVideoName">${dataVideoInfo.video_title}</span>
+                </a>
+                <a href="#banner">
                   <span class="plVideoInfo" id="plVideoChannel">${dataVideoInfo.video_channel}</span>
                   <span class="plVideoInfo" id="plVideoViews">${calcViews} views. ${calculateDate(dataVideoInfo.upload_date)} </span>
+                </a>
               </div>
         `;
             playlistVideo.innerHTML = playList;
