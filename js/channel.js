@@ -15,7 +15,6 @@ function fn_search(){
 document.addEventListener('DOMContentLoaded', () => {
   // get channel info
   const channelProfile = document.getElementsByClassName('channelProfile');
-  // channel_name은 임시로 넣은 것.
 
   //현재 channel.html의 url 가져오기
   let requestUrl = window.location.href;
@@ -50,6 +49,16 @@ document.addEventListener('DOMContentLoaded', () => {
           </div>
         `;
       channelProfile[0].innerHTML = channelInfo;
+
+        let channelContainerInfo = `
+          <div class="channelBanner">
+            <img src='${data.channel_banner}' class="bannerImg">
+          </div>
+        `;
+
+      const channelBanner = document.getElementById('banner');
+      channelBanner.innerHTML = channelContainerInfo;
+
     });
   // ==========================================
   // show channel video
