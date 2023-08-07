@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -12,8 +13,9 @@
     <link href="./imgHome/Logo_mini.svg" rel="shortcut icon" type="image/x-icon">
     <title>Video</title>
 </head>
+
 <body>
-   <!--Header and Nav part -->
+    <!--Header and Nav part -->
     <div class="wrapHeader">
         <!--Top Navigation-->
         <header id="navigation" class="navigation">
@@ -24,12 +26,13 @@
                     <img src="imgHome/Youtube-Logo.svg" alt="">
                 </div>
             </div>
-        <!-- center part(search)-->
+            <!-- center part(search)-->
             <div class="searchBox" id="searchBox">
-                <input type="text" name="searchInput" id="searchInput" onkeyup="enterkey();" class="searchInput" placeholder="search">
-                    <button class="searchBtn" id="searchBtn" onclick="fn_search()">
-                        <span class="material-symbols-outlined">search</span>
-                    </button>
+                <input type="text" name="searchInput" id="searchInput" onkeyup="enterkey();" class="searchInput"
+                    placeholder="search">
+                <button class="searchBtn" id="searchBtn" onclick="fn_search()">
+                    <span class="material-symbols-outlined">search</span>
+                </button>
                 </button>
                 <button class="micButton" id="micButton">
                     <img class="mic" id="mic" src="imgHome/mic.svg" alt="">
@@ -41,9 +44,9 @@
             <div class="profile" id="profile">
                 <div class="rightContent" id="rightContent">
                     <img class="create" id="create" src="imgHome/create.svg" alt="">
-                        <!-- <div class="createContainer" id="createContainer"> -->
-                            <!-- create modal content -->
-                        <!-- </div> -->
+                    <!-- <div class="createContainer" id="createContainer"> -->
+                    <!-- create modal content -->
+                    <!-- </div> -->
                     <img class="apps" id="apps" src="imgHome/apps.svg" alt="">
                     <span class="notifications material-symbols-outlined" id="notifications">notifications</span>
                     <!-- notiContainer의 inline style 적용은 css 작업후 지울 예정 -->
@@ -64,80 +67,86 @@
             <article class="primary" id="primary">
                 <!--section(Video Player)-->
                 <div class="wrapVideo">
-                <!--video player-->
-                <section class="videoPlayer" id="VideoPlayer">
-                    <div class="videoContainer">
-                        <img src="https://via.placeholder.com/640x360" alt="">
-                        [video player : 이미지예시]
-                    </div>
-                    <!--videoInfo-->
-                    <div class="videoInfoContainer">
-                        <div class="videoTitle">
-                            <p class="videoTitle">[video Title]</p>
+                    <!--video player-->
+                    <section class="videoPlayer" id="VideoPlayer">
+                        <div class="videoContainer" id="videoContainer">
+                            <!-- <video src="" id="selectedVideo" class="selectedVideo" controls autoplay></video> -->
                         </div>
-                        <div class="videoInfo">
-                            <span class="views" id="views"> [views]</span>
-                            <span class="uploadDate" id="uploadDate">[date]</span>
-                            <ul>
-                            <li>
-                                <button class="material-symbols-outlined videoLike" id="videoLike">thumb_up</button>
-                                <span class="videoLikesCount" id="videoLikesCount">0</span>
-                            </li>
-                            <li>
-                                <button class="material-symbols-outlined videoDislike" id="videoDislike">thumb_down</button>
-                                <span class="videoDislikeCount" id="videoDislikeCount">0</span>
-                            </li>
-                            <li>
-                                <img src="videoImg/Group.svg" alt="">
-                                <span class="share" id="share">SHARE</span>
-                            </li>
-                            <li>
-                                <img src="videoImg/Button-Btn.svg" alt="">
-                                <span class="save" id="save">SAVE</span>
-                            </li>
-                            <li>
-                                <span class="material-symbols-outlined">more_horiz</span>
-                            </li>
-                            </ul>
-                        </div>
-                    </div> 
-                </section>        
-                <hr class="border">
-   
-                <!--video Desc-->
-                <section class="videoDesc" id="videoDesc">
-                    <div class="channelTitle">
-                        <div class="channelimg">
-                            <img src="videoImg/Pic.svg" alt="">
-                        </div>
-                        <div class="channelInfo">
-                            <p class="channelName" id="channelName">Marcus Levin</p>
-                            <p class="subscribers" id="subscribers">[subscribers number] subscribers</p>
-                        </div>
-                        <div class="buttoncon">
-                            <button onclick="changeImg()" class="button" id="subscribe">구독</button>
-                            <div style="display: none;" id="options">
-                                <a id="all" onclick="selectOption('all')">
-                                    <img src="imgChannel/notifications_active.svg">전체</a>
-                                <a id="custom" onclick="selectOption('custom')">
-                                    <img src="imgChannel/notifications.svg">맞춤설정</a>
-                                <a id="none" onclick="selectOption('none')">
-                                    <img src="imgChannel/notifications_off.svg">없음</a>
-                                <a id="cancel" onclick="subCancle()">
-                                    <img src="imgChannel/person_remove.svg">구독취소</a>
+                        <!--videoInfo-->
+                        <div class="videoInfoContainer">
+                            <div class="videoTitle" id="videoTitle">
+                                <!-- <p class="videoTitle">[video Title]</p> -->
+                            </div>
+                            <div class="selectVideoInfo">
+                                <div class="videoInfo" id="videoInfo">
+                                    <!-- <span class="views" id="views"> [views]</span>
+                                    <span class="uploadDate" id="uploadDate">[date]</span> -->
+                                </div>
+                                <div class="videoExtra">
+                                    <ul>
+                                        <li>
+                                            <button class="material-symbols-outlined videoLike"
+                                                id="videoLike">thumb_up</button>
+                                            <span class="videoLikesCount" id="videoLikesCount">0</span>
+                                        </li>
+                                        <li>
+                                            <button class="material-symbols-outlined videoDislike"
+                                                id="videoDislike">thumb_down</button>
+                                            <span class="videoDislikeCount" id="videoDislikeCount">0</span>
+                                        </li>
+                                        <li>
+                                            <img src="videoImg/Group.svg" alt="">
+                                            <span class="share" id="share">SHARE</span>
+                                            
+                                        </li>
+                                        <li>
+                                            <img src="videoImg/Button-Btn.svg" alt="">
+                                            <span class="save" id="save">SAVE</span>
+                                        </li>
+                                        <li>
+                                            <span class="material-symbols-outlined">more_horiz</span>
+                                        </li>
+                                    </ul>
+                                </div>
                             </div>
                         </div>
+                    </section>
+                    <hr class="border">
+
+                    <!--video Desc-->
+                    <section class="videoDesc" id="videoDesc">
+                        <div class="channelTitle">
+                            <div class="channelimg" id="channelimg">
+                                <!-- <img src="videoImg/Pic.svg" alt=""> -->
+                            </div>
+                            <div class="channelInfo" id="channelInfo">
+                                <!-- <p class="channelName" id="channelName">Marcus Levin</p>
+                                <p class="subscribers" id="subscribers">[subscribers number] subscribers</p> -->
+                            </div>
+                            <div class="buttoncon">
+                                <button onclick="changeImg()" class="button" id="subscribe">구독</button>
+                                <div style="display: none;" id="options">
+                                    <a id="all" onclick="selectOption('all')">
+                                        <img src="imgChannel/notifications_active.svg">전체</a>
+                                    <a id="custom" onclick="selectOption('custom')">
+                                        <img src="imgChannel/notifications.svg">맞춤설정</a>
+                                    <a id="none" onclick="selectOption('none')">
+                                        <img src="imgChannel/notifications_off.svg">없음</a>
+                                    <a id="cancel" onclick="subCancle()">
+                                        <img src="imgChannel/person_remove.svg">구독취소</a>
+                                </div>
+                            </div>
                         </div>
-                    </div>
-                    <div class="videoExplain" id="videoExplain">
-                        <p class="videoText" id="videoText">
-                            [video explanation]
-                        </p>
-                        <a href="#" class="showMore" id="showMore">SHOW MORE</a>
-                    </div>
+                </div>
+                <div class="videoExplain" id="videoExplain">
+                    <!-- <p class="videoText" id="videoText">
+                        [video explanation]
+                    </p> -->
+                    <!-- <a href="#" class="showMore" id="showMore">SHOW MORE</a> -->
+                </div>
                 </section>
                 <hr class="border">
-   
+
                 <!--comments-->
                 <section class="comment" id="comment">
                     <!--my comment-->
@@ -156,8 +165,9 @@
                         <div class="writeComment">
                             <img class="commentWriter" src="videoImg/Profile.svg" alt="">
                             <div class="inputContainer">
-                            <input class="commentInput" id="commentInput" type="text" placeholder="Add a public comment...">
-                            <hr class="commentBorder">
+                                <input class="commentInput" id="commentInput" type="text"
+                                    placeholder="Add a public comment...">
+                                <hr class="commentBorder">
                             </div>
                         </div>
                     </section>
@@ -172,26 +182,28 @@
                                     <span class="writerName" id="writerName">James Gouse</span>
                                     <span class="writeTime" id="writeTime">[write date]</span>
                                     <div class="commentContent">
-                                    Wow, world is full of different skills 
+                                        Wow, world is full of different skills
                                     </div>
                                 </div>
-                            <div class="commentLike">
-                                <ul>
-                                    <li>
-                                        <button class="material-symbols-outlined commentLike" id="commentLike">thumb_up</button>
-                                        <span class="commentLikesCount" id="commentLikesCount">0</span>
-                                    </li>
-                                    <li>
-                                        <button class="material-symbols-outlined commentDislike" id="commentDislike">thumb_down</button>
-                                        <span class="commentDislikeCount" id="commentDislikeCount">0</span>
-                                    </li>
-                                    <li>
-                                        <span class="reply" id="reply">REPLY</span>
-                                    </li>
-                                </ul>
+                                <div class="commentLike">
+                                    <ul>
+                                        <li>
+                                            <button class="material-symbols-outlined commentLike"
+                                                id="commentLike">thumb_up</button>
+                                            <span class="commentLikesCount" id="commentLikesCount">0</span>
+                                        </li>
+                                        <li>
+                                            <button class="material-symbols-outlined commentDislike"
+                                                id="commentDislike">thumb_down</button>
+                                            <span class="commentDislikeCount" id="commentDislikeCount">0</span>
+                                        </li>
+                                        <li>
+                                            <span class="reply" id="reply">REPLY</span>
+                                        </li>
+                                    </ul>
+                                </div>
                             </div>
-                        </div>
-                     <!--comment reply-->
+                            <!--comment reply-->
                     </section>
 
             </article>
@@ -199,28 +211,30 @@
         <div class="wrapAside">
             <!--secondary-->
             <aside class="secondary">
-            <!--secondary top menu-->
-            <section class="secondaryMenu" id="secondaryMenu">
-                <button class="allBtn" id="allBtn">All</button>
-                <button class="classfyBtn">From Marcus Levin</button>
-            </section>
-            <!--secondary video List-->
-            <section class="secondaryVideoList" id="secondaryVideoList">
-                <div class="secondaryVideo">
-                    <div class="videoThumbnail">
-                        <img src="videoImg/Thumbnail.svg" alt="">
+                <!--secondary top menu-->
+                <section class="secondaryMenu" id="secondaryMenu">
+                    <button class="allBtn" id="allBtn">All</button>
+                    <button class="classfyBtn">From Marcus Levin</button>
+                </section>
+                <!--secondary video List-->
+                <section class="secondaryVideoList" id="secondaryVideoList">
+                    <div class="secondaryVideo">
+                        <div class="videoThumbnail">
+                            <img src="videoImg/Thumbnail.svg" alt="">
+                        </div>
+                        <!--video information-->
+                        <div class="secondaryVideoInfo">
+                            <p class="secondaryVideoTitle" id="secondaryVideoTitle"> Ep 6: Living to Serve| SEARCH ON
+                            </p>
+                            <p class="videoOwner" id="videoOwner"> James Gouse</p>
+                            <p class="videoSimpleInfo" id="videoSimpleInfo">[views][upload date]</p>
+                        </div>
                     </div>
-                  <!--video information-->
-                    <div class="secondaryVideoInfo">
-                        <p class="secondaryVideoTitle" id="secondaryVideoTitle"> Ep 6: Living to Serve| SEARCH ON</p>
-                        <p class="videoOwner" id="videoOwner"> James Gouse</p>
-                        <p class="videoSimpleInfo" id="videoSimpleInfo">[views][upload date]</p>
-                    </div>
-                </div>
-            </section>
+                </section>
         </div>
-   </div>
+    </div>
 </body>
 <script src="js/videoJs.js"></script>
 <script src="js/header.js"></script>
+
 </html>
