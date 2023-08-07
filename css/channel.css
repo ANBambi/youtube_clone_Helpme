@@ -212,6 +212,14 @@ body {
     color: #AAAAAA;
 }
 
+.sideBarBottom img {
+    width: 24px;
+    height: 24px;
+} 
+
+
+
+
 /* li title */
 .subtitle {
     color: white;

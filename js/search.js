@@ -17,7 +17,7 @@ function fn_search(){
    ThumbnailRowThumbnailItem.innerHTML = '';
     
    var itemCnt = 0;
-
+  
    fetch("http://oreumi.appspot.com/video/getVideoList")
    .then((resonse)=>resonse.json())
    .then((data) =>{
