@@ -96,7 +96,7 @@ body {
 
 /*search*/
 .searchBox {
-    display: flex;
+    display: flex;    
     width: 470px;
     height: 40px;
     justify-content: center;
@@ -202,6 +202,52 @@ body {
     height: 40px;
     padding: 8px 0px 8px 24px;
     justify-content: flex-start;
+}
+
+.sideBarContent li img {
+    width: 1.8rem;
+    height: 1.8rem;
+    border-radius: 70%;
+}
+
+.sideBarFooter {
+    color: var(--gray-color, #AAA);
+    font-family: Roboto;
+    font-size: 13px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: normal;
+}
+.Footer1 {
+    display: flex;
+    width: 224px;
+    padding: 16px 24px 0px 24px;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 10px;
+}
+
+.Footer2 {
+    display: flex;
+    width: 224px;
+    padding: 16px 24px 0px 24px;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 10px;
+}
+
+.Footer3 {
+    display: flex;
+    width: 224px;
+    padding: 16px 24px 0px 24px;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 10px;
+} 
+
+.contentsListDate{
+    display: flex;
+    margin-top: 24px;
 }
 
 /*side bar title*/

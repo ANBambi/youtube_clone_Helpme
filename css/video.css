@@ -611,6 +611,11 @@ material-symbols-outlined => icon class name */
     height: 94px;
     margin-right: 8px;
 }
+.videoThumbnail img {
+    width: 168px;
+    height: 94px;
+    margin-right: 8px;
+}
 
 .secondaryVideoTitle {
     color: #fff;
