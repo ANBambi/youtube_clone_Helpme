@@ -326,12 +326,12 @@ main(video list part)/ */
 }
 /* thumbnail video /
 / ThumbnailRowThumbnailItem
-    div for grouping video /
+    div for grouping video */
 .ThumbnailRowThumbnailItem{
     margin-right: 16px;
 }
 
-/ thumbnailDescContainer
+/* thumbnailDescContainer
     div for grouping thumbnail information */
 .thumbnailDescContainer{
     display: flex;
@@ -340,8 +340,8 @@ main(video list part)/ */
 
 /* thumbnail image */
 .Image1{
-    width: 275px;
-    height: 160px;
+    width: 311px;
+    height: 175px;
 }
 
 /* profile image */
@@ -362,6 +362,11 @@ main(video list part)/ */
     margin-top: 12px;
     margin-bottom: 6px;
 }
+
+a{
+    text-decoration: none;
+}
+
 .ChannelName,
 .Time{
     color: #AAAAAA;
@@ -391,6 +396,7 @@ main(video list part)/ */
    background-color: rgb(0, 0, 0);
    background-color: rgba(0, 0, 0, 0.4);
 }
+
 /* mic modal inner div */
 .micModal {
     position: relative;
@@ -400,11 +406,13 @@ main(video list part)/ */
    border: 1px solid #888;
    width: 30%
 }
+
 /* micModalClose
     div for mic modal close button */
 .micModalClose{
     display: flex;
 }
+
 /* mic modal close button */
 .closeMic{
     margin-left: auto;
@@ -413,6 +421,7 @@ main(video list part)/ */
     width: 30px;
     height: 30px;
 }
+
 .closeMic:hover{
     background-color: #888;
 }

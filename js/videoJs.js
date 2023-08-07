@@ -1,5 +1,6 @@
 document.addEventListener("DOMContentLoaded", () => {
-  // get video info(selected by user)
+
+  // get video info(selected by user) 여기는 비디오  추가된 부분
   let requestUrl = window.location.href;
   let url = new URL(requestUrl);
   let videoId = url.searchParams.get("videoId"); //비디오의 고유번호
@@ -61,6 +62,7 @@ document.addEventListener("DOMContentLoaded", () => {
           channelInfo.innerHTML = channelDetails;
         });
     });
+// 오류 수정 
 
   // ========video Info button event=============
   // like dislike button event 
@@ -147,7 +149,6 @@ document.addEventListener("DOMContentLoaded", () => {
   save.addEventListener('click', () => {
     const saveModalContainer = document.getElementById('saveModalContainer');
     saveModalContainer.style.display = 'block';
-
   });
   //=======================================================
   //=======================================================
@@ -157,6 +158,7 @@ document.addEventListener("DOMContentLoaded", () => {
   const commentLikesCount = document.getElementById('commentLikesCount');
   const commentDislikeCount = document.getElementById('commentDislikeCount');
   // like and dislike count 변수
+
   let commentLikeCnt = 0;
   let commentDislikeCnt = 0;
 
