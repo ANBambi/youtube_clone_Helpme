@@ -55,9 +55,18 @@ document.addEventListener('DOMContentLoaded', () => {
             <img src='${data.channel_banner}' class="bannerImg">
           </div>
         `;
+ 
 
       const channelBanner = document.getElementById('banner');
       channelBanner.innerHTML = channelContainerInfo;
+      
+// --------------------------------------------
+
+
+
+
+
+
 
     });
   // ==========================================
@@ -89,14 +98,18 @@ document.addEventListener('DOMContentLoaded', () => {
           // calculate dates
           let calcDate = calculateDate(videoData.upload_date);
           mainVideo += `
-        <div class="videoPart" id="videoPart">
-          <video src="${videoData.video_link}" controls autoplay
-            muted></video>
-        </div>
-        <div class="videoDescPart" id="videoDescPart">
-          <div class="mainVideoTitle" id="mainVideoTitle">
+          <a href="./video.html?videoId=${videoData.video_id}" target="_self">
+            <div class="videoPart" id="videoPart">
+              <video src="${videoData.video_link}" controls autoplay
+                muted></video>
+            </div>
+          </a>
+          <div class="videoDescPart" id="videoDescPart">
+          <a href="./video.html?videoId=${videoData.video_id}" target="_self">
+            <div class="mainVideoTitle" id="mainVideoTitle">
               <p>${videoData.video_title}</p>
-          </div>
+            </div>
+          </a>
           <div class="mainVideoInfo" id="mainVideoInfo">
               <span class="mainVideoViews" id="mainVideoViews">
                   ${videoData.views} views
@@ -144,13 +157,15 @@ document.addEventListener('DOMContentLoaded', () => {
               calcViews = views / 1000000 + "M Views";
             }
             playList = `
-            <img class="playThumbnail" src="${dataVideoInfo.image_link}"
+            <a href="./video.html?videoId=${dataVideoInfo.video_id}" target="_self">
+              <img class="playThumbnail" src="${dataVideoInfo.image_link}"
                 alt="썸네일">
-            <div class="playlistDesc">
-                <span class="plVideoName">${dataVideoInfo.video_title}</span>
-                <span class="plVideoInfo" id="plVideoChannel">${dataVideoInfo.video_channel}</span>
-                <span class="plVideoInfo" id="plVideoViews">${calcViews} views. ${calculateDate(dataVideoInfo.upload_date)} </span>
-            </div>
+            </a>
+              <div class="playlistDesc">
+                  <span class="plVideoName">${dataVideoInfo.video_title}</span>
+                  <span class="plVideoInfo" id="plVideoChannel">${dataVideoInfo.video_channel}</span>
+                  <span class="plVideoInfo" id="plVideoViews">${calcViews} views. ${calculateDate(dataVideoInfo.upload_date)} </span>
+              </div>
         `;
             playlistVideo.innerHTML = playList;
           });
@@ -186,13 +201,15 @@ document.addEventListener('DOMContentLoaded', () => {
               calcViews = views / 1000000 + "M Views";
             }
             playList = `
-            <img class="playThumbnail" src="${dataVideoInfo.image_link}"
+            <a href="./video.html?videoId=${dataVideoInfo.video_id}" target="_self">
+              <img class="playThumbnail" src="${dataVideoInfo.image_link}"
                 alt="썸네일">
-            <div class="playlistDesc">
-                <span class="plVideoName">${dataVideoInfo.video_title}</span>
-                <span class="plVideoInfo" id="plVideoChannel">${dataVideoInfo.video_channel}</span>
-                <span class="plVideoInfo" id="plVideoViews">${calcViews} views. ${calculateDate(dataVideoInfo.upload_date)} </span>
-            </div>
+            </a>
+              <div class="playlistDesc">
+                  <span class="plVideoName">${dataVideoInfo.video_title}</span>
+                  <span class="plVideoInfo" id="plVideoChannel">${dataVideoInfo.video_channel}</span>
+                  <span class="plVideoInfo" id="plVideoViews">${calcViews} views. ${calculateDate(dataVideoInfo.upload_date)} </span>
+              </div>
         `;
             playlistVideo.innerHTML = playList;
           });
@@ -263,7 +280,10 @@ function calculateDate(date) {
     calcDate = uploadYear + " years ago";
   }
   return calcDate;
-}
+
+  
+
+};
 
 // ------------------------------------------------------------------
 // channel subscribe
