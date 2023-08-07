@@ -221,7 +221,7 @@ function alertCopy(){
 function shareClose() {
   shareModalContainer.style.display = 'none';
 }
-
+// close save modal
 function saveClose() {
   saveModalContainer.style.display = 'none';
 }
