@@ -53,6 +53,10 @@ body {
     font-family: 'Roboto', sans-serif;
 }
 
+a{
+    text-decoration: none;
+}
+
 /* border
     line for dividing part */
 .border {

@@ -53,6 +53,10 @@ body {
     font-family: 'Roboto', sans-serif;
 }
 
+a{
+    text-decoration: none;
+}
+
 .border {
     /* width: 224px; */
     /* height: 100%; */
@@ -300,6 +304,7 @@ material-symbols-outlined => icon class name */
     margin-top: 11px;
     margin-right: 9px;
     font-size: 14px;
+    color:white
     /* font : inherit */
 }
 
