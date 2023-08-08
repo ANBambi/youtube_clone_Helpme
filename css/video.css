@@ -89,8 +89,8 @@ a{
 
 /* header left
    topLeft for grouping left content(hamburger and logo) */
-.leftContent {
-    margin-left: 16px;
+.leftContent{
+    cursor: pointer;
 }
 
 .leftContent span {
@@ -332,10 +332,6 @@ material-symbols-outlined => icon class name */
     background-color: #f1f1f1;
     color: black;
     border-radius: 20px;
-    margin-left: 25rem;
-    font-family: Roboto;
-    font-size: 14px;
-    font-weight: 900;
 }
 
 .button:hover {
@@ -347,7 +343,7 @@ material-symbols-outlined => icon class name */
     display: flex;
     flex-direction: column;
     position: absolute;
-    width: 85%;
+    width: 150px;
     background-color: #282828;
     text-decoration: none;
     border-radius: 20px;
@@ -370,7 +366,8 @@ material-symbols-outlined => icon class name */
 
 #options>a:hover {
     background-color: #535353;
-    width: 86%;
+    width: 100%;
+    border-radius: 20px;
 }
 
 #options img {

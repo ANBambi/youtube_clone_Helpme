@@ -89,8 +89,8 @@ a{
 
 /* header left
     topLeft for grouping left content(hamburger and logo) */
-.leftContent {
-    margin-left: 16px;
+.leftContent{
+    cursor: pointer;
 }
 
 .leftContent span {
