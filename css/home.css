@@ -1,6 +1,6 @@
 @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;700&display=swap');
 
-:root { 
+:root {
     /* color */
     --white-color: #fff;
     --black-color: #140a00;
@@ -8,12 +8,12 @@
     --red-color: #e30504;
     --grey-dark-color: #616161;
     --gray-light-color: #8e8e8e;
-  
+
     /* size */
-    --padding:12px;
+    --padding: 12px;
     --avatar-size: 36px;
-  
-    /* font size */ 
+
+    /* font size */
     --font-superlarge: 22px;
     --font-verylarge: 20px;
     --font-large: 18px;
@@ -26,7 +26,7 @@
     font-family: 'Material Icons';
     font-weight: normal;
     font-style: normal;
-    font-size: 24px; 
+    font-size: 24px;
     display: inline-block;
     line-height: 1;
     text-transform: none;
@@ -34,14 +34,14 @@
     word-wrap: normal;
     white-space: nowrap;
     direction: ltr;
-  }
+}
 
 
 /* reset */
 * {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
 }
 
 /* font */
@@ -54,14 +54,14 @@ body {
 .border {
     width: 224px;
     height: 100%;
-    color : #303030;
+    color: #303030;
     margin-top: 10px;
     margin-bottom: 10px;
-    border-bottom: 1px solid #303030; 
+    border-bottom: 1px solid #303030;
 }
 
 /*header div*/
-.wrapHeader{
+.wrapHeader {
     position: sticky;
     top: 0;
     z-index: 100;
@@ -81,16 +81,17 @@ body {
 
 /* header left
     topLeft for grouping left content(hamburger and logo) */
-.leftContent{
+.leftContent {
     margin-left: 16px;
 }
-.leftContent span{
+
+.leftContent span {
     color: white;
     padding-right: 11px;
 }
 
 /*search*/
-.searchBox{
+.searchBox {
     display: flex;
     width: 470px;
     height: 40px;
@@ -98,7 +99,8 @@ body {
     align-items: flex-start;
     flex-shrink: 0;
 }
-.searchInput{
+
+.searchInput {
     border: 1px solid #303030;
     background-color: #121212;
     color: #AAAAAA;
@@ -110,8 +112,9 @@ body {
 }
 
 
-.searchBtn{
-    border: none; /*remove button style */
+.searchBtn {
+    border: none;
+    /*remove button style */
     border: 1px solid #303030;
     background-color: #303030;
     color: white;
@@ -121,11 +124,12 @@ body {
 }
 
 /*mic button*/
-.micButton{
+.micButton {
     width: 40px;
     height: 40px;
     background-color: #000000;
-    border: none; /*remove button style*/
+    border: none;
+    /*remove button style*/
     border-radius: 70%;
     margin-left: 5px;
 }
@@ -134,14 +138,14 @@ body {
     background-color: #2980b9;
 }
 
-.mic{
+.mic {
     color: white;
 }
 
 /* header right
     profile for grouping right content */
 /* right Content(div) */
-.rightContent{
+.rightContent {
     margin: 8px 8px 8px 0px;
     display: flex;
     align-items: center;
@@ -149,11 +153,11 @@ body {
 
 .create,
 .apps,
-.notifications{
+.notifications {
     padding: 8px;
 }
 
-.notifications{
+.notifications {
     color: #fff;
 }
 
@@ -161,7 +165,7 @@ body {
     background-color: #2980b9;
 }
 
-/* Sidebar */ 
+/* Sidebar */
 .wrapNav {
     position: sticky;
     top: 56px;
@@ -171,11 +175,12 @@ body {
     align-items: flex-start;
     background-color: #212121;
     color: #FFFFFF;
-    white-space: nowrap; /*prevent auto  enter*/
+    white-space: nowrap;
+    /*prevent auto  enter*/
 }
 
 /* icon gap control  */
-.sideBar li{
+.sideBar li {
     background-color: #212121;
     display: flex;
     align-items: center;
@@ -185,7 +190,7 @@ body {
     justify-content: flex-start;
 }
 
-.sideBar li:hover{
+.sideBar li:hover {
     background-color: #696666;
     display: flex;
     align-items: center;
@@ -196,17 +201,17 @@ body {
 }
 
 /*side bar title*/
-.sideBarTitle{
+.sideBarTitle {
     padding: 8px 24px;
     font-size: 13px;
     text-transform: uppercase;
     color: #AAAAAA;
 }
 
-.sideBarBottom img{
+.sideBarBottom img {
     width: 24px;
     height: 24px;
-} 
+}
 
 .sideBarFooter {
     color: var(--gray-color, #AAA);
@@ -216,6 +221,7 @@ body {
     font-weight: 700;
     line-height: normal;
 }
+
 .Footer1 {
     display: flex;
     width: 224px;
@@ -248,110 +254,65 @@ body {
     height: 1.8rem;
     border-radius: 70%;
 }
- 
 
 /* li title */
-.subtitle{
+.subtitle {
     margin-left: 24px;
     font-size: 14px;
     line-height: 40px;
 }
-.sideBarSubscriptions img{
+
+.sideBarSubscriptions img {
     width: 40px;
     height: 40px;
 }
 
-/* main container
-    div for grouping main content */
-.mainContainer{
+
+.mainContainer {
     display: flex;
     background-color: #212121;
 }
 
-
-/* #tagNavScrollForward,
-#tagNavScrollBackward {
-  position: relative;
-  top: 3.5rem;
-  height: 3.5rem;
-  width: 7rem;
-} */
-
-/* #tagNavScrollForward {
-  float: left;
-  background: linear-gradient(to right, #212121 50%, transparent);
-}
-
-#tagNavScrollForward:hover {
-  background: linear-gradient(to right, #303030 50%, transparent);
-}
-
-#tagNavScrollBackward {
-  float: right;
-  background: linear-gradient(to left, #212121 50%, transparent);
-  text-align: right;
-}
-
-#tagNavScrollBackward:hover {
-  background: linear-gradient(to left, #303030 50%, transparent);
-} */
-
-/* #tagNav::-webkit-scrollbar {
-    display: none;
-  } */
-
-/* #tagNavScrollForward{
-    display: flex;
-    margin-right: 8px;
-    align-items: center;
-} */
 .allBtn,
-.topMenuBtn{
-   margin-bottom: 8px;
-   padding: 8px 12px;
-   color: #fff;
-   background-color: #303030;
-   border: 1px solid #AAAAAA;
-   border-radius: 32px;
+.topMenuBtn {
+    margin-bottom: 8px;
+    padding: 8px 12px;
+    color: #fff;
+    background-color: #303030;
+    border: 1px solid #AAAAAA;
+    border-radius: 32px;
 }
 
 /* btn mouse hover */
-#tagNavScrollBtn button:hover{
-   color: #303030;
-   background-color: #fff;
+#tagNavScrollBtn button:hover {
+    color: #303030;
+    background-color: #fff;
 }
 
-/* ================================================ 
-/================================================ 
-main(video list part)/ */
-.ThumbnailRow{
+/*main(video list part)*/
+.ThumbnailRow {
     display: flex;
     flex-wrap: wrap;
     margin-top: 24px;
     margin-left: 24px;
 }
-/* thumbnail video /
-/ ThumbnailRowThumbnailItem
-    div for grouping video */
-.ThumbnailRowThumbnailItem{
+
+.ThumbnailRowThumbnailItem {
     margin-right: 16px;
 }
 
-/* thumbnailDescContainer
-    div for grouping thumbnail information */
-.thumbnailDescContainer{
+.thumbnailDescContainer {
     display: flex;
     margin-bottom: 50px;
 }
 
 /* thumbnail image */
-.Image1{
+.Image1 {
     width: 311px;
     height: 175px;
 }
 
-/* profile image */
-.UserAvatar img{
+.UserAvatar img {
     border-radius: 70%;
     overflow: hidden;
     margin-top: 12px;
@@ -359,8 +320,7 @@ main(video list part)/ */
 
 }
 
-/* video desc */
-.videoTitle{
+.videoTitle {
     height: 20px;
     color: var(--white-color);
     font-size: 14px;
@@ -369,58 +329,53 @@ main(video list part)/ */
     margin-bottom: 6px;
 }
 
-a{
+a {
     text-decoration: none;
 }
 
 .ChannelName,
-.Time{
+.Time {
     color: #AAAAAA;
     font-size: 12px;
 }
 
 @media (max-width: 900px) {
     .search input {
-      width: 25rem;
+        width: 25rem;
     }
 }
 
-/* modal css */
-/* mic modal */
 /* micContainer
     div for grouping mic modal content */
 .micContainer {
-   display: none;
-   position: fixed;
-   z-index: 1;
-   padding-top: 50px;
-   left: 0%;
-   top: 0;
-   width: 100%;
-   height: 100%;
-   overflow: auto;
-   background-color: rgb(0, 0, 0);
-   background-color: rgba(0, 0, 0, 0.4);
+    display: none;
+    position: fixed;
+    z-index: 1;
+    padding-top: 50px;
+    left: 0%;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: rgb(0, 0, 0);
+    background-color: rgba(0, 0, 0, 0.4);
 }
 
 /* mic modal inner div */
 .micModal {
     position: relative;
-   background-color: #fefefe;
-   margin: auto;
-   padding: 20px;
-   border: 1px solid #888;
-   width: 30%
+    background-color: #fefefe;
+    margin: auto;
+    padding: 20px;
+    border: 1px solid #888;
+    width: 30%
 }
 
-/* micModalClose
-    div for mic modal close button */
-.micModalClose{
+.micModalClose {
     display: flex;
 }
 
-/* mic modal close button */
-.closeMic{
+.closeMic {
     margin-left: auto;
     border: none;
     border-radius: 70%;
@@ -428,20 +383,19 @@ a{
     height: 30px;
 }
 
-.closeMic:hover{
+.closeMic:hover {
     background-color: #888;
 }
 
-/* mic modal text div */
-.micModalText{
+.micModalText {
     margin-bottom: 30px;
 }
-.micModalText p{
+
+.micModalText p {
     margin-top: 10px;
 }
 
-/* check button */
-.checkMic{
+.checkMic {
     display: block;
     margin: auto;
     width: 60px;
@@ -451,8 +405,8 @@ a{
     color: #fff;
     font-size: 20px;
 }
-/* mic button */
-.record{
+
+.record {
     display: block;
     margin: auto;
     width: 40px;
@@ -463,11 +417,11 @@ a{
 }
 
 .checkMic:hover,
-.record:hover{
+.record:hover {
     background-color: #A50000;
 }
-/* create video modal */
-.createContainer{
+
+.createContainer {
     display: none;
     position: absolute;
     z-index: 1;
@@ -477,6 +431,7 @@ a{
     overflow: auto;
     border-radius: 20px;
 }
+
 .createList {
     position: relative;
     background-color: #fefefe;
@@ -484,21 +439,22 @@ a{
     padding: 10px;
     border: 1px solid #888;
 }
-/* create modal content */
-.videoUpload{
+
+.videoUpload {
     margin-bottom: 10px;
 }
+
 .videoUpload,
-.videoLive{
+.videoLive {
     display: flex;
     align-items: center;
 }
-.createListContent{
+
+.createListContent {
     margin-left: 10px;
 }
 
-/* notifications modal */
-.notiContainer{
+.notiContainer {
     display: none;
     position: absolute;
     z-index: 1;
@@ -511,50 +467,53 @@ a{
     width: 350px;
     height: 500px;
 }
-/* notifications header part */
-.notiHeader{
+
+.notiHeader {
     display: flex;
     align-items: center;
 }
-.notiTitle{
+
+.notiTitle {
     margin-left: 10px;
     font-size: 20px;
     font-weight: bold;
 }
-.notiHeader span{
+
+.notiHeader span {
     margin-left: auto;
     margin-top: 10px;
     margin-right: 20px;
 }
 
-/* notifications */
-.notifications li{
+
+.notifications li {
     display: flex;
     align-items: center;
     margin-top: 10px;
 }
 
-.notiChannelImg{
+.notiChannelImg {
     width: 50px;
     height: 50px;
     border-radius: 70%;
 }
 
-.notiVideoContent{
+.notiVideoContent {
     margin-left: 10px;
     color: #000000;
 }
 
-.videoInfo{
+.videoInfo {
     font-size: 17px;
     margin-bottom: 5px;
 }
-.notiDate{
+
+.notiDate {
     font-size: 15px;
 }
 
-/* profile modal */
-.profileContainer{
+
+.profileContainer {
     display: none;
     position: absolute;
     z-index: 1;
@@ -564,30 +523,30 @@ a{
     overflow: auto;
     border-radius: 5px;
 }
-.profileList{
+
+.profileList {
     background-color: #fff;
     width: 150px;
     height: 100px;
     padding: 5px;
 }
-.userName{
+
+.userName {
     margin-bottom: 10px;
     font-weight: bold;
 }
+
 .myPage,
-.logOutDiv{
+.logOutDiv {
     margin-left: 10px;
 }
-.logOutDiv{
+
+.logOutDiv {
     margin-top: 10px;
     display: flex;
     align-items: center;
 }
-.logout{
+
+.logout {
     margin-left: 5px;
 }
-
-
-
-
-

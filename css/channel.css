@@ -40,25 +40,20 @@
     direction: ltr;
 }
 
-
-/* reset */
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
 }
 
-/* font */
 body {
     font-family: 'Roboto', sans-serif;
 }
 
-a{
+a {
     text-decoration: none;
 }
 
-/* border
-    line for dividing part */
 .border {
     width: 224px;
     height: 100%;
@@ -68,7 +63,6 @@ a{
     border-bottom: 1px solid #303030;
 }
 
-/*header div*/
 .wrapHeader {
     position: sticky;
     top: 0;
@@ -76,7 +70,6 @@ a{
     background-color: #212121;
 }
 
-/* header */
 .navigation {
     display: flex;
     justify-content: space-between;
@@ -87,9 +80,7 @@ a{
     padding: 15px;
 }
 
-/* header left
-    topLeft for grouping left content(hamburger and logo) */
-.leftContent{
+.leftContent {
     cursor: pointer;
 }
 
@@ -100,7 +91,7 @@ a{
 
 /*search*/
 .searchBox {
-    display: flex;    
+    display: flex;
     width: 470px;
     height: 40px;
     justify-content: center;
@@ -122,7 +113,6 @@ a{
 
 .searchBtn {
     border: none;
-    /*remove button style */
     border: 1px solid #303030;
     background-color: #303030;
     color: white;
@@ -131,13 +121,11 @@ a{
     margin-right: 4px;
 }
 
-/*mic button*/
 .micButton {
     width: 40px;
     height: 40px;
     background-color: #000000;
     border: none;
-    /*remove button style*/
     border-radius: 70%;
     margin-left: 5px;
 }
@@ -150,9 +138,6 @@ a{
     color: white;
 }
 
-/* header right
-    profile for grouping right content */
-/* right Content(div) */
 .rightContent {
     margin: 8px 8px 8px 0px;
     display: flex;
@@ -173,7 +158,6 @@ a{
     background-color: #2980b9;
 }
 
-/* Sidebar */
 .wrapNav {
     position: sticky;
     top: 56px;
@@ -184,10 +168,8 @@ a{
     background-color: #212121;
     color: #FFFFFF;
     white-space: nowrap;
-    /*prevent auto  enter*/
 }
 
-/* icon gap control  */
 .sideBar li {
     background-color: #212121;
     display: flex;
@@ -216,12 +198,13 @@ a{
 
 .sideBarFooter {
     color: var(--gray-color, #AAA);
-    font-family: Roboto;
+    font-family: 'Roboto';
     font-size: 13px;
     font-style: normal;
     font-weight: 700;
     line-height: normal;
 }
+
 .Footer1 {
     display: flex;
     width: 224px;
@@ -247,14 +230,13 @@ a{
     flex-direction: column;
     align-items: flex-start;
     gap: 10px;
-} 
+}
 
-.contentsListDate{
+.contentsListDate {
     display: flex;
     margin-top: 24px;
 }
 
-/*side bar title*/
 .sideBarTitle {
     padding: 8px 24px;
     font-size: 13px;
@@ -265,9 +247,7 @@ a{
 .sideBarBottom img {
     width: 24px;
     height: 24px;
-} 
-
-
+}
 
 
 /* li title */
@@ -293,23 +273,17 @@ a{
 .sideBarBottom img {
     width: 24px;
     height: 24px;
-} 
+}
 
-/* main container
-    div for grouping main content */
 .mainContainer {
     display: flex;
     background-color: #212121;
 }
 
-/* main Content */
-/* channelContainer
-    div for grouping banner and channel information */
 .channelContainer {
     width: 1200;
 }
 
-/* Banner */
 .banner {
     display: flex;
     width: 100%;
@@ -319,7 +293,6 @@ a{
     flex-shrink: 0;
 }
 
-/* Channel Title */
 .channelTitle {
     background-color: #181818;
     width: 100%;
@@ -340,7 +313,6 @@ a{
     padding: 18px 0px;
 }
 
-/* subscribe button css */
 .buttoncon {
     margin-left: auto;
     cursor: pointer;
@@ -517,10 +489,9 @@ span {
     height: 100%;
     margin-left: 64px;
     margin-right: 69px;
-    border-bottom: 3px solid #303030; 
-} 
-sss
-/* Playlist */
+    border-bottom: 3px solid #303030;
+}
+
 .playlistContainer {
     display: flex;
     flex-direction: column;
@@ -584,6 +555,7 @@ sss
     padding: 24px 0px;
     align-items: flex-start;
 }
+
 .contentsListFavorite,
 .contentsListDate {
     display: flex;
@@ -659,10 +631,6 @@ sss
     }
 }
 
-/* modal css */
-/* mic modal */
-/* micContainer
-    div for grouping mic modal content */
 .micContainer {
     display: none;
     position: fixed;
@@ -677,7 +645,6 @@ sss
     background-color: rgba(0, 0, 0, 0.4);
 }
 
-/* mic modal inner div */
 .micModal {
     position: relative;
     background-color: #fefefe;
@@ -687,13 +654,10 @@ sss
     width: 30%
 }
 
-/* micModalClose
-         div for mic modal close button */
 .micModalClose {
     display: flex;
 }
 
-/* mic modal close button */
 .closeMic {
     margin-left: auto;
     border: none;
@@ -706,7 +670,6 @@ sss
     background-color: #888;
 }
 
-/* mic modal text div */
 .micModalText {
     margin-bottom: 30px;
 }
@@ -715,7 +678,6 @@ sss
     margin-top: 10px;
 }
 
-/* check button */
 .checkMic {
     display: block;
     margin: auto;
@@ -727,7 +689,6 @@ sss
     font-size: 20px;
 }
 
-/* mic button */
 .record {
     display: block;
     margin: auto;
@@ -743,7 +704,6 @@ sss
     background-color: #A50000;
 }
 
-/* create video modal */
 .createContainer {
     display: none;
     position: absolute;
@@ -763,7 +723,6 @@ sss
     border: 1px solid #888;
 }
 
-/* create modal content */
 .videoUpload {
     margin-bottom: 10px;
 }
@@ -778,7 +737,6 @@ sss
     margin-left: 10px;
 }
 
-/* notifications modal */
 .notiContainer {
     display: none;
     position: absolute;
@@ -793,7 +751,6 @@ sss
     height: 500px;
 }
 
-/* notifications header part */
 .notiHeader {
     display: flex;
     align-items: center;

@@ -53,7 +53,7 @@ body {
     font-family: 'Roboto', sans-serif;
 }
 
-a{
+a {
     text-decoration: none;
 }
 
@@ -89,7 +89,7 @@ a{
 
 /* header left
    topLeft for grouping left content(hamburger and logo) */
-.leftContent{
+.leftContent {
     cursor: pointer;
 }
 
@@ -98,7 +98,7 @@ a{
     padding-right: 11px;
 }
 
-/*search*/
+
 .searchBox {
     display: flex;
     width: 470px;
@@ -121,7 +121,6 @@ a{
 
 .searchBtn {
     border: none;
-    /*remove button style */
     border: 1px solid #303030;
     background-color: #303030;
     color: white;
@@ -130,13 +129,12 @@ a{
     margin-right: 4px;
 }
 
-/*mic button*/
 .micButton {
     width: 40px;
     height: 40px;
     background-color: #000000;
     border: none;
-    /*remove button style*/
+
     border-radius: 70%;
     margin-left: 5px;
 }
@@ -149,9 +147,6 @@ a{
     color: white;
 }
 
-/* header right
-   profile for grouping right content */
-/* right Content(div) */
 .rightContent {
     margin: 8px 8px 8px 0px;
     display: flex;
@@ -168,37 +163,29 @@ a{
     color: #fff;
 }
 
-/* div for grouping all */
 .container {
     display: flex;
 }
 
-/* article div */
+
 .wrapArticle {
     margin-left: 162px;
 }
 
-/* article */
+
 .primary {
     margin: 24px 24px 0px 24px;
     width: 664px;
     height: 968px;
-    /* padding: 24px 0px 0px 24px; */
     flex-direction: column;
     justify-content: flex-end;
     align-items: flex-start;
     flex-shrink: 0;
 }
 
-/* video */
+
 .videoContainer {
     text-align: center;
-    /* 수정한부분------------------- */
-    /* display: flex;
-    padding: 30px 0px 8px 0px;
-    flex-direction: column;
-    align-items: flex-start;
-    gap: 1rem; */
 }
 
 .selectedVideo {
@@ -211,14 +198,11 @@ a{
     font-size: 18px;
 }
 
-/* videoDesc
-    div for grouping video extra features */
 .selectVideoInfo {
     display: flex;
     flex-direction: row;
 }
 
-/* video info div */
 .videoInfo {
     display: flex;
     align-items: center;
@@ -226,12 +210,10 @@ a{
     padding-bottom: 8px;
 }
 
-/* ----------------0804확인부분------------ */
 .views,
 .uploadDate {
     color: #AAAAAA;
     font-size: 14px;
-    /* font-weight: bold; */
 }
 
 .videoExtra {
@@ -252,8 +234,6 @@ a{
     font-weight: bold;
 }
 
-/* icon & img margin control
-material-symbols-outlined => icon class name */
 .videoExtra img,
 .material-symbols-outlined {
     margin-right: 9px;
@@ -271,8 +251,6 @@ material-symbols-outlined => icon class name */
     margin-left: 4px;
 }
 
-/* Video Desc(>channelTitle>channelimg, channelinfo, buttoncon */
-/* 추가한부분------------------- */
 .videoDesc {
     display: flex;
     margin-top: 10px;
@@ -287,7 +265,6 @@ material-symbols-outlined => icon class name */
     align-items: center;
 }
 
-/* video information */
 .classInfo {
     display: flex;
 }
@@ -304,8 +281,7 @@ material-symbols-outlined => icon class name */
     margin-top: 11px;
     margin-right: 9px;
     font-size: 14px;
-    color:white
-    /* font : inherit */
+    color: white
 }
 
 .subscribers {
@@ -385,7 +361,6 @@ material-symbols-outlined => icon class name */
     padding-left: 64px;
     padding-right: 15px;
     padding-bottom: 2px;
-    /* padding-top: 12px; */
     font-family: 'Roboto';
     font-style: normal;
     font-weight: 200;
@@ -394,7 +369,6 @@ material-symbols-outlined => icon class name */
 
 }
 
-/* show more */
 .showMore {
     margin-top: 10px;
     color: #AAAAAA;
@@ -407,12 +381,9 @@ material-symbols-outlined => icon class name */
     text-decoration: underline;
 }
 
-/* Comment */
-/* div for grouping comment info */
 .commentInfo {
     display: flex;
     align-items: center;
-    /* margin-top: 24px; */
 }
 
 .commentCount {
@@ -421,7 +392,6 @@ material-symbols-outlined => icon class name */
     font-size: 16px;
 }
 
-/* div for sort comment */
 .sortComment {
     display: flex;
     align-items: center;
@@ -443,8 +413,6 @@ material-symbols-outlined => icon class name */
     height: 24px;
 }
 
-
-/* write comment */
 .writeComment {
     margin-top: 24px;
     display: flex;
@@ -453,21 +421,16 @@ material-symbols-outlined => icon class name */
     height: 40px;
 }
 
-/* comment writer image */
+
 .commentWriter {
-    /* width: 40px;
-    height: 40px; */
     margin-right: 16px;
 }
 
-/* input container
-    div for grouping input */
 .inputContainer {
     width: 100%;
     height: 40px;
 }
 
-/* input comment */
 .commentInput {
     border: none;
     border-radius: 0;
@@ -483,31 +446,20 @@ material-symbols-outlined => icon class name */
     color: #303030;
 }
 
-/* comment list */
-/* other comment
-    div for grouping comment written by others */
 .otherComment {
     display: flex;
     flex-direction: column;
     margin-top: 32px;
 }
 
-/* div for grouping writer information */
 .writerInfo {
     display: flex;
 }
 
-/* about writer */
 .writerInfo img {
     margin-right: 16px;
 }
 
-/* 0804 잠깐 주석---------------------- */
-/* .commentDetail{
-    display: flex;
-    height: 22px;
-    margin-bottom: 2px;
- } */
 .writerName {
     font-size: 13px;
     font-weight: bold;
@@ -518,7 +470,6 @@ material-symbols-outlined => icon class name */
     color: #AAAAAA;
 }
 
-/* div commentcontent */
 .commentContent {
     height: 24px;
     padding-top: 2px;
@@ -526,11 +477,10 @@ material-symbols-outlined => icon class name */
     font-size: 14px;
 }
 
-/* comment like
-    div for grouping comment buttons */
-.commentLikeDiv{
+.commentLikeDiv {
     margin-left: 70px;
 }
+
 .commentLikeDiv ul {
     display: flex;
     align-items: center;
@@ -565,7 +515,6 @@ material-symbols-outlined => icon class name */
     font-size: 12px;
 }
 
-/* aside */
 .secondary {
     margin-top: 24px;
     width: 426px;
@@ -576,12 +525,10 @@ material-symbols-outlined => icon class name */
     flex-shrink: 0;
 }
 
-/* secondary top menu */
 .secondaryMenu {
     margin: 8px 8px 8px 0px;
 }
 
-/* secondary top munu button */
 .allBtn,
 .classfyBtn {
     margin-bottom: 8px;
@@ -596,13 +543,11 @@ material-symbols-outlined => icon class name */
     margin-right: 8px;
 }
 
-/* btn mouse hover */
 .secondaryMenu button:hover {
     color: #303030;
     background-color: #fff;
 }
 
-/* div for secondary video */
 .secondaryVideo {
     display: flex;
     margin-top: 8px;
@@ -613,6 +558,7 @@ material-symbols-outlined => icon class name */
     height: 94px;
     margin-right: 8px;
 }
+
 .videoThumbnail img {
     width: 168px;
     height: 94px;
@@ -636,10 +582,6 @@ material-symbols-outlined => icon class name */
     height: 18px;
 }
 
-/* modal css */
-/* mic modal */
-/* micContainer
-    div for grouping mic modal content */
 .micContainer {
     display: none;
     position: fixed;
@@ -655,7 +597,6 @@ material-symbols-outlined => icon class name */
     cursor: pointer;
 }
 
-/* mic modal inner div */
 .micModal {
     position: relative;
     background-color: #fefefe;
@@ -665,13 +606,10 @@ material-symbols-outlined => icon class name */
     width: 30%
 }
 
-/* micModalClose
-     div for mic modal close button */
 .micModalClose {
     display: flex;
 }
 
-/* mic modal close button */
 .closeMic {
     margin-left: auto;
     border: none;
@@ -685,7 +623,6 @@ material-symbols-outlined => icon class name */
     background-color: #888;
 }
 
-/* mic modal text div */
 .micModalText {
     margin-bottom: 30px;
     color: black;
@@ -695,7 +632,6 @@ material-symbols-outlined => icon class name */
     margin-top: 10px;
 }
 
-/* check button */
 .checkMic {
     display: block;
     margin: auto;
@@ -708,7 +644,6 @@ material-symbols-outlined => icon class name */
     cursor: pointer;
 }
 
-/* mic button */
 .record {
     display: block;
     margin: auto;
@@ -717,7 +652,7 @@ material-symbols-outlined => icon class name */
     background-color: var(--red-color);
     border: none;
     border-radius: 70%;
-    
+
 }
 
 .checkMic:hover,
@@ -725,7 +660,6 @@ material-symbols-outlined => icon class name */
     background-color: #A50000;
 }
 
-/* share modal */
 .shareModalContainer {
     display: none;
     position: fixed;
@@ -851,44 +785,50 @@ material-symbols-outlined => icon class name */
     margin-top: 15px;
     font-size: 20px;
 }
+
 .saveTitle {
     margin-left: 15px;
 }
+
 .saveClose {
     margin-left: auto;
     border: none;
     background-color: white;
 }
 
-.saveModalContent{
+.saveModalContent {
     font-size: 15px;
 }
-.saveOption{
+
+.saveOption {
     margin: 15px;
     display: flex;
     align-items: center;
 }
-.saveOption input{
+
+.saveOption input {
     width: 15px;
     height: 15px;
-	border: 2px solid #bcbcbc;
-	cursor: pointer;
+    border: 2px solid #bcbcbc;
+    cursor: pointer;
     width: 15px;
     height: 15px;
     margin-right: 10px;
 }
-.saveOption span{
+
+.saveOption span {
     margin-left: auto;
 }
 
 
-.makeNewPlaylist{
+.makeNewPlaylist {
     margin-top: 30px;
     margin-bottom: 20px;
     margin-left: 15px;
     display: flex;
     align-items: center;
 }
-.makeNewPlaylist:hover{
+
+.makeNewPlaylist:hover {
     cursor: pointer;
 }
