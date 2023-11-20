@@ -7,7 +7,7 @@ const micContainer = document.getElementById('micContainer');
 openMic.addEventListener('click', () => {
     micContainer.style.display = 'block';
     if (!confirm("마이크에 대한 엑세스를 허용하시겠습니까?")) {
-        //허용 안할 경우
+        //if not
         micContent = `
                 <div class="micModal">
                     <div class="micModalClose">
@@ -51,20 +51,20 @@ openMic.addEventListener('click', () => {
     }
 });
 
-function micClose(){
+function micClose() {
     micContainer.style.display = 'none';
 }
 
-//------------------------------------------------------------------------------------------------------------------
+
 //profile modal event
 const create = document.getElementById('create');
 
 let createContent = "";
 // create button event
 const createContainer = document.getElementById('createContainer');
-create.addEventListener('click', ()=>{
+create.addEventListener('click', () => {
     createContainer.style.display = 'block';
-    createContent =`
+    createContent = `
         <div class="createList">
             <div class = "videoUpload" >
                 <span class="material-symbols-outlined">smart_display</span>
@@ -83,12 +83,12 @@ create.addEventListener('click', ()=>{
 let notiContent = "";
 const notifications = document.getElementById('notifications');
 const notiContainer = document.getElementById('notiContainer');
-notifications.addEventListener('click',()=>{
+notifications.addEventListener('click', () => {
     notiContainer.style.display = 'block';
-    if(notifications.classList.contains('material-symbols-outlined')){
+    if (notifications.classList.contains('material-symbols-outlined')) {
         notifications.classList.remove('material-symbols-outlined');
         notifications.classList.add('material-icons');
-        notiContent =`
+        notiContent = `
         <div class="notiHeader">
             <p class="notiTitle">NOTIFICATIONS</p>
             <span class="material-symbols-outlined">settings</span>
@@ -108,18 +108,18 @@ notifications.addEventListener('click',()=>{
         </div>
         `;
         notiContainer.innerHTML = notiContent;
-      }else{
+    } else {
         notifications.classList.remove('material-icons');
         notifications.classList.add('material-symbols-outlined');
         notiContainer.style.display = 'none';
-      }
+    }
 });
 
 //page click -> modal close
-window.onclick = function (event){
-    if(event.target == createContainer){
+window.onclick = function (event) {
+    if (event.target == createContainer) {
         createContainer.style.display = "none";
-    }else if(event.target == notiContainer){
+    } else if (event.target == notiContainer) {
         notiContainer.style.display = "none";
     }
 };
@@ -127,9 +127,9 @@ window.onclick = function (event){
 let profileContent = "";
 const profile = document.getElementById('profileButton');
 const profileContainer = document.getElementById('profileContainer');
-profile.addEventListener('click', ()=>{
+profile.addEventListener('click', () => {
     profileContainer.style.display = 'block';
-    profileContent =`
+    profileContent = `
         <div class="profileList">
             <div class="userName">
                 <h3> Oreumi님!</h3>
@@ -146,14 +146,14 @@ profile.addEventListener('click', ()=>{
     profileContainer.innerHTML = profileContent;
 });
 
-window.onclick = function (event){
-    if(event.target == createContainer){
+window.onclick = function (event) {
+    if (event.target == createContainer) {
         createContainer.style.display = "none";
     }
-    if(event.target == notiContainer){
+    if (event.target == notiContainer) {
         notiContainer.style.display = "none";
     }
-    if(event.target == profileContainer){
+    if (event.target == profileContainer) {
         profileContainer.style.display = "none";
     }
 };
